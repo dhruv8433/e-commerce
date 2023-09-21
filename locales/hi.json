@@ -1,0 +1,43 @@
+{
+    "translation": {
+        "welcome": "हमारी वेबसाइट पर आपका स्वागत है",
+        "greeting": "नमस्ते, {{name}}!",
+        "buttonLabel": "मुझे क्लिक करें"
+    },
+    "contact": {
+        "contact": "हमसे संपर्क करें",
+        "name": "नाम",
+        "email": "ईमेल",
+        "message": "संदेश",
+        "submit": "प्रस्तुत करें"
+    },
+    "navigation": {
+        "home": "होम",
+        "about": "हमारे बारे में",
+        "provider": "प्रदानकर्ता",
+        "contact": "संपर्क करें",
+        "login": "लॉगिन",
+        "signup": "साइन अप",
+        "erequirement": "eRequirement"
+    },
+    "home_ads": {
+        "welcome": "स्वागत है eRequirement में",
+        "one_stop": "आपकी सभी आवश्यकताओं के लिए आपका एक-स्टॉप समाधान।",
+        "get_start": "शुरू करें"
+    },
+    "signup": {
+        "signup": "साइन अप करें",
+        "email": "ईमेल",
+        "password": "पासवर्ड",
+        "phone": "फ़ोन",
+        "name": "पूरा नाम",
+        "address": "पता"
+    },
+    "login": {
+        "login": "लॉगिन",
+        "email": "ईमेल",
+        "password": "पासवर्ड",
+        "signup": "साइन अप करें",
+        "no_account": "खाता नहीं है?"
+    }
+}

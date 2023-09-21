@@ -1,0 +1,43 @@
+{
+    "translation": {
+        "welcome": "Bienvenue sur notre site Web",
+        "greeting": "Bonjour, {{name}} !",
+        "buttonLabel": "Cliquez-moi"
+    },
+    "contact": {
+        "contact": "Nous Contacter",
+        "name": "Nom",
+        "email": "E-mail",
+        "message": "Message",
+        "submit": "Envoyer"
+    },
+    "navigation": {
+        "home": "Accueil",
+        "about": "À propos",
+        "provider": "Fournisseurs",
+        "contact": "Contact",
+        "login": "Connexion",
+        "signup": "S'inscrire",
+        "erequirement": "eRequirement"
+    },
+    "home_ads": {
+        "welcome": "Bienvenue sur eRequirement",
+        "one_stop": "Votre solution unique pour tous vos besoins.",
+        "get_start": "Commencer"
+    },
+    "signup": {
+        "signup": "S'inscrire",
+        "email": "Email",
+        "password": "Mot de passe",
+        "phone": "Téléphone",
+        "name": "Nom complet",
+        "address": "Adresse"
+    },
+    "login": {
+        "login": "Se connecter",
+        "email": "Email",
+        "password": "Mot de passe",
+        "signup": "S'inscrire",
+        "no_account": "Pas encore de compte ?"
+    }
+}

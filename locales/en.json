@@ -1,0 +1,45 @@
+{
+    "translation": {
+        "welcome": "Welcome to our website",
+        "greeting": "Hello, {{name}}!",
+        "buttonLabel": "Click me"
+    },
+    "contact": {
+        "contact": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Submit"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "provider": "Providers",
+        "contact": "Contact",
+        "login": "Login",
+        "signup": "Sign Up",
+        "erequirement": "eRequirement"
+    },
+    "home_ads": {
+        "welcome": "Welcome to eRequirement",
+        "one_stop": "Your one-stop solution for all your requirements.",
+        "get_start": "Get Started",
+        "top_provider": "Our Top Rated Providers",
+        "deals": "DEALS OF DAY"
+    },
+    "signup": {
+        "signup": "Sign Up",
+        "email": "Email",
+        "password": "Password",
+        "phone": "Phone",
+        "name": "Full Name",
+        "address": "Address"
+    },
+    "login": {
+        "login": "Login",
+        "email": "Email",
+        "password": "Password",
+        "signup": "Sign Up",
+        "no_account": "Don't Have Account"
+    }
+}
