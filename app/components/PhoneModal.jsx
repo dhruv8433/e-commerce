@@ -6,6 +6,7 @@ import LoginIcon from "@mui/icons-material/Login";
 import "@/app/styles/style.css";
 import { CloseRounded } from "@mui/icons-material";
 
+// it is modal that only open in responsive device so insted of seeting login and sign up in navigatin we use one icon and on that click we got 2 option for login and signup
 const PhoneModal = ({ signup, login }) => {
   const [loginModal, setLoginModal] = useState(false);
   return (
@@ -13,12 +14,14 @@ const PhoneModal = ({ signup, login }) => {
       <IconButton onClick={() => open(setLoginModal)}>
         <LoginIcon />
       </IconButton>
+      {/* login & signup modal */}
       <Modal
         className="flex justify-center items-center"
         open={loginModal}
         onClose={() => close(setLoginModal)}
       >
         <div className="bg-white w-48 h-48 rounded ">
+          {/* select method to login or signup */}
           <div className="flex justify-between items-center px-1">
             <h1>Select Method</h1>
             <IconButton onClick={() => close(setLoginModal)}>

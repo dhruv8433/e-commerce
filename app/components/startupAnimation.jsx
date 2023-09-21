@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 // just import json file of lottie animation from 'https://lottiefiles.com/animations/welcome-ioV4tbykLt'
 import animationData from "@/app/json/animations/welcome.json";
 
+// welcome animation
 function StartupAnimation() {
   useEffect(() => {
     // getting div of animation using query selector

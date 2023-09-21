@@ -10,6 +10,7 @@ import { Pagination, Navigation, EffectFade, Autoplay } from "swiper/modules";
 import { getHomeScreen } from "../httpFetch";
 import "@/app/styles/style.css";
 
+// swiper ads
 export default function SwiperHome() {
   const [swiperSlide, setSwiperSlide] = useState([]);
 
@@ -26,6 +27,7 @@ export default function SwiperHome() {
         This is Extra Div
       </div>
 
+      {/* swiper to use slideshow */}
       <Swiper
         spaceBetween={30}
         effect="fade"

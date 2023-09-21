@@ -7,8 +7,8 @@ import { useState } from "react";
 import Heading from "./Heading";
 import Link from "next/link";
 import React from "react";
-import { colors } from "../config/config";
 
+// setting drawer that contain all nacessary settings for this website
 const SettingDrawer = () => {
   const [openSetting, setOpenSetting] = useState(false);
   return (
@@ -16,13 +16,16 @@ const SettingDrawer = () => {
       <IconButton onClick={() => open(setOpenSetting)}>
         <SettingsOutlined />
       </IconButton>
+      {/* drawer open when user click on setting icon */}
       <Drawer
         open={openSetting}
         anchor="right"
         onClose={() => close(setOpenSetting)}
       >
         <Box sx={{ width: { xs: "300px", md: "400px" } }}>
+          {/* reusable heading component  */}
           <Heading title={"Settings"} setOpen={setOpenSetting} />
+          {/* locale setting  */}
           <div className="p-4 mt-2">
             <h1>select preffered language : </h1>
             <div className="mt-2 border border-gray-400 rounded w-full flex justify-evenly items-center p-2 text-center">

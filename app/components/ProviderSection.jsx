@@ -2,12 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import "@/app/styles/style.css";
-import { homeService } from "../services/homeService";
 import { Box, Grid } from "@mui/material";
 import Provider from "./Provider";
 import { useTranslations } from "next-intl";
 import { getHomeScreen } from "../httpFetch";
+import Link from "next/link";
 
+// provider section that used in home screen
 const ProviderSection = () => {
   const [providers, setProviders] = useState([]);
 
@@ -27,22 +28,31 @@ const ProviderSection = () => {
         paddingInline: { xs: "none", md: "100px" },
       }}
     >
-      <div className="heading px-8">
-        <h1 className="text-2xl font-bold items-center flex justify-center pt-2">
-          {t("top_provider")}
-        </h1>
+      {/* heading component that contain top rated providers and view all providers  */}
+      <div className="px-8">
+        <div className="heading flex justify-between items-center ">
+          <h1 className="text-2xl font-bold items-center  pt-2">
+            {t("top_provider")}
+          </h1>
+          <Link href={"/providers"}>View All providers</Link>
+        </div>
         <hr />
       </div>
+      {/* provider cards */}
       <div>
-        <Box className="">
-          <div className="providercard p-6">
-            <Grid container>
-              {providers.slice(0, 3).map((provider) => (
-                <Grid item xs={12} sm={6} md={4} key={provider.id}>
-                  <Provider key={provider.id} provider={provider} />
-                </Grid>
-              ))}
-            </Grid>
+        <Box className="mt-4 mb-4">
+          <div className="providercard">
+            <Box sx={{ px: { xs: 1, lg: 4 } }}>
+              <Grid container>
+                {/* we only display 3 providers on home page */}
+                {providers.slice(0, 3).map((provider) => (
+                  <Grid item xs={12} sm={6} md={4} key={provider.id}>
+                    {/* calling single provider component */}
+                    <Provider key={provider.id} provider={provider} />
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
           </div>
         </Box>
       </div>

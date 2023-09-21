@@ -6,7 +6,8 @@ import homeAnimationJSON from "@/app/json/animations/homescreen.json";
 import { useTranslations } from "next-intl";
 import { Grid } from "@mui/material";
 
-
+// starting component
+// use client because lottie only support in client component 
 const HomeAnimation = () => {
   const t = useTranslations("home_ads");
   return (
@@ -14,6 +15,7 @@ const HomeAnimation = () => {
       <Grid container>
         <Grid item xs={12} md={6}>
           <div>
+            {/* some animation for home screen */}
             <Lottie animationData={homeAnimationJSON} />
           </div>
         </Grid>

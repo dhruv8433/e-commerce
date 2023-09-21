@@ -1,13 +1,20 @@
-import { HomeOutlined, SettingsOutlined, InfoOutlined, ContactPageOutlined } from "@mui/icons-material";
+import {
+  HomeOutlined,
+  SettingsOutlined,
+  InfoOutlined,
+  ContactPageOutlined,
+} from "@mui/icons-material";
 import { Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
+// routes contain all necassary pages link
 const Routes = ({ display, icons, padding, spacing }) => {
   const t = useTranslations("navigation");
   return (
     <div>
+      {/* we dynamicly pass display padding and spacing for required devices */}
       <ul className={`${display} ${padding} ${spacing}`}>
         <li className="flex items-center">
           <Typography sx={{ display: icons, px: 1, py: 1 }}>

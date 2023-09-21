@@ -12,9 +12,11 @@ const BurgerMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <div>
+      {/* burger menu icon */}
       <IconButton onClick={() => open(setOpenMenu)}>
         <MenuIcon />
       </IconButton>
+      {/* creating drawer to routing in responsive screen */}
       <Drawer open={openMenu} onClose={() => close(setOpenMenu)}>
         <Box sx={{ width: 300 }} display={"flex"} alignItems={"center"}>
           {/* Left Side Logo */}

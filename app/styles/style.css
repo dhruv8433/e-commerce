@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   z-index: 9999; /* Ensure the animation appears above other content */
-  background: bisque;
+  background: var(--global-them);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
 }
 
 .bg-bisque {
-  background: bisque;
+  background: var(--global-them);
 }
 
 /* 100 vh scroll container */
@@ -75,4 +75,23 @@
   background: url("https://i.pinimg.com/564x/f1/14/c9/f114c9e8b92080deee7ae4b32da37e55.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

@@ -6,7 +6,8 @@ import { notFound } from "next/navigation";
 import { company_name } from "../config/config";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
-require('dotenv').config();
+import Footer from "../components/Footer";
+require("dotenv").config();
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
           {children}
+          <Footer />
           <Toaster />
         </NextIntlClientProvider>
       </body>

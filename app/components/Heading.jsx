@@ -3,6 +3,7 @@ import { IconButton } from "@mui/material";
 import React from "react";
 import { close } from "../config/config";
 
+// reusable heading component for drawer or modal section
 const Heading = ({ title, setOpen }) => {
   return (
     <>
