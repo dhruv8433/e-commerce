@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
+require('dotenv').config();
 
 export async function dbConnect() {
   try {
-    const connection = mongoose.connect(`mongodb://127.0.0.1:27017/local`, {
+    // Use await to properly wait for the connection
+    const connection = await mongoose.connect(process.env.MONGO, {
       dbName: "e-commerce",
     });
 

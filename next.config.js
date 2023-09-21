@@ -6,4 +6,6 @@ const withNextIntl = require("next-intl/plugin")(
   "./i18n.js"
 );
 
+require('dotenv').config();
+
 module.exports = withNextIntl(nextConfig);

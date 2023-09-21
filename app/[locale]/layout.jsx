@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { company_name } from "../config/config";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
+require('dotenv').config();
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export function generateStaticParams() {
 export default async function RootLayout({ children, params }) {
   let messages;
   const { locale } = params;
+  // when user want to change localets
   try {
     messages = (await import(`../../locales/${locale}.json`)).default;
   } catch (error) {
