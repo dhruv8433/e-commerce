@@ -42,7 +42,7 @@ const ContactForm = () => {
         </div>
       </Grid>
       <Grid item xs={12} md={6}>
-        <div className="h-screen flex items-center justify-center bg-gray-100">
+        <div className="h-screen flex items-center justify-center bg-theme ">
           <div className="w-96 p-6 bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">{t("contact")}</h2>
             <form onSubmit={handleSubmit}>
