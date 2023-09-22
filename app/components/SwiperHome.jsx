@@ -21,7 +21,7 @@ export default function SwiperHome() {
   }, []);
 
   return (
-    <div className="overflow-hidden h-screen relative scroll-slides">
+    <div className="overflow-hidden h-screen relative scroll-slides my-10">
       {/* Extra div for xs displays */}
       <div className="xs:block md:hidden absolute inset-0 flex justify-center items-center bg-gray-300">
         This is Extra Div

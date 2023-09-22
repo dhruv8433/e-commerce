@@ -6,77 +6,81 @@ import {
   LinkedIn,
   Twitter,
 } from "@mui/icons-material";
-import { Divider } from "@mui/material";
+import { Box, Divider } from "@mui/material";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
-
 const Footer = () => {
+  const t = useTranslations("footer");
+
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-        <div className="md:w-1/4">
-          <h2 className="text-2xl font-semibold mb-4">eRequirement</h2>
-          <p className="text-gray-400">
-            Your one-stop solution for all home services.
-          </p>
-          <Divider />
-          <div className="md:w-1/4 mt-4 md:mt-0">
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <ul className="flex space-x-4">
-              <li>
-                <Link href="#" className="text-white hover:text-blue-500">
-                  <FacebookOutlined />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white hover:text-blue-500">
-                  <Instagram />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white hover:text-blue-500">
-                  <LinkedIn />
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-white hover:text-blue-500">
-                  <Twitter />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:w-1/4 mt-4 md:mt-0">
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto py-8 md:py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+        {/* Column 1 */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">{t("erequirement")}</h2>
+          <p className="text-gray-400">{t("one_stop")}</p>
+          <Divider className="my-4" />
+          <h3 className="text-xl font-semibold mb-2">{t("follow")}</h3>
+          <ul className="flex space-x-4">
             <li>
-              <Link href="#" className="hover:text-blue-500">
-                Home
+              <Link href="#" className="text-white hover:text-blue-500">
+                <FacebookOutlined />
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-blue-500">
-                Services
+              <Link href="#" className="text-white hover:text-blue-500">
+                <Instagram />
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-blue-500">
-                About Us
+              <Link href="#" className="text-white hover:text-blue-500">
+                <LinkedIn />
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-blue-500">
-                Contact Us
+              <Link href="#" className="text-white hover:text-blue-500">
+                <Twitter />
               </Link>
             </li>
           </ul>
         </div>
 
-        <div className="md:w-1/4 mt-4 md:mt-0">
+        {/* Column 2 */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">{t("quick_links")}</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/" className="hover:text-blue-500">
+                {t("home")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/providers" className="hover:text-blue-500">
+                {t("provider")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-blue-500">
+                {t("about")}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-blue-500">
+                {t("contact")}
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Column 3 */}
+        <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-400">Address: 1234 Home Street, City Name</p>
-          <p className="text-gray-400">Phone: +123 456 7890</p>
-          <p className="text-gray-400">Email: info@erequirement.com</p>
+          <p className="text-gray-400">
+            {t("address")}: 1234 Home Street, City Name
+          </p>
+          <p className="text-gray-400">{t("phone")}: +123 456 7890</p>
+          <p className="text-gray-400">{t("email")}: info@erequirement.com</p>
         </div>
       </div>
     </footer>

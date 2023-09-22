@@ -5,7 +5,7 @@ import React from "react";
 // we got deal as a props so we can reuse this component where we need
 const Deal = ({ deal }) => {
   return (
-    <Box sx={{ mt: { xs: "10px", md: "20px" } }}>
+    <Box sx={{ mt: { xs: "10px", md: "10px" }, pb: "20px" }}>
       {/* routing to their provider page */}
       <Link href={`/${deal.provider_id}/${deal.slug}`}>
         <Card className="xl:flex h-auto lg:block">

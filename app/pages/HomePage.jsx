@@ -11,12 +11,10 @@ const HomePage = () => {
     <>
       <div className="scroll-container">
         <HomeAnimation />
-        <SwiperHome />
         <ProviderSection />
-        <div className="scroll-slides">
-          <DealsofDay />
-          <Twittes />
-        </div>
+        <DealsofDay />
+        <SwiperHome />
+        <Twittes />
       </div>
     </>
   );

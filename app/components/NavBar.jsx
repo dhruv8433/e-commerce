@@ -6,7 +6,7 @@ import React from "react";
 import SettingDrawer from "./SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
-import { Avatar, Box, IconButton } from "@mui/material";
+import { Avatar, Box, Container, IconButton } from "@mui/material";
 import PhoneModal from "./phoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
@@ -18,53 +18,58 @@ const Navigation = () => {
   return (
     <>
       {/* computer screen navigation  */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <nav className="fixed w-screen z-50 bg-opacity-70 backdrop-blur-md bg-gray-200 px-8">
-          <div className="container mx-auto flex justify-between items-center">
-            {/* Left Side Logo */}
-            <Link href={"/"}>
-              <Image
-                src={logo} // Replace with your logo image URL
-                alt="Logo"
-                height={80}
-                // className="h-10 w-20"
+      <Box
+        className="bg-gray-100 w-screen bg-opacity-70 backdrop-blur-md fixed z-40"
+        sx={{ display: { xs: "none", md: "block" } }}
+      >
+        <Container>
+          <nav>
+            <div className="container flex justify-between items-center">
+              {/* Left Side Logo */}
+              <Link href={"/"}>
+                <Image
+                  src={logo} // Replace with your logo image URL
+                  alt="Logo"
+                  height={80}
+                  // className="h-10 w-20"
+                />
+              </Link>
+
+              {/* Centered Links */}
+              <Routes
+                display={"flex"}
+                icons={"none"}
+                padding={"0"}
+                spacing={"space-x-6"}
               />
-            </Link>
 
-            {/* Centered Links */}
-            <Routes
-              display={"flex"}
-              icons={"none"}
-              padding={"0"}
-              spacing={"space-x-6"}
-            />
-
-            <div className="flex justify-center items-center">
-              {/* Sign-up and Login Buttons */}
-              {isLoggedIn === false ? (
-                <div className="flex space-x-4 items-center">
-                  <Link href={"/signup"}>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
-                      {t("signup")}
-                    </button>
-                  </Link>
-                  <Link href={"/login"}>
-                    <button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full focus:ring focus:ring-gray-200">
-                      {t("login")}
-                    </button>
-                  </Link>
-                </div>
-              ) : (
-                <div>
-                  <IconButton>
-                    <Avatar style={{ width: 30, height: 30 }} />
-                  </IconButton>
-                </div>
-              )}
-              <SettingDrawer />
+              <div className="flex justify-center items-center">
+                {/* Sign-up and Login Buttons */}
+                {isLoggedIn === false ? (
+                  <div className="flex space-x-4 items-center">
+                    <Link href={"/signup"}>
+                      <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
+                        {t("signup")}
+                      </button>
+                    </Link>
+                    <Link href={"/login"}>
+                      <button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full focus:ring focus:ring-gray-200">
+                        {t("login")}
+                      </button>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <IconButton>
+                      <Avatar style={{ width: 30, height: 30 }} />
+                    </IconButton>
+                  </div>
+                )}
+                <SettingDrawer />
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </Container>
       </Box>
 
       {/* mobile screen navigation  */}

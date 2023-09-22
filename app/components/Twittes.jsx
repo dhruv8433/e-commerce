@@ -25,11 +25,11 @@ const Twittes = () => {
     getTwittes();
   }, []);
   return (
-    <div className="bg-blue-200">
+    <div className="twitter">
       <div className="heading flex justify-center py-1">
-        <h1 className="text-2xl font-bold">Our Reviews</h1>
+        <h1 className="text-2xl font-bold">Customer Reviews</h1>
       </div>
-      <hr className="pb-2" />
+      <hr className="pb-2 pt-3" />
       <div className="flex justify-center">
         <div className="md:w-1/2 sm:w-full">
           {/* swiper to show slides using different effects */}
