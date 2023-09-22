@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "Full-Service Cleaner data",
+    "data": [
+      {
+        "id": 591,
+        "image": "cleaning-service-1.jpg",
+        "title": "Home Cleaning",
+        "provider_id": 141,
+        "description": "Professional home cleaning services for a spotless home.",
+        "rating": 4.9,
+        "price": 80,
+        "discounted_price": 70,
+        "offer": 13
+      },
+      {
+        "id": 592,
+        "image": "cleaning-service-2.jpg",
+        "title": "Office Cleaning",
+        "provider_id": 142,
+        "description": "Efficient office cleaning to create a clean work environment.",
+        "rating": 4.8,
+        "price": 60,
+        "discounted_price": 55,
+        "offer": 8
+      },
+      {
+        "id": 593,
+        "image": "cleaning-service-3.jpg",
+        "title": "Carpet Cleaning",
+        "provider_id": 143,
+        "description": "Thorough carpet cleaning for a fresh and clean look.",
+        "rating": 4.7,
+        "price": 100,
+        "discounted_price": 90,
+        "offer": 10
+      },
+      {
+        "id": 594,
+        "image": "cleaning-service-4.jpg",
+        "title": "Window Cleaning",
+        "provider_id": 144,
+        "description": "Spotless window cleaning for clear views.",
+        "rating": 4.8,
+        "price": 50,
+        "discounted_price": 45,
+        "offer": 10
+      },
+      {
+        "id": 595,
+        "image": "cleaning-service-5.jpg",
+        "title": "Deep Cleaning",
+        "provider_id": 145,
+        "description": "Comprehensive deep cleaning services for a sanitized home.",
+        "rating": 4.9,
+        "price": 120,
+        "discounted_price": 110,
+        "offer": 9
+      },
+      {
+        "id": 596,
+        "image": "cleaning-service-6.jpg",
+        "title": "Commercial Cleaning",
+        "provider_id": 146,
+        "description": "Professional commercial cleaning for businesses.",
+        "rating": 4.7,
+        "price": 70,
+        "discounted_price": 65,
+        "offer": 7
+      },
+      {
+        "id": 597,
+        "image": "cleaning-service-7.jpg",
+        "title": "Upholstery Cleaning",
+        "provider_id": 147,
+        "description": "Revitalize your upholstery with expert cleaning.",
+        "rating": 4.9,
+        "price": 90,
+        "discounted_price": 80,
+        "offer": 11
+      },
+      {
+        "id": 598,
+        "image": "cleaning-service-8.jpg",
+        "title": "Tile and Grout Cleaning",
+        "provider_id": 148,
+        "description": "Tile and grout cleaning for a clean and hygienic environment.",
+        "rating": 4.8,
+        "price": 65,
+        "discounted_price": 60,
+        "offer": 8
+      },
+      {
+        "id": 599,
+        "image": "cleaning-service-9.jpg",
+        "title": "Kitchen Cleaning",
+        "provider_id": 149,
+        "description": "Professional kitchen cleaning services for a pristine kitchen.",
+        "rating": 4.9,
+        "price": 75,
+        "discounted_price": 70,
+        "offer": 7
+      },
+      {
+        "id": 600,
+        "image": "cleaning-service-10.jpg",
+        "title": "Outdoor Cleaning",
+        "provider_id": 150,
+        "description": "Outdoor cleaning for a clean and inviting outdoor space.",
+        "rating": 4.7,
+        "price": 45,
+        "discounted_price": 40,
+        "offer": 11
+      }
+    ]
+  }
+  

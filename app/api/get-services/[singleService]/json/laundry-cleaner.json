@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "laundry cleaner data",
+    "data": [
+      {
+        "id": 511,
+        "image": "laundry1.jpg",
+        "title": "Professional Laundry Service",
+        "provider_id": 32,
+        "description": "Expert laundry cleaning services.",
+        "rating": 4.7,
+        "price": 25,
+        "discounted_price": 20,
+        "offer": 20
+      },
+      {
+        "id": 512,
+        "image": "laundry2.jpg",
+        "title": "Dry Cleaning Solutions",
+        "provider_id": 33,
+        "description": "High-quality dry cleaning services.",
+        "rating": 4.9,
+        "price": 30,
+        "discounted_price": 25,
+        "offer": 17
+      },
+      {
+        "id": 513,
+        "image": "laundry3.jpg",
+        "title": "Laundry Pickup & Delivery",
+        "provider_id": 34,
+        "description": "Convenient laundry pickup and delivery.",
+        "rating": 4.8,
+        "price": 20,
+        "discounted_price": 18,
+        "offer": 10
+      },
+      {
+        "id": 514,
+        "image": "laundry4.jpg",
+        "title": "Eco-Friendly Laundry",
+        "provider_id": 35,
+        "description": "Environmentally friendly laundry services.",
+        "rating": 4.6,
+        "price": 28,
+        "discounted_price": 24,
+        "offer": 15
+      },
+      {
+        "id": 515,
+        "image": "laundry5.jpg",
+        "title": "Laundry & Ironing",
+        "provider_id": 36,
+        "description": "Laundry and ironing services for your convenience.",
+        "rating": 4.7,
+        "price": 22,
+        "discounted_price": 20,
+        "offer": 10
+      },
+      {
+        "id": 516,
+        "image": "laundry6.jpg",
+        "title": "Same-Day Laundry",
+        "provider_id": 37,
+        "description": "Quick and efficient same-day laundry.",
+        "rating": 4.8,
+        "price": 35,
+        "discounted_price": 30,
+        "offer": 14
+      },
+      {
+        "id": 517,
+        "image": "laundry7.jpg",
+        "title": "Laundry for Businesses",
+        "provider_id": 38,
+        "description": "Commercial laundry solutions for businesses.",
+        "rating": 4.7,
+        "price": 40,
+        "discounted_price": 35,
+        "offer": 12
+      },
+      {
+        "id": 518,
+        "image": "laundry8.jpg",
+        "title": "Laundry Subscription",
+        "provider_id": 39,
+        "description": "Subscription-based laundry services.",
+        "rating": 4.9,
+        "price": 18,
+        "discounted_price": 15,
+        "offer": 17
+      },
+      {
+        "id": 519,
+        "image": "laundry9.jpg",
+        "title": "Laundry & Alterations",
+        "provider_id": 40,
+        "description": "Laundry and clothing alterations services.",
+        "rating": 4.7,
+        "price": 27,
+        "discounted_price": 23,
+        "offer": 15
+      },
+      {
+        "id": 520,
+        "image": "laundry10.jpg",
+        "title": "Professional Stain Removal",
+        "provider_id": 41,
+        "description": "Specialized stain removal services.",
+        "rating": 4.8,
+        "price": 22,
+        "discounted_price": 19,
+        "offer": 14
+      }
+    ]
+  }
+  

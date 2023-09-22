@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "plumbing service data",
+    "data": [
+      {
+        "id": 561,
+        "image": "leak-repair.jpg",
+        "title": "Leak Repair",
+        "provider_id": 91,
+        "description": "Expert leak repair services for your home or business.",
+        "rating": 4.7,
+        "price": 80,
+        "discounted_price": 70,
+        "offer": 12
+      },
+      {
+        "id": 562,
+        "image": "pipe-installation.jpg",
+        "title": "Pipe Installation",
+        "provider_id": 92,
+        "description": "Professional pipe installation and replacement services.",
+        "rating": 4.8,
+        "price": 120,
+        "discounted_price": 110,
+        "offer": 8
+      },
+      {
+        "id": 563,
+        "image": "drain-cleaning.jpg",
+        "title": "Drain Cleaning",
+        "provider_id": 93,
+        "description": "Efficient drain cleaning and unclogging services.",
+        "rating": 4.6,
+        "price": 60,
+        "discounted_price": 55,
+        "offer": 9
+      },
+      {
+        "id": 564,
+        "image": "water-heater-repair.jpg",
+        "title": "Water Heater Repair",
+        "provider_id": 94,
+        "description": "Quick and reliable water heater repair solutions.",
+        "rating": 4.9,
+        "price": 100,
+        "discounted_price": 90,
+        "offer": 10
+      },
+      {
+        "id": 565,
+        "image": "fixture-installation.jpg",
+        "title": "Fixture Installation",
+        "provider_id": 95,
+        "description": "Professional fixture and faucet installation services.",
+        "rating": 4.8,
+        "price": 70,
+        "discounted_price": 65,
+        "offer": 7
+      },
+      {
+        "id": 566,
+        "image": "sewer-line-repair.jpg",
+        "title": "Sewer Line Repair",
+        "provider_id": 96,
+        "description": "Expert sewer line repair and replacement services.",
+        "rating": 4.7,
+        "price": 150,
+        "discounted_price": 140,
+        "offer": 7
+      },
+      {
+        "id": 567,
+        "image": "toilet-repair.jpg",
+        "title": "Toilet Repair",
+        "provider_id": 97,
+        "description": "Quick and efficient toilet repair services.",
+        "rating": 4.5,
+        "price": 45,
+        "discounted_price": 40,
+        "offer": 11
+      },
+      {
+        "id": 568,
+        "image": "plumbing-inspection.jpg",
+        "title": "Plumbing Inspection",
+        "provider_id": 98,
+        "description": "Comprehensive plumbing inspection services for your property.",
+        "rating": 4.8,
+        "price": 90,
+        "discounted_price": 80,
+        "offer": 11
+      },
+      {
+        "id": 569,
+        "image": "garbage-disposal-repair.jpg",
+        "title": "Garbage Disposal Repair",
+        "provider_id": 99,
+        "description": "Prompt garbage disposal repair and maintenance.",
+        "rating": 4.6,
+        "price": 55,
+        "discounted_price": 50,
+        "offer": 10
+      },
+      {
+        "id": 570,
+        "image": "frozen-pipe-repair.jpg",
+        "title": "Frozen Pipe Repair",
+        "provider_id": 100,
+        "description": "Emergency frozen pipe repair to prevent water damage.",
+        "rating": 4.9,
+        "price": 120,
+        "discounted_price": 110,
+        "offer": 8
+      }
+    ]
+  }
+  

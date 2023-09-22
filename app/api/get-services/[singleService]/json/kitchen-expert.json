@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "kitchen expert service data",
+    "data": [
+      {
+        "id": 571,
+        "image": "kitchen-renovation.jpg",
+        "title": "Kitchen Renovation",
+        "provider_id": 111,
+        "description": "Transform your kitchen with our expert renovation services.",
+        "rating": 4.7,
+        "price": 1500,
+        "discounted_price": 1400,
+        "offer": 7
+      },
+      {
+        "id": 572,
+        "image": "cabinet-installation.jpg",
+        "title": "Cabinet Installation",
+        "provider_id": 112,
+        "description": "Professional cabinet installation and custom design.",
+        "rating": 4.7,
+        "price": 700,
+        "discounted_price": 750,
+        "offer": 6
+      },
+      {
+        "id": 573,
+        "image": "countertop-replacement.jpg",
+        "title": "Countertop Replacement",
+        "provider_id": 113,
+        "description": "Upgrade your kitchen with new countertop installations.",
+        "rating": 4.6,
+        "price": 600,
+        "discounted_price": 550,
+        "offer": 7
+      },
+      {
+        "id": 574,
+        "image": "appliance-repair.jpg",
+        "title": "Appliance Repair",
+        "provider_id": 114,
+        "description": "Prompt appliance repair services for kitchen appliances.",
+        "rating": 4.9,
+        "price": 100,
+        "discounted_price": 90,
+        "offer": 10
+      },
+      {
+        "id": 575,
+        "image": "kitchen-lighting.jpg",
+        "title": "Kitchen Lighting",
+        "provider_id": 115,
+        "description": "Upgrade your kitchen's lighting for a brighter space.",
+        "rating": 4.7,
+        "price": 250,
+        "discounted_price": 230,
+        "offer": 7
+      },
+      {
+        "id": 576,
+        "image": "kitchen-flooring.jpg",
+        "title": "Kitchen Flooring",
+        "provider_id": 116,
+        "description": "Durable and stylish flooring solutions for your kitchen.",
+        "rating": 4.7,
+        "price": 400,
+        "discounted_price": 370,
+        "offer": 7
+      },
+      {
+        "id": 577,
+        "image": "kitchen-painting.jpg",
+        "title": "Kitchen Painting",
+        "provider_id": 117,
+        "description": "Professional kitchen painting to freshen up your space.",
+        "rating": 4.5,
+        "price": 300,
+        "discounted_price": 270,
+        "offer": 6
+      },
+      {
+        "id": 577,
+        "image": "kitchen-remodel.jpg",
+        "title": "Kitchen Remodel",
+        "provider_id": 117,
+        "description": "Comprehensive kitchen remodeling services.",
+        "rating": 4.7,
+        "price": 2000,
+        "discounted_price": 1750,
+        "offer": 7
+      },
+      {
+        "id": 579,
+        "image": "sink-installation.jpg",
+        "title": "Sink Installation",
+        "provider_id": 119,
+        "description": "Expert sink installation and plumbing services.",
+        "rating": 4.6,
+        "price": 150,
+        "discounted_price": 140,
+        "offer": 6
+      },
+      {
+        "id": 580,
+        "image": "kitchen-organization.jpg",
+        "title": "Kitchen Organization",
+        "provider_id": 120,
+        "description": "Get your kitchen organized and clutter-free.",
+        "rating": 4.9,
+        "price": 350,
+        "discounted_price": 320,
+        "offer": 9
+      }
+    ]
+  }
+  

@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "pest control service data",
+    "data": [
+      {
+        "id": 551,
+        "image": "termite-control.jpg",
+        "title": "Termite Control",
+        "provider_id": 72,
+        "description": "Effective termite control services.",
+        "rating": 4.7,
+        "price": 120,
+        "discounted_price": 110,
+        "offer": 8
+      },
+      {
+        "id": 552,
+        "image": "rodent-control.jpg",
+        "title": "Rodent Control",
+        "provider_id": 73,
+        "description": "Get rid of rodents with our expert services.",
+        "rating": 4.6,
+        "price": 80,
+        "discounted_price": 70,
+        "offer": 12
+      },
+      {
+        "id": 553,
+        "image": "bed-bug-control.jpg",
+        "title": "Bed Bug Control",
+        "provider_id": 74,
+        "description": "Comprehensive bed bug control solutions.",
+        "rating": 4.9,
+        "price": 50,
+        "discounted_price": 45,
+        "offer": 10
+      },
+      {
+        "id": 554,
+        "image": "mosquito-control.jpg",
+        "title": "Mosquito Control",
+        "provider_id": 75,
+        "description": "Keep your home mosquito-free.",
+        "rating": 4.8,
+        "price": 150,
+        "discounted_price": 140,
+        "offer": 7
+      },
+      {
+        "id": 555,
+        "image": "ant-control.jpg",
+        "title": "Ant Control",
+        "provider_id": 76,
+        "description": "Effective ant control services.",
+        "rating": 4.9,
+        "price": 200,
+        "discounted_price": 180,
+        "offer": 10
+      },
+      {
+        "id": 556,
+        "image": "cockroach-control.jpg",
+        "title": "Cockroach Control",
+        "provider_id": 77,
+        "description": "Get rid of cockroaches for good.",
+        "rating": 4.7,
+        "price": 60,
+        "discounted_price": 55,
+        "offer": 8
+      },
+      {
+        "id": 557,
+        "image": "spider-control.jpg",
+        "title": "Spider Control",
+        "provider_id": 78,
+        "description": "Safe and effective spider control solutions.",
+        "rating": 4.9,
+        "price": 70,
+        "discounted_price": 65,
+        "offer": 7
+      },
+      {
+        "id": 558,
+        "image": "flea-control.jpg",
+        "title": "Flea Control",
+        "provider_id": 79,
+        "description": "Keep your pets and home free from fleas.",
+        "rating": 4.8,
+        "price": 180,
+        "discounted_price": 160,
+        "offer": 11
+      },
+      {
+        "id": 559,
+        "image": "bee-control.jpg",
+        "title": "Bee Control",
+        "provider_id": 80,
+        "description": "Expert bee removal and control.",
+        "rating": 4.7,
+        "price": 40,
+        "discounted_price": 35,
+        "offer": 12
+      },
+      {
+        "id": 560,
+        "image": "wildlife-control.jpg",
+        "title": "Wildlife Control",
+        "provider_id": 81,
+        "description": "Safe removal of unwanted wildlife.",
+        "rating": 4.9,
+        "price": 250,
+        "discounted_price": 230,
+        "offer": 8
+      }
+    ]
+  }
+  

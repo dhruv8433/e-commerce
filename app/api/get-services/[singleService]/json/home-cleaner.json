@@ -1,0 +1,116 @@
+{
+  "success": true,
+  "message": "home provider data",
+  "data": [
+    {
+      "id": 501,
+      "image": "https://media.istockphoto.com/id/155432541/photo/plumber-hands-holding-wrench-and-fixing-a-sink-in-bathroom.webp?s=2048x2048&w=is&k=20&c=JxWFyWE4EH-tWRUPgx6mKepILs4iSDKl99I60sKQGIw=",
+      "title": "Plumbing Services",
+      "provider_id": 22,
+      "description": "Professional plumbing services for your home.",
+      "rating": 4.8,
+      "price": 150,
+      "discounted_price": 135,
+      "offer": 10
+    },
+    {
+      "id": 502,
+      "image": "https://media.istockphoto.com/id/1345962789/photo/electrician-engineer-uses-a-multimeter-to-test-the-electrical-installation-and-power-line.webp?s=2048x2048&w=is&k=20&c=HpGhfe5H-xVteIqy9Pu9nRkhAHxttl8vjnRG0S66um0=",
+      "title": "Electrical Repairs",
+      "provider_id": 23,
+      "description": "Expert electrical repair services.",
+      "rating": 4.9,
+      "price": 180,
+      "discounted_price": 160,
+      "offer": 11
+    },
+    {
+      "id": 503,
+      "image": "https://media.istockphoto.com/id/1365606525/photo/shot-of-a-bucket-of-cleaning-supplies.webp?s=2048x2048&w=is&k=20&c=cOSg6XJCpRNh6bBwEY6qN3Zo-CJLK38Vm4vCkDHcbjM=",
+      "title": "House Cleaning",
+      "provider_id": 24,
+      "description": "Thorough house cleaning services.",
+      "rating": 4.7,
+      "price": 120,
+      "discounted_price": 110,
+      "offer": 8
+    },
+    {
+      "id": 504,
+      "image": "https://media.istockphoto.com/id/1166203849/photo/garden-worker-trimming-plants.webp?s=2048x2048&w=is&k=20&c=ii49G2qSu4WSZ1iU_kQJyGgyUop26saP1AMO0DhP5aI=",
+      "title": "Gardening Services",
+      "provider_id": 25,
+      "description": "Professional gardening and landscaping.",
+      "rating": 4.6,
+      "price": 200,
+      "discounted_price": 180,
+      "offer": 10
+    },
+    {
+      "id": 505,
+      "image": "https://media.istockphoto.com/id/958154544/photo/young-asian-happy-woman-painting-interior-wall.webp?s=2048x2048&w=is&k=20&c=cl3KlNFrmm4lE4sxMZyj8UTqcZjWQhrC3ACuojb0_u0=",
+      "title": "Home Painting",
+      "provider_id": 26,
+      "description": "Quality home painting services.",
+      "rating": 4.7,
+      "price": 250,
+      "discounted_price": 230,
+      "offer": 8
+    },
+    {
+      "id": 506,
+      "image": "https://media.istockphoto.com/id/1309386180/photo/repair-of-dishwashers-repairman-repairing-dishwasher-in-kitchen.jpg?s=1024x1024&w=is&k=20&c=HnSuJ0xq3xyGUs47vyffOzzh6ExL2Cr-HJLW1__vWQE=",
+      "title": "Appliance Repairs",
+      "provider_id": 27,
+      "description": "Appliance repair specialists.",
+      "rating": 4.8,
+      "price": 170,
+      "discounted_price": 155,
+      "offer": 9
+    },
+    {
+      "id": 507,
+      "image": "https://media.istockphoto.com/id/823328086/photo/new-roof-installation.webp?s=2048x2048&w=is&k=20&c=_ojORPOqs9Yu9GI-WJW3ZJ8hYbWJsqPWEfuKRvxzy-o=",
+      "title": "Roofing Services",
+      "provider_id": 28,
+      "description": "Roof repair and installation.",
+      "rating": 4.7,
+      "price": 280,
+      "discounted_price": 250,
+      "offer": 11
+    },
+    {
+      "id": 508,
+      "image": "https://media.istockphoto.com/id/1061173208/photo/young-carpenter-using-sander-while-working-on-a-piece-of-wood.webp?s=2048x2048&w=is&k=20&c=QuOBvKL_XmA8_8rerPou32TcObllGxoIJc2E1JvCDEY=",
+      "title": "Carpentry Work",
+      "provider_id": 29,
+      "description": "Skilled carpenters for various projects.",
+      "rating": 4.9,
+      "price": 190,
+      "discounted_price": 175,
+      "offer": 8
+    },
+    {
+      "id": 509,
+      "image": "https://media.istockphoto.com/id/1368514998/photo/hand-adjusting-temperature-on-air-conditioner.jpg?s=1024x1024&w=is&k=20&c=ytU1_PVANLq-sipWr6zQl4EuBtcmwasGLQ52q_gy2Ow=",
+      "title": "Air Conditioning",
+      "provider_id": 30,
+      "description": "AC repair and maintenance services.",
+      "rating": 4.7,
+      "price": 160,
+      "discounted_price": 145,
+      "offer": 9
+    },
+    {
+      "id": 510,
+      "image": "https://media.istockphoto.com/id/485624142/photo/architects-interior-designer-hands-working-with-tablet-computer-material-sample.jpg?s=2048x2048&w=is&k=20&c=D-vhRa9c0cK5bJSKvbL1tRK1L7UqyVRKUyJuwylAe8A=",
+      "title": "Interior Design",
+      "provider_id": 31,
+      "description": "Creative interior design solutions.",
+      "rating": 4.8,
+      "price": 300,
+      "discounted_price": 280,
+      "offer": 7
+    }
+  ]
+}

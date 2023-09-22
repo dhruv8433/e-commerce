@@ -1,0 +1,116 @@
+{
+    "success": true,
+    "message": "electric service data",
+    "data": [
+        {
+            "id": 531,
+            "image": "wiring.jpg",
+            "title": "Wiring Installation",
+            "provider_id": 52,
+            "description": "Expert electrical wiring installation.",
+            "rating": 4.8,
+            "price": 120,
+            "discounted_price": 110,
+            "offer": 8
+        },
+        {
+            "id": 532,
+            "image": "lighting.jpg",
+            "title": "Lighting Installation",
+            "provider_id": 53,
+            "description": "Installation of indoor and outdoor lighting.",
+            "rating": 4.7,
+            "price": 80,
+            "discounted_price": 70,
+            "offer": 12
+        },
+        {
+            "id": 533,
+            "image": "outlets.jpg",
+            "title": "Outlet Repair",
+            "provider_id": 54,
+            "description": "Quick and reliable outlet repair services.",
+            "rating": 4.9,
+            "price": 50,
+            "discounted_price": 45,
+            "offer": 10
+        },
+        {
+            "id": 534,
+            "image": "generator.jpg",
+            "title": "Generator Installation",
+            "provider_id": 55,
+            "description": "Installation of backup generators for homes.",
+            "rating": 4.8,
+            "price": 150,
+            "discounted_price": 140,
+            "offer": 7
+        },
+        {
+            "id": 535,
+            "image": "solar-panels.jpg",
+            "title": "Solar Panel Installation",
+            "provider_id": 56,
+            "description": "Environmentally friendly solar panel installations.",
+            "rating": 4.9,
+            "price": 200,
+            "discounted_price": 180,
+            "offer": 10
+        },
+        {
+            "id": 536,
+            "image": "circuit-breaker.jpg",
+            "title": "Circuit Breaker Repair",
+            "provider_id": 57,
+            "description": "Repair and replacement of circuit breakers.",
+            "rating": 4.7,
+            "price": 60,
+            "discounted_price": 55,
+            "offer": 8
+        },
+        {
+            "id": 537,
+            "image": "electrical-inspection.jpg",
+            "title": "Electrical Inspection",
+            "provider_id": 58,
+            "description": "Thorough electrical safety inspections.",
+            "rating": 4.9,
+            "price": 70,
+            "discounted_price": 65,
+            "offer": 7
+        },
+        {
+            "id": 538,
+            "image": "rewiring.jpg",
+            "title": "Rewiring Services",
+            "provider_id": 59,
+            "description": "Complete home rewiring services.",
+            "rating": 4.8,
+            "price": 180,
+            "discounted_price": 160,
+            "offer": 11
+        },
+        {
+            "id": 539,
+            "image": "ceiling-fans.jpg",
+            "title": "Ceiling Fan Installation",
+            "provider_id": 60,
+            "description": "Ceiling fan installation for improved ventilation.",
+            "rating": 4.7,
+            "price": 40,
+            "discounted_price": 35,
+            "offer": 12
+        },
+        {
+            "id": 540,
+            "image": "smart-home.jpg",
+            "title": "Smart Home Integration",
+            "provider_id": 61,
+            "description": "Make your home smarter with automation.",
+            "rating": 4.9,
+            "price": 250,
+            "discounted_price": 230,
+            "offer": 8
+        }
+    ]
+}

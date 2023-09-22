@@ -80,7 +80,7 @@ export async function POST(request) {
         },
         {
           id: 27,
-          title: `testing plumbing`,
+          title: `plumbing`,
           available: true,
           rating: 3.9,
           order_complted: 30,

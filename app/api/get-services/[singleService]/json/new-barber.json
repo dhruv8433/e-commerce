@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "message": "barber service data",
+    "data": [
+      {
+        "id": 521,
+        "image": "haircut.jpg",
+        "title": "Haircut",
+        "provider_id": 42,
+        "description": "Get a trendy haircut at our barbershop.",
+        "rating": 4.6,
+        "price": 25,
+        "discounted_price": 22,
+        "offer": 12
+      },
+      {
+        "id": 522,
+        "image": "beard-trim.jpg",
+        "title": "Beard Trim",
+        "provider_id": 43,
+        "description": "Professional beard trimming services.",
+        "rating": 4.8,
+        "price": 15,
+        "discounted_price": 12,
+        "offer": 20
+      },
+      {
+        "id": 523,
+        "image": "hairstyling.jpg",
+        "title": "Hairstyling",
+        "provider_id": 44,
+        "description": "Styling for all hair types and lengths.",
+        "rating": 4.9,
+        "price": 30,
+        "discounted_price": 27,
+        "offer": 10
+      },
+      {
+        "id": 524,
+        "image": "shave.jpg",
+        "title": "Shave",
+        "provider_id": 45,
+        "description": "Traditional close shave experience.",
+        "rating": 4.7,
+        "price": 18,
+        "discounted_price": 15,
+        "offer": 17
+      },
+      {
+        "id": 525,
+        "image": "facial.jpg",
+        "title": "Facial Treatment",
+        "provider_id": 46,
+        "description": "Relaxing facial treatments for men.",
+        "rating": 4.7,
+        "price": 28,
+        "discounted_price": 25,
+        "offer": 11
+      },
+      {
+        "id": 526,
+        "image": "coloring.jpg",
+        "title": "Hair Coloring",
+        "provider_id": 47,
+        "description": "Expert hair coloring services.",
+        "rating": 4.8,
+        "price": 35,
+        "discounted_price": 30,
+        "offer": 14
+      },
+      {
+        "id": 527,
+        "image": "head-massage.jpg",
+        "title": "Head Massage",
+        "provider_id": 48,
+        "description": "Relaxing head massage at the barbershop.",
+        "rating": 4.7,
+        "price": 20,
+        "discounted_price": 18,
+        "offer": 10
+      },
+      {
+        "id": 528,
+        "image": "trim-and-style.jpg",
+        "title": "Trim & Style",
+        "provider_id": 49,
+        "description": "Trimming and styling for a fresh look.",
+        "rating": 4.9,
+        "price": 28,
+        "discounted_price": 25,
+        "offer": 11
+      },
+      {
+        "id": 529,
+        "image": "beard-design.jpg",
+        "title": "Beard Design",
+        "provider_id": 50,
+        "description": "Creative beard designs and styling.",
+        "rating": 4.7,
+        "price": 20,
+        "discounted_price": 18,
+        "offer": 10
+      },
+      {
+        "id": 530,
+        "image": "kids-haircut.jpg",
+        "title": "Kids Haircut",
+        "provider_id": 51,
+        "description": "Child-friendly haircuts for kids of all ages.",
+        "rating": 4.6,
+        "price": 15,
+        "discounted_price": 12,
+        "offer": 20
+      }
+    ]
+  }
+  
