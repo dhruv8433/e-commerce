@@ -1,16 +1,17 @@
-import { company_name } from '@/app/config/config'
-import React from 'react'
+import { company_name } from "@/app/config/config";
+import React from "react";
+import Providers from "./Providers";
 
 export const metadata = {
-  title: `Provider | ${company_name}` 
-}
+  title: `Provider | ${company_name}`,
+};
 
 const page = () => {
   return (
-    <div className='items-center h-screen flex justify-center'>
-        Providers
+    <div>
+      <Providers />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

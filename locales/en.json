@@ -24,7 +24,7 @@
         "welcome": "Welcome to eRequirement",
         "one_stop": "Your one-stop solution for all your requirements.",
         "get_start": "Get Started",
-        "top_provider": "Our Top Rated Providers",
+        "top_provider": "OUR TOP RATED PROVIDERS",
         "deals": "DEALS OF DAY"
     },
     "signup": {
@@ -41,5 +41,18 @@
         "password": "Password",
         "signup": "Sign Up",
         "no_account": "Don't Have Account"
+    },
+    "footer": {
+        "one_stop": "Your one-stop solution for all your requirements.",
+        "erequirement": "eRequirement",
+        "follow": "Follow Us",
+        "quick_links": "Quick Links",
+        "home": "Home",
+        "about": "About",
+        "provider": "Providers",
+        "contact": "Contact Us",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email"
     }
 }

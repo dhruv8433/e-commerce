@@ -23,7 +23,9 @@
     "home_ads": {
         "welcome": "स्वागत है eRequirement में",
         "one_stop": "आपकी सभी आवश्यकताओं के लिए आपका एक-स्टॉप समाधान।",
-        "get_start": "शुरू करें"
+        "get_start": "शुरू करें",
+        "top_provider": "हमारे शीर्ष मूल्यांकन वाले प्रदानकर्ता",
+        "deals": "दिन के सौदे"
     },
     "signup": {
         "signup": "साइन अप करें",
@@ -39,5 +41,18 @@
         "password": "पासवर्ड",
         "signup": "साइन अप करें",
         "no_account": "खाता नहीं है?"
+    },
+    "footer": {
+        "one_stop": "आपकी सभी आवश्यकताओं का एक-स्टॉप समाधान।",
+        "erequirement": "eRequirement",
+        "follow": "हमें फॉलो करें",
+        "quick_links": "त्वरित लिंक",
+        "home": "होम",
+        "about": "हमारे बारे में",
+        "provider": "प्रदाता",
+        "contact": "संपर्क करें",
+        "address": "पता",
+        "phone": "फ़ोन",
+        "email": "ईमेल"
     }
 }

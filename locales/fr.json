@@ -23,7 +23,9 @@
     "home_ads": {
         "welcome": "Bienvenue sur eRequirement",
         "one_stop": "Votre solution unique pour tous vos besoins.",
-        "get_start": "Commencer"
+        "get_start": "Commencer",
+        "top_provider": "NOS PRESTATAIRES LES MIEUX NOTÉS",
+        "deals": "OFFRES DU JOUR"
     },
     "signup": {
         "signup": "S'inscrire",
@@ -39,5 +41,18 @@
         "password": "Mot de passe",
         "signup": "S'inscrire",
         "no_account": "Pas encore de compte ?"
+    },
+    "footer": {
+        "one_stop": "Votre solution unique pour toutes vos exigences.",
+        "erequirement": "eRequirement",
+        "follow": "Suivez-nous",
+        "quick_links": "Liens rapides",
+        "home": "Accueil",
+        "about": "À propos",
+        "provider": "Fournisseurs",
+        "contact": "Contactez-nous",
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "email": "E-mail"
     }
 }
