@@ -305,7 +305,7 @@ export async function POST(request) {
             },
           ],
         },
-        twittes: {
+        tweets: {
           id: 56,
           title: `Twittes`,
           data: [

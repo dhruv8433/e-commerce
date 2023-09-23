@@ -1,0 +1,13 @@
+{
+    "id": 29,
+    "title": "Car Provider",
+    "available": true,
+    "rating": 4.0,
+    "order_completed": 18,
+    "banner": "https://media.istockphoto.com/id/1273682054/photo/car-service-worker-applying-nano-coating-on-a-car-detail.webp?s=2048x2048&w=is&k=20&c=6kkQ_RwFA0r56K0EHJETUot2VSvNVsquwtYbwT8xk6E=",
+    "logo": "https://media.istockphoto.com/id/1036660952/vector/auto-service-sign-car-repair-logo-eps.webp?s=2048x2048&w=is&k=20&c=VWxhPgt1o_I6lWxdn9231_UFWVPX3r8WDoZd1nneX0Y=",
+    "address": "Schwarzenberg, Switzerland, 6867",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime in eum labore officiis id. Expedita quaerat molestias voluptatum nisi incidunt blanditiis quidem dolorem quisquam possimus esse accusantium voluptatibus debitis, corrupti repellat quam numquam aliquam voluptates, quis eveniet fugiat itaque earum eos reprehenderit laborum. Accusantium quo numquam eveniet eos quod!",
+    "slug": "car-provider"
+  }
+  

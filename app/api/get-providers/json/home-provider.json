@@ -1,0 +1,12 @@
+{
+    "id": 21,
+    "title": "Home Cleaner",
+    "available": true,
+    "rating": 4.5,
+    "order_complted": 10,
+    "banner": "https://media.istockphoto.com/id/863454098/photo/woman-cleaning-with-a-spray-detergent.webp?s=2048x2048&w=is&k=20&c=v-y7ZrJRnJUE4CZYn9-jP8hnJj39dzMYA0qAVK0m5Zo=",
+    "logo": "https://media.istockphoto.com/id/1200097176/vector/cleaning-service-vector-icon.webp?s=2048x2048&w=is&k=20&c=PkoZzpDaqCeb_b56674CqKbj2PY4PO0BHyOU6Xf17Pg=",
+    "address": "Schwarzenberg, Switzerland, 6867",
+    "description": "We offer a comprehensive range of home services to cater to all your needs. Whether you're facing plumbing issues, electrical problems, or require general maintenance, our skilled technicians are here to help. We understand that your home is your sanctuary, and we are committed to ensuring it remains in top condition.At our home service company, we believe in a customer-centric approach. Your satisfaction is our ultimate goal. We listen to your needs, provide transparent solutions, and ensure that the work is completed to your satisfaction. We take pride in building lasting relationships with our client",
+    "slug": "home-cleaner"
+}

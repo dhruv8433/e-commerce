@@ -1,0 +1,13 @@
+{
+    "id": 25,
+    "title": "Electric",
+    "available": true,
+    "rating": 4.3,
+    "order_completed": 49,
+    "banner": "https://media.istockphoto.com/id/1049775258/photo/smiling-handsome-electrician-repairing-electrical-box-with-pliers-in-corridor-and-looking-at.webp?s=2048x2048&w=is&k=20&c=2MfJrDttEgalp7h1BQNUi8XZSgjKUH0dONnALk8QgN4=",
+    "logo": "https://media.istockphoto.com/id/1032150246/vector/power-lightning-logo-icon-vector-electric-fast-thunder-bolt-symbol-isolated-on-transparent.webp?s=2048x2048&w=is&k=20&c=lSNuZ05BmYDg1LyIFqC_m-xqWLhGH6v2eVKk8VtFgFM=",
+    "address": "Schwarzenberg, Switzerland, 6867",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime in eum labore officiis id. Expedita quaerat molestias voluptatum nisi incidunt blanditiis quidem dolorem quisquam possimus esse accusantium voluptatibus debitis, corrupti repellat quam numquam aliquam voluptates, quis eveniet fugiat itaque earum eos reprehenderit laborum. Accusantium quo numquam eveniet eos quod!",
+    "slug": "electric"
+  }
+  

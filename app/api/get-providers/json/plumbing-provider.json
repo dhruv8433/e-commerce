@@ -1,0 +1,13 @@
+{
+    "id": 27,
+    "title": "Plumbing",
+    "available": true,
+    "rating": 3.9,
+    "order_completed": 30,
+    "banner": "https://media.istockphoto.com/id/1339613829/photo/plumber-at-work-in-a-bathroom-plumbing-repair-service-assemble-and-install-concept.webp?s=2048x2048&w=is&k=20&c=VtlTqDmKRNb63hSsulMTZnxpH9fkMitsqapsMfkEAkw=",
+    "logo": "https://media.istockphoto.com/id/1026488930/vector/plumbing-water-with-initial-letter-p-logo-design-template.webp?s=2048x2048&w=is&k=20&c=yYj3mpKDNXoAW6r9ASyjbPaNRCMoLo7h5q61w3QPR9g=",
+    "address": "Schwarzenberg, Switzerland, 6867",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime in eum labore officiis id. Expedita quaerat molestias voluptatum nisi incidunt blanditiis quidem dolorem quisquam possimus esse accusantium voluptatibus debitis, corrupti repellat quam numquam aliquam voluptates, quis eveniet fugiat itaque earum eos reprehenderit laborum. Accusantium quo numquam eveniet eos quod!",
+    "slug": "testing-plumbing"
+  }
+  

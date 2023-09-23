@@ -4,7 +4,7 @@
     "data": [
         {
             "id": 531,
-            "image": "wiring.jpg",
+            "image": "https://media.istockphoto.com/id/1165561132/photo/electrician-working-at-electric-panel.webp?s=2048x2048&w=is&k=20&c=c4kZZnk21SM9KeKxW44ltx9y2NZPS6OlMXz_vLdo4YU=",
             "title": "Wiring Installation",
             "provider_id": 52,
             "description": "Expert electrical wiring installation.",
@@ -15,7 +15,7 @@
         },
         {
             "id": 532,
-            "image": "lighting.jpg",
+            "image": "https://media.istockphoto.com/id/1472464806/photo/decorative-antique-edison-style-filament-light-bulbs-hanging-an-electrician-is-installing.webp?s=2048x2048&w=is&k=20&c=YQLI3f-fmpv3hy2WeVDvLR6ny_bNrHiHfub1ijPCR3Y=",
             "title": "Lighting Installation",
             "provider_id": 53,
             "description": "Installation of indoor and outdoor lighting.",
@@ -26,7 +26,7 @@
         },
         {
             "id": 533,
-            "image": "outlets.jpg",
+            "image": "https://media.istockphoto.com/id/1015452484/photo/home-electrical-system.webp?s=2048x2048&w=is&k=20&c=WMG_n6Tq-8X-2_7UrBeT7_v1nX1Oeg-zhvRzY41tI4Y=",
             "title": "Outlet Repair",
             "provider_id": 54,
             "description": "Quick and reliable outlet repair services.",
@@ -37,7 +37,7 @@
         },
         {
             "id": 534,
-            "image": "generator.jpg",
+            "image": "https://media.istockphoto.com/id/1367493005/photo/electrician-installing-solar-panel-system-wiring-inverter-and-electric-box.webp?s=2048x2048&w=is&k=20&c=vlT9afcu744X0uytVHqFG492l75IecvuVwNrRnAlX_c=",
             "title": "Generator Installation",
             "provider_id": 55,
             "description": "Installation of backup generators for homes.",
@@ -48,7 +48,7 @@
         },
         {
             "id": 535,
-            "image": "solar-panels.jpg",
+            "image": "https://media.istockphoto.com/id/1405880267/photo/two-engineers-installing-solar-panels-on-roof.jpg?s=2048x2048&w=is&k=20&c=GemIAZXodFYZrSvd5pvUMFtEVvuk21kv4_FajEw-sVg=",
             "title": "Solar Panel Installation",
             "provider_id": 56,
             "description": "Environmentally friendly solar panel installations.",
@@ -59,7 +59,7 @@
         },
         {
             "id": 536,
-            "image": "circuit-breaker.jpg",
+            "image": "https://media.istockphoto.com/id/1165561132/photo/electrician-working-at-electric-panel.webp?s=2048x2048&w=is&k=20&c=c4kZZnk21SM9KeKxW44ltx9y2NZPS6OlMXz_vLdo4YU=",
             "title": "Circuit Breaker Repair",
             "provider_id": 57,
             "description": "Repair and replacement of circuit breakers.",
@@ -70,7 +70,7 @@
         },
         {
             "id": 537,
-            "image": "electrical-inspection.jpg",
+            "image": "https://media.istockphoto.com/id/824602916/photo/young-female-maintenance-engineer-testing-voltage-with-digital-multimeter.webp?s=2048x2048&w=is&k=20&c=CANWgeGY4crJ9j_jkdVv-8fV3jClGF5r3TSixCBeGCA=",
             "title": "Electrical Inspection",
             "provider_id": 58,
             "description": "Thorough electrical safety inspections.",
@@ -81,7 +81,7 @@
         },
         {
             "id": 538,
-            "image": "rewiring.jpg",
+            "image": "https://media.istockphoto.com/id/1097680264/photo/electricians-hands-testing-current-electric-in-control-panel.webp?s=2048x2048&w=is&k=20&c=BbN8_Cp4hGj-PJfilNOn34W89CQvAKeiRozln3TVPiI=",
             "title": "Rewiring Services",
             "provider_id": 59,
             "description": "Complete home rewiring services.",
@@ -92,7 +92,7 @@
         },
         {
             "id": 539,
-            "image": "ceiling-fans.jpg",
+            "image": "https://media.istockphoto.com/id/865382870/photo/electrician-fixing-a-ceiling-fan.webp?s=2048x2048&w=is&k=20&c=eln7ARbvnMmlOB2CnSA24NA-FJpHAkt2cQQkW8L_9uI=",
             "title": "Ceiling Fan Installation",
             "provider_id": 60,
             "description": "Ceiling fan installation for improved ventilation.",
@@ -103,7 +103,7 @@
         },
         {
             "id": 540,
-            "image": "smart-home.jpg",
+            "image": "https://media.istockphoto.com/id/1370886491/photo/smart-home-control-in-living-room.webp?s=2048x2048&w=is&k=20&c=HSuxBn4rWdYzs3ZlAupPl0PxlOkZvO6qRt8iiKliikE=",
             "title": "Smart Home Integration",
             "provider_id": 61,
             "description": "Make your home smarter with automation.",

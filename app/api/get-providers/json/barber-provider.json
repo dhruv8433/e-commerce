@@ -1,0 +1,13 @@
+{
+    "id": 24,
+    "title": "New Barber",
+    "available": true,
+    "rating": 4.0,
+    "order_completed": 58,
+    "banner": "https://media.istockphoto.com/id/640274128/photo/barber-using-scissors-and-comb.webp?s=2048x2048&w=is&k=20&c=JfHrRbaY4VFXB3S3e-ZdNneYAoakxw0E3OK8egtEYPQ=",
+    "logo": "https://media.istockphoto.com/id/1387780759/vector/barbershop-vector.webp?s=2048x2048&w=is&k=20&c=L2EMZicbO8KMMVMs0pM48pO9Jk1r01FI9xTOFpeXX8g=",
+    "address": "Schwarzenberg, Switzerland, 6867",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime in eum labore officiis id. Expedita quaerat molestias voluptatum nisi incidunt blanditiis quidem dolorem quisquam possimus esse accusantium voluptatibus debitis, corrupti repellat quam numquam aliquam voluptates, quis eveniet fugiat itaque earum eos reprehenderit laborum. Accusantium quo numquam eveniet eos quod!",
+    "slug": "new-barber"
+  }
+  

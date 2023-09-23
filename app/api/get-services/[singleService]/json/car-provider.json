@@ -4,7 +4,7 @@
     "data": [
       {
         "id": 581,
-        "image": "car-mechanic.jpg",
+        "image": "https://media.istockphoto.com/id/1191778420/photo/young-auto-mechanic-cleaning-hands-after-working-on-car-engine-in-a-garage.webp?s=2048x2048&w=is&k=20&c=oJmiJRESGbx6ymNt5qtffYVQ9P1v3PgmCZEbDvPaUc4=",
         "title": "Car Mechanic",
         "provider_id": 131,
         "description": "Expert car mechanics for all your car repair needs.",
@@ -15,7 +15,7 @@
       },
       {
         "id": 582,
-        "image": "car-wash.jpg",
+        "image": "https://media.istockphoto.com/id/1128018249/photo/the-car-wash.webp?s=2048x2048&w=is&k=20&c=Uek5vie1YrbNVLD6MrIw1rdV5swW7kG4hmgm5YsIWxU=",
         "title": "Car Wash",
         "provider_id": 132,
         "description": "Professional car washing and detailing services.",
@@ -26,7 +26,7 @@
       },
       {
         "id": 583,
-        "image": "car-painting.jpg",
+        "image": "https://media.istockphoto.com/id/1337272787/photo/automobile-technician-painting-auto-with-spraying-gun.webp?s=2048x2048&w=is&k=20&c=c7lvn-IknsomDhwgxEgQOR5E47Rt9UcI3-jLzeU58a0=",
         "title": "Car Painting",
         "provider_id": 133,
         "description": "High-quality car painting and customization.",
@@ -37,7 +37,7 @@
       },
       {
         "id": 584,
-        "image": "tire-replacement.jpg",
+        "image": "https://media.istockphoto.com/id/846758642/photo/tire-changing-at-car-service.webp?s=2048x2048&w=is&k=20&c=oNB50_wPphWKsFyQMW4E-R_GswDOXTXosdrWS_WAvQA=",
         "title": "Tire Replacement",
         "provider_id": 134,
         "description": "Replace old tires with new ones for improved safety.",
@@ -48,7 +48,7 @@
       },
       {
         "id": 585,
-        "image": "oil-change.jpg",
+        "image": "https://media.istockphoto.com/id/1212092642/photo/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.webp?s=2048x2048&w=is&k=20&c=n01ZTQgCGUX0oqbfundLYqL81LbYC2LjoDPnn-8q6y8=",
         "title": "Oil Change",
         "provider_id": 135,
         "description": "Efficient oil change services to keep your car running smoothly.",
@@ -59,7 +59,7 @@
       },
       {
         "id": 586,
-        "image": "car-towing.jpg",
+        "image": "https://media.istockphoto.com/id/1413409340/photo/car-towing-worker-securing-a-vehicle-on-his-truck.webp?s=2048x2048&w=is&k=20&c=k1CGdic6QuIee00FBSBIENKzVYewWexcYp6rnU1w9T0=",
         "title": "Car Towing",
         "provider_id": 136,
         "description": "24/7 car towing and roadside assistance.",
@@ -70,7 +70,7 @@
       },
       {
         "id": 587,
-        "image": "car-inspection.jpg",
+        "image": "https://media.istockphoto.com/id/1349412663/photo/supervisor-at-a-car-workshop-checking-tablet-while-mechanic-works-at-background-on-a-car.webp?s=2048x2048&w=is&k=20&c=nJPLr1k860uBdRkGulBEqDkNhOt1Z9lkbgOOQr7WsjM=",
         "title": "Car Inspection",
         "provider_id": 137,
         "description": "Thorough car inspection and diagnostic services.",
@@ -81,7 +81,7 @@
       },
       {
         "id": 588,
-        "image": "auto-body-repair.jpg",
+        "image": "https://media.istockphoto.com/id/1387759698/photo/hand-of-car-mechanic-with-wrench-auto-repair-garage-mechanic-works-on-the-engine-of-the-car.jpg?s=2048x2048&w=is&k=20&c=e8dba8xAoFJNlYLi1Dyq_A2NC8PnnNnPLr_q8FhsG7c=",
         "title": "Auto Body Repair",
         "provider_id": 138,
         "description": "Repair car body damage with precision.",
@@ -92,7 +92,7 @@
       },
       {
         "id": 589,
-        "image": "car-ac-repair.jpg",
+        "image": "https://media.istockphoto.com/id/1288971827/photo/car-detailing-service.webp?s=2048x2048&w=is&k=20&c=n-qrBFOIWoirwfxFiIVWWVs6cGN0pSHgbQGLb2yPZqE=",
         "title": "Car AC Repair",
         "provider_id": 139,
         "description": "Reliable car air conditioning repair services.",
@@ -103,7 +103,7 @@
       },
       {
         "id": 590,
-        "image": "engine-repair.jpg",
+        "image": "https://media.istockphoto.com/id/1165311626/photo/mechanic-using-a-ratchet-wrench.webp?s=2048x2048&w=is&k=20&c=55Ck8H4bL94KiK0ZAjVwUYLQsHc9lNNmHmNKv9wyHro=",
         "title": "Engine Repair",
         "provider_id": 140,
         "description": "Skilled mechanics for comprehensive engine repair.",
