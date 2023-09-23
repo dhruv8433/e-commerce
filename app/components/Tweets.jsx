@@ -13,16 +13,16 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 // twitter section
-const Twittes = () => {
+const Tweets = () => {
   const [twitte, setTwitte] = useState([]);
 
-  async function getTwittes() {
+  async function getTweets() {
     const response = await homeService();
-    setTwitte(response.data.twittes.data);
+    setTwitte(response.data.tweets.data);
   }
 
   useEffect(() => {
-    getTwittes();
+    getTweets();
   }, []);
   return (
     <div className="twitter">
@@ -68,4 +68,4 @@ const Twittes = () => {
   );
 };
 
-export default Twittes;
+export default Tweets;

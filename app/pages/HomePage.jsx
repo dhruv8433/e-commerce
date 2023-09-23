@@ -3,7 +3,7 @@ import SwiperHome from "../components/SwiperHome";
 import HomeAnimation from "../components/homeAnimation";
 import "@/app/styles/style.css";
 import ProviderSection from "../components/ProviderSection";
-import Twittes from "../components/Twittes";
+import Tweets from "../components/Tweets";
 import DealsofDay from "../components/DealsofDay";
 
 const HomePage = () => {
@@ -14,7 +14,7 @@ const HomePage = () => {
         <ProviderSection />
         <DealsofDay />
         <SwiperHome />
-        <Twittes />
+        <Tweets />
       </div>
     </>
   );
