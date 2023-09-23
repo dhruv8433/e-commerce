@@ -1,22 +1,54 @@
 "use client";
 
-import { Container } from "@mui/material";
+import ServiceCard from "@/app/components/ServiceCard";
+import { getService } from "@/app/services/getServices";
+import { GetSingleProvider } from "@/app/services/getProviders";
+import { Container, Grid } from "@mui/material";
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import DetailedProvider from "@/app/components/DetailedProvider";
 
 const page = () => {
-  const params = useParams();
-  // to getting params 
-  console.log(params);
+  const [services, setServices] = useState([]);
+  const [provider, setProvider] = useState([]);
+  const { providerId } = useParams();
+
+  async function getServices() {
+    try {
+      // service of particular provider
+      const result = await getService(providerId);
+      setServices(result.data);
+      // particular provider
+      const serviceProvider = await GetSingleProvider(providerId);
+      setProvider(serviceProvider);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      getServices();
+    },2000);
+  }, []);
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <div className="breadcrums"></div>
       <Container>
-        <div className="flex justify-between">
-          <div className="left">Services</div>
-          <div className="right">Provider Info</div>
-        </div>
+        <Grid container spacing={2}>
+          <Grid item sm={12} md={6}>
+            <div className="left mt-24 p-3 rounded bg-slate-100">
+              {services.map((service) => (
+                <ServiceCard key={service.id} services={service} />
+              ))}
+            </div>
+          </Grid>
+          <Grid item sm={12} md={6}>
+            <div className="right mt-24 ">
+              <DetailedProvider provider={provider} />
+            </div>
+          </Grid>
+        </Grid>
       </Container>
     </div>
   );
