@@ -54,5 +54,9 @@
         "address": "Address",
         "phone": "Phone",
         "email": "Email"
+    },
+    "providers": {
+        "order_completed": "order completed",
+        "address":"Address"
     }
 }
