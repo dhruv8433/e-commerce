@@ -24,7 +24,7 @@ const Providers = () => {
     console.log(loading);
   }, []);
   return (
-    <Container sx>
+    <Container>
       <Box className="pt-20 mb-4">
         <div className="providercard">
           <Box>

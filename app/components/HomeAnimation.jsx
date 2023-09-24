@@ -6,6 +6,7 @@ import homeAnimationJSON from "@/app/json/animations/homescreen.json";
 import { useTranslations } from "next-intl";
 import { Grid } from "@mui/material";
 import "@/app/styles/style.css";
+import CustomButton from "./CustomButton";
 
 // starting component
 // use client because lottie only support in client component
@@ -26,9 +27,14 @@ const HomeAnimation = () => {
               {t("welcome")}
             </h1>
             <p className="text-lg text-gray-600">{t("one_stop")}</p>
-            <button className="mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
-              {t("get_start")}
-            </button>
+            {/* calling custom component of button */}
+            <CustomButton
+              children={t("get_start")}
+              varient={"contained"}
+              customClass={
+                "mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
+              }
+            />
           </div>
         </Grid>
       </Grid>

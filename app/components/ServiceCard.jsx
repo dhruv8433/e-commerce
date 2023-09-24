@@ -7,6 +7,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import CustomButton from "./CustomButton";
 const ServiceCard = ({ services }) => {
   return (
     <div>
@@ -28,13 +29,18 @@ const ServiceCard = ({ services }) => {
               <p className="text-blue-500">
                 ${services.discounted_price}
                 <del>
-                  <span className="text-xs text-slate-500">{services.price}</span>
+                  <span className="text-xs text-slate-500">
+                    {services.price}
+                  </span>
                 </del>
               </p>
             </div>
-            <Button size="small" variant="contained" color="primary">
-              Add
-            </Button>
+            <CustomButton
+              children={"Add"}
+              size={"small"}
+              customClass={"bg-blue-500"}
+              varient={"contained"}
+            />
           </div>
         </CardContent>
       </Card>

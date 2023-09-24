@@ -7,6 +7,7 @@ import { Container, Grid } from "@mui/material";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DetailedProvider from "@/app/components/DetailedProvider";
+import UserReviewCard from "@/app/components/UserReviewCard";
 
 const page = () => {
   const [services, setServices] = useState([]);
@@ -28,7 +29,7 @@ const page = () => {
   useEffect(() => {
     const delay = setTimeout(() => {
       getServices();
-    },2000);
+    }, 2000);
   }, []);
 
   return (
@@ -46,6 +47,14 @@ const page = () => {
           <Grid item sm={12} md={6}>
             <div className="right mt-24 ">
               <DetailedProvider provider={provider} />
+            </div>
+            <div className="mt-4  rounded-md justify-center items-center bg-slate-100">
+              <div className="flex justify-center">
+                <h1 className="text-2xl py-1">User Reviews</h1>
+              </div>
+              <div className="div">
+                <UserReviewCard review={"lorem"} user={"dhruv"} />
+              </div>
             </div>
           </Grid>
         </Grid>

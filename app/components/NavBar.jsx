@@ -7,6 +7,7 @@ import SettingDrawer from "./SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
 import { Avatar, Box, Container, IconButton } from "@mui/material";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PhoneModal from "./phoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
@@ -62,6 +63,9 @@ const Navigation = () => {
                   <div>
                     <IconButton>
                       <Avatar style={{ width: 30, height: 30 }} />
+                    </IconButton>
+                    <IconButton>
+                      <ShoppingCartOutlinedIcon />
                     </IconButton>
                   </div>
                 )}
