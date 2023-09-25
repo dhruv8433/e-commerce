@@ -1,5 +1,7 @@
 "use client";
+import Breadcrumb from "@/app/common/Breadcrumbs";
 import Provider from "@/app/components/Provider";
+import ProviderSkeleton from "@/app/components/Skeletons";
 import { GetProviders } from "@/app/services/getProviders";
 import { Box, Container, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
@@ -24,23 +26,32 @@ const Providers = () => {
     console.log(loading);
   }, []);
   return (
-    <Container>
-      <Box className="pt-20 mb-4">
-        <div className="providercard">
-          <Box>
-            <Grid container spacing={2}>
-              {/* we only display 3 providers on home page */}
-              {providers.map((provider) => (
-                <Grid item xs={12} sm={6} md={4} key={provider.id}>
-                  {/* calling single provider component */}
-                  <Provider key={provider.id} provider={provider} />
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        </div>
+    <>
+      <Box sx={{ pt: { xs: "4rem", md: "5rem" } }}>
+        <Breadcrumb title={"Providers"} breadcrumb={"providers"} />
       </Box>
-    </Container>
+      <Container>
+        <Box className="py-2">
+          {loading ? (
+            <ProviderSkeleton />
+          ) : (
+            <div className="providercard">
+              <Box>
+                <Grid container spacing={2}>
+                  {/* we only display 3 providers on home page */}
+                  {providers.map((provider) => (
+                    <Grid item xs={12} sm={6} md={4} key={provider.id}>
+                      {/* calling single provider component */}
+                      <Provider key={provider.id} provider={provider} />
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </div>
+          )}
+        </Box>
+      </Container>
+    </>
   );
 };
 

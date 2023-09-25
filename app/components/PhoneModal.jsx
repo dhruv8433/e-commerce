@@ -5,7 +5,7 @@ import { close, open } from "../config/config";
 import LoginIcon from "@mui/icons-material/Login";
 import "@/app/styles/style.css";
 import { CloseRounded } from "@mui/icons-material";
-import CustomButton from "./CustomButton";
+import CustomButton from "../common/CustomButton";
 
 // it is modal that only open in responsive device so insted of seeting login and sign up in navigatin we use one icon and on that click we got 2 option for login and signup
 const PhoneModal = ({ signup, login }) => {

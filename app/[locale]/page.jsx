@@ -1,7 +1,5 @@
 import { useTranslations } from "next-intl";
-import Testing from "../testing/__testing__";
 import StartupAnimation from "../components/startupAnimation";
-import SwiperHome from "../components/SwiperHome";
 import HomePage from "../pages/HomePage";
 
 export default function Home() {
