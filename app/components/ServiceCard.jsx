@@ -7,7 +7,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import CustomButton from "./CustomButton";
+import CustomButton from "../common/CustomButton";
 const ServiceCard = ({ services }) => {
   return (
     <div>

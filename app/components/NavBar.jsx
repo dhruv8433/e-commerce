@@ -62,7 +62,9 @@ const Navigation = () => {
                 ) : (
                   <div>
                     <IconButton>
-                      <Avatar style={{ width: 30, height: 30 }} />
+                      <Link href={"/profile"}>
+                        <Avatar style={{ width: 30, height: 30 }} />
+                      </Link>
                     </IconButton>
                     <IconButton>
                       <ShoppingCartOutlinedIcon />
@@ -100,7 +102,9 @@ const Navigation = () => {
                 <PhoneModal login={t("login")} signup={t("signup")} />
               ) : (
                 <IconButton className="-mr-2">
-                  <Avatar style={{ width: 30, height: 30 }} />
+                  <Link href={"/profile"}>
+                    <Avatar style={{ width: 30, height: 30 }} />
+                  </Link>
                 </IconButton>
               )}
               <SettingDrawer />
