@@ -114,6 +114,10 @@ body {
   height: 380px;
 }
 
-.h-40vh{
+.h-40vh {
   height: 40vh;
+}
+
+.global-breadcrumb {
+  background: var(--global-breadcrumb);
 }
