@@ -34,6 +34,7 @@ const UserProfile = () => {
             <CustomButton children={"Edit"} varient={"outlined"} />
           </div>
         </div>
+        {/* user navigation links that contain common user profile but different user route */}
       </div>
     </div>
   );
