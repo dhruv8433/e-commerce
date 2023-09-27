@@ -5,7 +5,7 @@ const CustomButton = ({ children, size, varient, customClass }) => {
   return (
     <Button
       size={`${size}`}
-      className={`${customClass}`}
+      className={`${customClass} bg-violet-400 hover:bg-violet-500`}
       variant={`${varient}`}
     >
       {children}
