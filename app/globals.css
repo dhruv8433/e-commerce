@@ -9,6 +9,7 @@
   --global-them: white;
   --global-secondry: rgb(249, 222, 255);
   --global-breadcrumb: rgb(235, 166, 251);
+  --global-text-primary: rgb(198, 26, 237);
 }
 
 @media (prefers-color-scheme: dark) {

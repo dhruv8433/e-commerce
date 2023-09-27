@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+.bg-theme {
+  background: var(--global-secondry);
+}
+
+.color-primary {
+  color: var(--global-text-primary);
+}
+
 body {
   background: var(--global-them);
 }
@@ -103,10 +111,6 @@ body {
   width: 100%;
 }
 
-.bg-theme {
-  background: var(--global-secondry);
-}
-
 .twitter {
   background: url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80");
   background-repeat: no-repeat;
@@ -120,4 +124,14 @@ body {
 
 .global-breadcrumb {
   background: var(--global-breadcrumb);
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.dicount-bg {
+  background: url("https://i.pinimg.com/736x/5c/68/87/5c6887eb40399331677b44e7725e4682.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
