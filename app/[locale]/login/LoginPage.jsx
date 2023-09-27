@@ -33,6 +33,9 @@ const LoginPage = () => {
       localStorage.setItem("token", user.token);
       localStorage.setItem("login", true);
       toast.success("Login Success");
+      if (typeof window !== "undefined") {
+        window.location.assign("/");
+      }
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
