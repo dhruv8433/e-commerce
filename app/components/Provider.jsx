@@ -43,7 +43,7 @@ const Provider = ({ provider }) => {
             <div className="info -mt-4 z-10 relative">
               <h1 className="text-2xl font-bold">{provider.title}</h1>
               <div className="flex justify-center p-1">
-                <h1 className="border border-blue-600 bg-blue-400 p-1 rounded text-white">
+                <h1 className="border bg-violet-500 p-1 rounded text-white">
                   {provider.order_complted} order completed
                 </h1>
               </div>

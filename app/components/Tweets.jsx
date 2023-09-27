@@ -25,13 +25,13 @@ const Tweets = () => {
     getTweets();
   }, []);
   return (
-    <div className="twitter">
+    <div className="twitter h-auto">
       <div className="heading flex justify-center py-1">
         <h1 className="text-2xl font-bold">Customer Reviews</h1>
       </div>
       <hr className="pb-2 pt-3" />
       <div className="flex justify-center">
-        <div className="md:w-1/2 sm:w-full">
+        <div className="md:w-1/2 sm:w-96">
           {/* swiper to show slides using different effects */}
           <Swiper
             effect={"coverflow"}

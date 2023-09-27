@@ -1,63 +1,53 @@
 "use client";
 
+import { Box, Container } from "@mui/material";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import "@/app/styles/style.css";
-import { Box, Container, Grid } from "@mui/material";
-import Provider from "./Provider";
-import { useTranslations } from "next-intl";
-import { getHomeScreen } from "../httpFetch";
+import { homeService } from "../services/homeService";
+import ProviderLogos from "./ProviderLogos";
+import CustomButton from "../common/CustomButton";
 import Link from "next/link";
 
-// provider section that used in home screen
 const ProviderSection = () => {
-  const [providers, setProviders] = useState([]);
+  const [provider, setProvider] = useState([]);
+
+  async function fetchingProvider() {
+    const respnose = await homeService();
+    setProvider(respnose.data.providers.data);
+  }
 
   useEffect(() => {
-    //calling api here
-    getHomeScreen().then((response) => {
-      setProviders(response.data.providers.data);
-    });
+    fetchingProvider();
   }, []);
-
-  const t = useTranslations("home_ads");
   return (
-    <Box
-      className="providerSection scroll-slides items-center pt-2 pb-2"
-      sx={{
-        height: "max-content",
-      }}
-    >
+    <div className="py-14 h-auto">
       <Container>
-        {/* heading component that contain top rated providers and view all providers  */}
-        <div>
-          <div className="heading flex justify-between items-center ">
-            <h1 className="text-2xl font-bold items-center pt-2">
-              {t("top_provider")}
-            </h1>
-            <Link href={"/providers"}>View All providers</Link>
-          </div>
-          <hr />
+        <div className="flex justify-center ">
+          <h1 className="text-3xl">Available Providers</h1>
         </div>
-        {/* provider cards */}
-        <div>
-          <Box className="mt-4 mb-4">
-            <div className="providercard">
-              <Box>
-                <Grid container spacing={2}>
-                  {/* we only display 3 providers on home page */}
-                  {providers.slice(0, 3).map((provider) => (
-                    <Grid item xs={12} sm={6} md={4} key={provider.id}>
-                      {/* calling single provider component */}
-                      <Provider key={provider.id} provider={provider} />
-                    </Grid>
-                  ))}
-                </Grid>
-              </Box>
-            </div>
-          </Box>
+
+        {/* Provider Icons large  screen */}
+        <Box
+          className="icons justify-center w-full sm:hidden md:flex"
+        >
+          {/* to getting only 5 providers on home screen */}
+          {provider.slice(0, 5).map((response) => (
+            <ProviderLogos key={response.id} respnose={response} />
+          ))}
+        </Box>
+
+        <div className="flex justify-center ">
+          <Link href={"/providers"}>
+            <CustomButton
+              children={"view all providers"}
+              varient={"contained"}
+              customClass={"bg-violet-400 hover:bg-violet-500"}
+              size={"large"}
+            />
+          </Link>
         </div>
       </Container>
-    </Box>
+    </div>
   );
 };
 
