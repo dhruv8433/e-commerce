@@ -56,6 +56,34 @@ export async function POST(request) {
             },
           ],
         },
+        options: {
+          id: 51,
+          title: ``,
+          section_type: `options`,
+          cards: [
+            {
+              id: 1,
+              title: `Showcase of the Week`,
+              description: `services, ratings`,
+              image: `https://plus.unsplash.com/premium_photo-1671578325135-edb91319a6d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80`,
+              slug: "showcase-of-week",
+            },
+            {
+              id: 2,
+              title: `Deals of the Week`,
+              description: `upto 50% off`,
+              image: `https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80`,
+              slug: "deals-of-week",
+            },
+            {
+              id: 3,
+              title: `Top Providers`,
+              description: `highly rated providers`,
+              image: `https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80`,
+              slug: "top-providers",
+            },
+          ],
+        },
         categorys: {
           id: 52,
           title: `categories`,
