@@ -1,6 +1,7 @@
 import React from "react";
 import CustomButton from "../common/CustomButton";
 import Image from "next/image";
+import Link from "next/link";
 
 const UserProfile = () => {
   return (
@@ -35,6 +36,22 @@ const UserProfile = () => {
           </div>
         </div>
         {/* user navigation links that contain common user profile but different user route */}
+        <div className="bg-white h-10">
+          <ul className="flex justify-around w-full">
+            <li>
+              <Link href={"/##"}>Bookings</Link>
+            </li>
+            <li>
+              <Link href={"/##"}>Bookmarks</Link>
+            </li>
+            <li>
+              <Link href={"/##"}>Notifications</Link>
+            </li>
+            <li>
+              <Link href={"/##"}>Delete Account</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
