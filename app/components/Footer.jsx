@@ -6,7 +6,7 @@ import {
   LinkedIn,
   Twitter,
 } from "@mui/icons-material";
-import { Box, Divider } from "@mui/material";
+import { Box, Container, Divider } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
@@ -15,74 +15,76 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto py-8 md:py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 justify-between">
-        {/* Column 1 */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">{t("erequirement")}</h2>
-          <p className="text-gray-400">{t("one_stop")}</p>
-          <Divider className="my-4" />
-          <h3 className="text-xl font-semibold mb-2">{t("follow")}</h3>
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="#" className="text-white hover:text-blue-500">
-                <FacebookOutlined />
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-white hover:text-blue-500">
-                <Instagram />
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-white hover:text-blue-500">
-                <LinkedIn />
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-white hover:text-blue-500">
-                <Twitter />
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <Container>
+        <div className="container mx-auto py-8 md:py-16 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+          {/* Column 1 */}
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">{t("erequirement")}</h2>
+            <p className="text-gray-400">{t("one_stop")}</p>
+            <Divider className="my-4" />
+            <h3 className="text-xl font-semibold mb-2">{t("follow")}</h3>
+            <ul className="flex space-x-4">
+              <li>
+                <Link href="#" className="text-white hover:text-blue-500">
+                  <FacebookOutlined />
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white hover:text-blue-500">
+                  <Instagram />
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white hover:text-blue-500">
+                  <LinkedIn />
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white hover:text-blue-500">
+                  <Twitter />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* Column 2 */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">{t("quick_links")}</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/" className="hover:text-blue-500">
-                {t("home")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/providers" className="hover:text-blue-500">
-                {t("provider")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-blue-500">
-                {t("about")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-blue-500">
-                {t("contact")}
-              </Link>
-            </li>
-          </ul>
-        </div>
+          {/* Column 2 */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">{t("quick_links")}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/" className="hover:text-blue-500">
+                  {t("home")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/providers" className="hover:text-blue-500">
+                  {t("provider")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-blue-500">
+                  {t("about")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-blue-500">
+                  {t("contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* Column 3 */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-400">
-            {t("address")}: 1234 Home Street, City Name
-          </p>
-          <p className="text-gray-400">{t("phone")}: +123 456 7890</p>
-          <p className="text-gray-400">{t("email")}: info@erequirement.com</p>
+          {/* Column 3 */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <p className="text-gray-400">
+              {t("address")}: 1234 Home Street, City Name
+            </p>
+            <p className="text-gray-400">{t("phone")}: +123 456 7890</p>
+            <p className="text-gray-400">{t("email")}: info@erequirement.com</p>
+          </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

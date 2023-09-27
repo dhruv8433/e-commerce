@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import SettingDrawer from "./SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
@@ -15,7 +15,15 @@ import Routes from "./routes";
 // navigation for routing in different pages
 const Navigation = () => {
   const t = useTranslations("navigation");
-  const isLoggedIn = localStorage.getItem("login");
+  // for checking user is logged in or not
+  let isLoggedIn;
+
+  useEffect(() => {
+    // Check if localStorage is available in the browser.
+    if (typeof window !== "undefined") {
+      isLoggedIn = localStorage.getItem("login");
+    }
+  }, []);
   return (
     <>
       {/* computer screen navigation  */}
@@ -29,7 +37,7 @@ const Navigation = () => {
               {/* Left Side Logo */}
               <Link href={"/"}>
                 <Image
-                  src={logo} // Replace with your logo image URL
+                  src={logo}
                   alt="Logo"
                   height={80}
                   // className="h-10 w-20"
@@ -88,7 +96,7 @@ const Navigation = () => {
               {/* Left Side Logo */}
               <Link href={"/"}>
                 <Image
-                  src={logo} // Replace with your logo image URL
+                  src={logo}
                   alt="Logo"
                   height={80}
                   // className="h-10 w-20"
