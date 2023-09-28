@@ -1,7 +1,9 @@
 import { Container } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Discount = () => {
+  const t = useTranslations("discount");
   return (
     <div className="dicount-bg h-96">
       <Container>
@@ -11,9 +13,9 @@ const Discount = () => {
           </h1>
           <div className="w-300">
             <h1 className="mt-2 text-2xl">
-              Register and send your shopping recipts to{" "}
-              <span className="font-bold">erequirement@gmail.com</span> to get a
-              discount at your preferred provider
+              {t("register")}{" "}
+              <span className="font-bold">{t("company_email")}</span>{" "}
+              {t("discount")}
             </h1>
           </div>
         </div>

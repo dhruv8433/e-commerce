@@ -1,17 +1,13 @@
 import { company_name } from "@/app/config/config";
 import React from "react";
-import Providers from "./Providers";
+import ProviderPage from "@/app/pages/ProviderPage";
 
 export const metadata = {
   title: `Provider | ${company_name}`,
 };
 
 const page = () => {
-  return (
-    <div>
-      <Providers />
-    </div>
-  );
+  return <ProviderPage />;
 };
 
 export default page;

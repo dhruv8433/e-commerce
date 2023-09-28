@@ -1,8 +1,8 @@
 import React from "react";
-import ContactForm from "./Contactus";
+import ContactPage from "@/app/pages/ContactPage";
 
 const page = () => {
-  return <ContactForm />;
+  return <ContactPage />;
 };
 
 export default page;
