@@ -1,12 +1,12 @@
 "use client";
 
 import { Box, Container } from "@mui/material";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { homeService } from "../services/homeService";
 import ProviderLogos from "./ProviderLogos";
 import CustomButton from "../common/CustomButton";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const ProviderSection = () => {
   const [provider, setProvider] = useState([]);
@@ -19,17 +19,17 @@ const ProviderSection = () => {
   useEffect(() => {
     fetchingProvider();
   }, []);
+
+  const t = useTranslations("providers");
   return (
     <div className="py-14 h-auto">
       <Container>
         <div className="flex justify-center ">
-          <h1 className="text-3xl">Available Providers</h1>
+          <h1 className="text-3xl">{t("available")}</h1>
         </div>
 
         {/* Provider Icons large  screen */}
-        <Box
-          className="icons justify-center w-full sm:hidden md:flex"
-        >
+        <Box className="icons justify-center w-full sm:hidden md:flex">
           {/* to getting only 5 providers on home screen */}
           {provider.slice(0, 5).map((response) => (
             <ProviderLogos key={response.id} respnose={response} />

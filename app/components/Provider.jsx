@@ -1,18 +1,16 @@
 "use client";
 
-import {
-  ArrowRightOutlined,
-  EastRounded,
-  StarBorderOutlined,
-} from "@mui/icons-material";
+import { EastRounded, StarBorderOutlined } from "@mui/icons-material";
 import { Card, CardContent, CardMedia } from "@mui/material";
 import waveAnimation from "@/app/json/animations/wave.json";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 // reusable provider card
 const Provider = ({ provider }) => {
+  const t = useTranslations("providers");
   return (
     <div className="p-1 items-center text-center">
       <Link href={`/${provider.id}/${provider.slug}`}>
@@ -44,7 +42,7 @@ const Provider = ({ provider }) => {
               <h1 className="text-2xl font-bold">{provider.title}</h1>
               <div className="flex justify-center p-1">
                 <h1 className="border bg-violet-500 p-1 rounded text-white">
-                  {provider.order_complted} order completed
+                  {provider.order_complted} {t("order_completed")}
                 </h1>
               </div>
               <div className="flex justify-center items-center">

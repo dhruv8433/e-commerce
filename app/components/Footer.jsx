@@ -6,7 +6,7 @@ import {
   LinkedIn,
   Twitter,
 } from "@mui/icons-material";
-import { Box, Container, Divider } from "@mui/material";
+import { Container, Divider } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";

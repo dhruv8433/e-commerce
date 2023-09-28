@@ -8,7 +8,9 @@ import {
   Typography,
 } from "@mui/material";
 import CustomButton from "../common/CustomButton";
+import { useTranslations } from "next-intl";
 const ServiceCard = ({ services }) => {
+  const t = useTranslations("service");
   return (
     <div>
       <Card className="my-3" sx={{ display: "flex", p: 1 }}>
@@ -22,7 +24,9 @@ const ServiceCard = ({ services }) => {
         <CardContent sx={{ width: "320px" }}>
           <h1 className="font-semibold text-2xl">{services.title}</h1>
           <p>{services.description}</p>
-          <p className="text-slate-500">Rating: {services.rating}</p>
+          <p className="text-slate-500">
+            {t("rating")}: {services.rating}
+          </p>
           {/* Right side with the "Add" button */}
           <div className="flex justify-between mt-10">
             <div className="price">
@@ -36,7 +40,7 @@ const ServiceCard = ({ services }) => {
               </p>
             </div>
             <CustomButton
-              children={"Add"}
+              children={t("add")}
               size={"small"}
               customClass={"bg-blue-500"}
               varient={"contained"}

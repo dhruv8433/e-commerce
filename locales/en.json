@@ -57,6 +57,30 @@
     },
     "providers": {
         "order_completed": "order completed",
-        "address":"Address"
+        "address": "Address",
+        "available": "Available Providers"
+    },
+    "discount": {
+        "register": "Register and send your shopping recipts to",
+        "company_email": "erequirement@gmail.com",
+        "discount": "to get a discount at your preferred provider"
+    },
+    "work": {
+        "how": "How Does ",
+        "company": "eRequirement",
+        "work": "Work",
+        "online_book": "Online Book Service",
+        "step_1": "Find where you can find a particular service and compare it's price across the available providers",
+        "best_price": "Find Out Best Prices",
+        "step_2": " Create and save yout shopping list so you can browse where you can purchase it by the cheapest price.",
+        "save_time": "Save Time & Money",
+        "step_3": "Compare before you buy! Sign up totally free. Manage your shopping with ease - no hidden fees."
+    },
+    "service": {
+        "rating": "Rating",
+        "add":"Add"
+    },
+    "reviews":{
+        "customer_review":"Customer Reviews"
     }
 }
