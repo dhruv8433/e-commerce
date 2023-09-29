@@ -1,12 +1,15 @@
 import "../globals.css";
 import { Inter } from "next/font/google";
 // for using multi language in our project
-import { NextIntlClientProvider, useLocale } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { company_name } from "../config/config";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
+import { Provider } from "react-redux";
+import store from "./store";
+import { ProviderStore } from "./StoreProvider";
 require("dotenv").config();
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,11 +36,15 @@ export default async function RootLayout({ children, params }) {
     // passing locale as lang in html so we can translate in defined json language file
     <html lang={locale}>
       <body>
+        {/* internationalization */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navigation />
-          {children}
-          <Footer />
-          <Toaster />
+          {/* redux provider */}
+          <ProviderStore>
+            <Navigation />
+            {children}
+            <Footer />
+            <Toaster />
+          </ProviderStore>
         </NextIntlClientProvider>
       </body>
     </html>
