@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.9",
+    "@redux-devtools/extension": "^3.2.5",
     "autoprefixer": "10.4.15",
     "axios": "^1.5.0",
     "i18next": "^23.5.1",
@@ -22,14 +23,15 @@
     "next": "13.4.19",
     "next-intl": "^3.0.0-beta.17",
     "postcss": "8.4.29",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^13.2.2",
     "react-icons": "^4.11.0",
+    "react-redux": "^8.1.2",
     "redux": "^4.2.1",
     "remotion": "^4.0.39",
-    "swiper": "^10.2.0",
+    "swiper": "^10.3.1",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
