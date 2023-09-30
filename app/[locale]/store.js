@@ -1,11 +1,9 @@
-import authReducer from "../reducer/isLoggedIn";
 // import { composeWithDevTools } from "@redux-devtools/extension";
 import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "../reducer/rootReducer";
 
 const store = configureStore({
-  reducer: {
-    auth: authReducer,
-  },
+  reducer: rootReducer,
 });
 
 // Export the store for later use
