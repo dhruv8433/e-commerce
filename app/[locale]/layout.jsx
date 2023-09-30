@@ -7,8 +7,6 @@ import { company_name } from "../config/config";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
-import { Provider } from "react-redux";
-import store from "./store";
 import { ProviderStore } from "./StoreProvider";
 require("dotenv").config();
 
@@ -35,6 +33,9 @@ export default async function RootLayout({ children, params }) {
   return (
     // passing locale as lang in html so we can translate in defined json language file
     <html lang={locale}>
+      <head>
+        <link rel="shortcut icon" href="#" />
+      </head>
       <body>
         {/* internationalization */}
         <NextIntlClientProvider locale={locale} messages={messages}>

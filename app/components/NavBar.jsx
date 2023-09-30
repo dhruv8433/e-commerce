@@ -11,12 +11,14 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PhoneModal from "./phoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
+import { useSelector } from "react-redux";
 
 // navigation for routing in different pages
 const Navigation = () => {
   const t = useTranslations("navigation");
   // for checking user is logged in or not
-  let isLoggedIn;
+  let isLoggedIn = useSelector((state) => state.isAuthenticate.isAuthenticated);
+  console.log(isLoggedIn);
 
   useEffect(() => {
     // Check if localStorage is available in the browser.
