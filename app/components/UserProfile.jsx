@@ -1,9 +1,27 @@
+"use client";
+
 import React from "react";
 import CustomButton from "../common/CustomButton";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { LOGOUT_SUCCESS } from "../reducer/isLoggedIn";
+import toast from "react-hot-toast";
+import { Button } from "@mui/material";
 
 const UserProfile = () => {
+  const dispatch = useDispatch();
+  function logout() {
+    dispatch({ type: LOGOUT_SUCCESS });
+    toast.success("Logout Success");
+    if (typeof window !== "undefined") {
+      window.location.assign("/");
+    }
+    console.log("Logout fire");
+  }
+
+  const user = useSelector((state) => state.isAuthenticate.user);
+
   return (
     <div className="mt-20 w-full py-4 ">
       <div className="border border-red-300 bg-theme rounded">
@@ -25,10 +43,9 @@ const UserProfile = () => {
           </div>
           <div className="user-details flex items-center">
             <div className="block">
-              <h1 className="text-3xl font-bold">Alex</h1>
-              <h1 className="text-2xl font-bold">alex@gmail.com</h1>
-              <h1 className="text-2xl font-semibold">+1 1231245994</h1>
-              <h1 className="text-2xl font-semibold">customer</h1>
+              <h1 className="text-3xl font-bold">{user.user}</h1>
+              <h1 className="text-2xl font-bold">{user.email}</h1>
+              <h1 className="text-2xl font-semibold">{user.mobile}</h1>
             </div>
           </div>
           <div className="edit ml-auto m-1">
@@ -52,6 +69,10 @@ const UserProfile = () => {
             </li>
           </ul>
         </div>
+
+        <Button varient={"contained"} onClick={() => logout()}>
+          Logout
+        </Button>
       </div>
     </div>
   );

@@ -20,6 +20,10 @@ export async function POST(request) {
           success: true,
           message: "User Login Success",
           token: user.token,
+          user: user.name,
+          email: user.email,
+          mobile: user.phone,
+          address: user.address,
         },
         {
           status: 200,

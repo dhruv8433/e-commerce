@@ -9,6 +9,8 @@ import toast from "react-hot-toast";
 
 import loginAnimation from "@/app/json/animations/login.json";
 import { useTranslations } from "next-intl";
+import { useDispatch } from "react-redux";
+import { loginFailure, loginSuccess } from "@/app/action/action";
 // import { loginSuccess } from "./LoginSuccess";
 
 const LoginPage = () => {
@@ -16,6 +18,7 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,14 +33,15 @@ const LoginPage = () => {
       const user = await verifyUser(loginData);
       console.log("success");
       console.log(user);
-      localStorage.setItem("token", user.token);
-      localStorage.setItem("login", true);
       toast.success("Login Success");
+      // redux store save user data
+      dispatch(loginSuccess(user));
       if (typeof window !== "undefined") {
         window.location.assign("/");
       }
     } catch (error) {
       console.log(error);
+      dispatch(loginFailure("Login Error"));
       toast.error("Something went wrong");
     }
   };
