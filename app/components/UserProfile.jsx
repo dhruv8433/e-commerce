@@ -9,7 +9,7 @@ import { LOGOUT_SUCCESS } from "../reducer/isLoggedIn";
 import toast from "react-hot-toast";
 import { Button } from "@mui/material";
 
-const UserProfile = () => {
+const UserProfile = ({ content }) => {
   const dispatch = useDispatch();
   function logout() {
     dispatch({ type: LOGOUT_SUCCESS });
@@ -29,13 +29,13 @@ const UserProfile = () => {
           <div className="user-image h-56 w-56 my-4 mx-4">
             <Image
               src={
-                "https://i.pinimg.com/564x/0a/15/19/0a151948d914e58aaad0202e40d07702.jpg"
+                "https://i.pinimg.com/736x/95/14/a2/9514a2106bdf506dc2ed2047ae4ba908.jpg"
               }
               width={"200"}
               height={"200"}
               alt="user-picture"
               style={{
-                borderRadius: "100px",
+                borderRadius: "120px",
                 maxHeight: "100%",
                 width: "100%",
               }}
@@ -49,27 +49,33 @@ const UserProfile = () => {
             </div>
           </div>
           <div className="edit ml-auto m-1">
-            <CustomButton children={"Edit"} varient={"outlined"} />
+            <CustomButton
+              children={"Edit"}
+              varient={"outlined"}
+              size={"small"}
+              customClass={"text-white"}
+            />
           </div>
         </div>
         {/* user navigation links that contain common user profile but different user route */}
         <div className="bg-white h-10">
           <ul className="flex justify-around w-full">
             <li>
-              <Link href={"/##"}>Bookings</Link>
+              <Link href={"/profile/bookings"}>Bookings</Link>
             </li>
             <li>
-              <Link href={"/##"}>Bookmarks</Link>
+              <Link href={"/profile/bookmark"}>Bookmarks</Link>
             </li>
             <li>
-              <Link href={"/##"}>Notifications</Link>
+              <Link href={"/profile/notifications"}>Notifications</Link>
             </li>
             <li>
-              <Link href={"/##"}>Delete Account</Link>
+              <Link href={"/profile/delete-account"}>Delete Account</Link>
             </li>
           </ul>
         </div>
 
+        <div className="h-auto">{content}</div>
         <Button varient={"contained"} onClick={() => logout()}>
           Logout
         </Button>
