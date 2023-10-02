@@ -4,7 +4,7 @@ import { Box, Button, ButtonGroup, Drawer, IconButton } from "@mui/material";
 
 import { close, open } from "../config/config";
 import { useState } from "react";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 import Link from "next/link";
 import React from "react";
 
@@ -41,26 +41,6 @@ const SettingDrawer = () => {
                 French
               </Link>
             </div>
-          </div>
-          <div className="p-4 mt-2">Select Theme:</div>
-          {/* for multitheming  */}
-          {/* <select>
-            {colors.map((color) => (
-              <option key={color} onChange={(e) => console.log(e.target.value)}>
-                {color}
-              </option>
-            ))}
-          </select> */}
-          {/* under construction themeing  */}
-          <div className="px-4">
-            <ButtonGroup
-              variant="outlined"
-              fullWidth
-              aria-label="text button group"
-            >
-              <Button>Light Mode</Button>
-              <Button>Dark Mode</Button>
-            </ButtonGroup>
           </div>
         </Box>
       </Drawer>
