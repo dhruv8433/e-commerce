@@ -8,9 +8,8 @@ import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
+import Theme from "../colors/theme";
 require("dotenv").config();
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: `Home | ${company_name}`,
@@ -34,6 +33,7 @@ export default async function RootLayout({ children, params }) {
     // passing locale as lang in html so we can translate in defined json language file
     <html lang={locale}>
       <head>
+        {/* if web don't have fav icon */}
         <link rel="shortcut icon" href="#" />
       </head>
       <body>
@@ -41,10 +41,12 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           {/* redux provider */}
           <ProviderStore>
-            <Navigation />
-            {children}
-            <Footer />
-            <Toaster />
+            <Theme>
+              <Navigation />
+              {children}
+              <Footer />
+              <Toaster />
+            </Theme>
           </ProviderStore>
         </NextIntlClientProvider>
       </body>
