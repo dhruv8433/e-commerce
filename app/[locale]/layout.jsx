@@ -1,5 +1,4 @@
 import "../globals.css";
-import { Inter } from "next/font/google";
 // for using multi language in our project
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
@@ -8,7 +7,6 @@ import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
-import Theme from "../colors/theme";
 require("dotenv").config();
 
 export const metadata = {
@@ -41,12 +39,10 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           {/* redux provider */}
           <ProviderStore>
-            <Theme>
-              <Navigation />
-              {children}
-              <Footer />
-              <Toaster />
-            </Theme>
+            <Navigation />
+            {children}
+            <Footer />
+            <Toaster />
           </ProviderStore>
         </NextIntlClientProvider>
       </body>
