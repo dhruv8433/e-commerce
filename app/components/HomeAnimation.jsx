@@ -32,9 +32,7 @@ const HomeAnimation = () => {
               <CustomButton
                 children={t("get_start")}
                 varient={"contained"}
-                customClass={
-                  "mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
-                }
+                customClass={"mt-12 text-white py-2 px-6 rounded-full"}
               />
             </div>
           </Grid>

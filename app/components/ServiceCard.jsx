@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import CustomButton from "../common/CustomButton";
 import { useTranslations } from "next-intl";
+
 const ServiceCard = ({ services }) => {
   const t = useTranslations("service");
   return (
