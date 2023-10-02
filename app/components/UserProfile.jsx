@@ -8,9 +8,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { LOGOUT_SUCCESS } from "../reducer/isLoggedIn";
 import toast from "react-hot-toast";
 import { Button } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 const UserProfile = ({ content }) => {
+  // dispatch for using redux
   const dispatch = useDispatch();
+
+  // redux logout function
   function logout() {
     dispatch({ type: LOGOUT_SUCCESS });
     toast.success("Logout Success");
@@ -20,10 +24,14 @@ const UserProfile = ({ content }) => {
     console.log("Logout fire");
   }
 
+  // to get user details
   const user = useSelector((state) => state.isAuthenticate.user);
 
+  // internationalization
+  const t = useTranslations("profile");
+
   return (
-    <div className="mt-20 w-full py-4 ">
+    <div className="pt-28 w-full pb-8">
       <div className="border border-red-300 bg-theme rounded">
         <div className="flex">
           <div className="user-image h-56 w-56 my-4 mx-4">
@@ -58,24 +66,27 @@ const UserProfile = ({ content }) => {
           </div>
         </div>
         {/* user navigation links that contain common user profile but different user route */}
-        <div className="bg-white h-10">
+        <div className="bg-white h-10 flex items-center">
           <ul className="flex justify-around w-full">
             <li>
-              <Link href={"/profile/bookings"}>Bookings</Link>
+              <Link href={"/profile/bookings"}>{t("booking")}</Link>
             </li>
             <li>
-              <Link href={"/profile/bookmark"}>Bookmarks</Link>
+              <Link href={"/profile/bookmark"}>{t("bookmark")}</Link>
             </li>
             <li>
-              <Link href={"/profile/notifications"}>Notifications</Link>
+              <Link href={"/profile/notifications"}>{t("notification")}</Link>
             </li>
             <li>
-              <Link href={"/profile/delete-account"}>Delete Account</Link>
+              <Link href={"/profile/delete-account"}>
+                {t("delete_account")}
+              </Link>
             </li>
           </ul>
         </div>
 
-        <div className="h-auto">{content}</div>
+        <div className="content">{content}</div>
+        
         <Button varient={"contained"} onClick={() => logout()}>
           Logout
         </Button>
