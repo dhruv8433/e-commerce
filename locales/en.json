@@ -78,9 +78,15 @@
     },
     "service": {
         "rating": "Rating",
-        "add":"Add"
+        "add": "Add"
     },
-    "reviews":{
-        "customer_review":"Customer Reviews"
+    "reviews": {
+        "customer_review": "Customer Reviews"
+    },
+    "profile": {
+        "booking": "Bookings",
+        "bookmark": "Bookmark",
+        "notification": "Notifications",
+        "delete_account": "Delete Account"
     }
 }
