@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import SettingDrawer from "./SettingDrawer";
+import SettingDrawer from "../drawers/SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
 import { Avatar, Box, Container, IconButton } from "@mui/material";
