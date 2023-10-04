@@ -6,7 +6,7 @@ export async function POST(request) {
   // Assuming requestData is an object with 'token' and 'items' properties
   const { token, items } = requestData;
 
-  // if no token found
+  // handle if no token 
   if (!token) {
     return NextResponse.json(
       {
@@ -17,7 +17,7 @@ export async function POST(request) {
     );
   }
 
-  // if no items found
+  // handle if no items 
   if (!items) {
     return NextResponse.json(
       {
