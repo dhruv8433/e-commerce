@@ -8,6 +8,7 @@ import { Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // routes contain all necassary pages link
 const Routes = ({ display, icons, padding, spacing }) => {
@@ -57,3 +58,26 @@ const Routes = ({ display, icons, padding, spacing }) => {
 };
 
 export default Routes;
+
+export const ProfileRoutes = () => {
+  // internationalization
+  const t = useTranslations("profile");
+  return (
+    <div className="bg-white h-10 flex items-center">
+      <ul className="flex justify-around w-full">
+        <li>
+          <Link href={"/profile/bookings"}>{t("booking")}</Link>
+        </li>
+        <li>
+          <Link href={"/profile/bookmark"}>{t("bookmark")}</Link>
+        </li>
+        <li>
+          <Link href={"/profile/notifications"}>{t("notification")}</Link>
+        </li>
+        <li>
+          <Link href={"/profile/delete-account"}>{t("delete_account")}</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
