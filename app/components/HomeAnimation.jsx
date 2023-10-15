@@ -28,12 +28,7 @@ const HomeAnimation = () => {
                 {t("welcome")}
               </h1>
               <p className="text-lg text-gray-600">{t("one_stop")}</p>
-              {/* calling custom component of button */}
-              <CustomButton
-                children={t("get_start")}
-                varient={"contained"}
-                customClass={"mt-12 text-white py-2 px-6 rounded-full"}
-              />
+              <p className="text-sm text-gray-400">{t("explore_here")}</p>
             </div>
           </Grid>
         </Grid>
