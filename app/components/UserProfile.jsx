@@ -3,12 +3,12 @@
 import React from "react";
 import CustomButton from "../common/CustomButton";
 import Image from "next/image";
-import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { LOGOUT_SUCCESS } from "../reducer/isLoggedIn";
 import toast from "react-hot-toast";
 import { Button, Grid } from "@mui/material";
-import { useTranslations } from "next-intl";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { ProfileRoutes } from "./routes";
 
 const UserProfile = ({ content }) => {
   // dispatch for using redux
@@ -26,9 +26,6 @@ const UserProfile = ({ content }) => {
 
   // to get user details
   const user = useSelector((state) => state.isAuthenticate.user);
-
-  // internationalization
-  const t = useTranslations("profile");
 
   return (
     <div className="pt-28 w-full pb-8 text-center">
@@ -58,16 +55,20 @@ const UserProfile = ({ content }) => {
                   <h1 className="text-2xl font-semibold">{user.mobile}</h1>
                 </div>
               </div>
-              <div className="edit ml-auto m-1">
-                <CustomButton
-                  children={"Edit"}
-                  varient={"outlined"}
-                  size={"small"}
-                  customClass={"text-white"}
-                />
-              </div>
             </div>
 
+            <SocialMediaIcons />
+
+            <div className="edit ml-auto m-1 px-4">
+              <CustomButton
+                children={"Edit profile"}
+                varient={"outlined"}
+                size={"small"}
+                customClass={"text-white w-full"}
+              />
+            </div>
+
+            {/* logout functionallity */}
             <Button varient={"contained"} onClick={() => logout()}>
               Logout
             </Button>
@@ -76,27 +77,8 @@ const UserProfile = ({ content }) => {
         <Grid item xs={12} md={8}>
           <div className="border border-red-300 rounded">
             {/* user navigation links that contain common user profile but different user route */}
-            <div className="bg-white h-10 flex items-center">
-              <ul className="flex justify-around w-full">
-                <li>
-                  <Link href={"/profile/bookings"}>{t("booking")}</Link>
-                </li>
-                <li>
-                  <Link href={"/profile/bookmark"}>{t("bookmark")}</Link>
-                </li>
-                <li>
-                  <Link href={"/profile/notifications"}>
-                    {t("notification")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/profile/delete-account"}>
-                    {t("delete_account")}
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
+            <ProfileRoutes />
+            {/* content that based on link displayed */}
             <div className="content">{content}</div>
           </div>
         </Grid>
