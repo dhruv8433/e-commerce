@@ -38,23 +38,24 @@ const page = () => {
       <Container>
         <Grid container spacing={2}>
           <Grid item sm={12} md={6}>
-            <div className="left mt-24 p-3 rounded bg-slate-100">
-              {services.map((service) => (
-                <ServiceCard key={service.id} services={service} />
-              ))}
-            </div>
-          </Grid>
-          <Grid item sm={12} md={6}>
-            <div className="right mt-24 ">
+            <div className="right mt-24">
               <DetailedProvider provider={provider} />
             </div>
             <div className="mt-4  rounded-md justify-center items-center bg-slate-100">
               <div className="flex justify-center">
                 <h1 className="text-2xl py-1">User Reviews</h1>
               </div>
-              <div className="div">
+              {/* user reviews based on providers */}
+              {/* <div className="div">
                 <UserReviewCard review={"lorem"} user={"dhruv"} />
-              </div>
+              </div> */}
+            </div>
+          </Grid>
+          <Grid item sm={12} md={6}>
+            <div className="left mt-24 p-3 rounded bg-slate-100">
+              {services.map((service) => (
+                <ServiceCard key={service.id} services={service} />
+              ))}
             </div>
           </Grid>
         </Grid>

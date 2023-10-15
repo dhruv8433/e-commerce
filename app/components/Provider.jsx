@@ -42,7 +42,9 @@ const Provider = ({ provider }) => {
               <h1 className="text-2xl font-bold">{provider.title}</h1>
               <div className="flex justify-center p-1">
                 <h1 className="border bg-violet-500 p-1 rounded text-white">
-                  {provider.order_complted} {t("order_completed")}
+                  {provider.order_complted}
+                  {""}
+                  {t("order_completed")}
                 </h1>
               </div>
               <div className="flex justify-center items-center">
