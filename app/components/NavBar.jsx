@@ -12,6 +12,7 @@ import PhoneModal from "./phoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
 import { useSelector } from "react-redux";
+import CartDrawer from "../drawers/cartDrawer";
 
 // navigation for routing in different pages
 const Navigation = () => {
@@ -76,9 +77,7 @@ const Navigation = () => {
                         <Avatar style={{ width: 30, height: 30 }} />
                       </Link>
                     </IconButton>
-                    <IconButton>
-                      <ShoppingCartOutlinedIcon />
-                    </IconButton>
+                    <CartDrawer />
                   </div>
                 )}
                 <SettingDrawer />
@@ -107,15 +106,18 @@ const Navigation = () => {
             </div>
 
             {/* Sign-up and Login Buttons */}
-            <div className="flex space-x-4 justify-center items-center">
+            <div className="flex justify-center items-center">
               {isLoggedIn === false ? (
                 <PhoneModal login={t("login")} signup={t("signup")} />
               ) : (
-                <IconButton className="-mr-2">
-                  <Link href={"/profile"}>
-                    <Avatar style={{ width: 30, height: 30 }} />
-                  </Link>
-                </IconButton>
+                <div>
+                  <IconButton>
+                    <Link href={"/profile"}>
+                      <Avatar style={{ width: 30, height: 30 }} />
+                    </Link>
+                  </IconButton>
+                  <CartDrawer />
+                </div>
               )}
               <SettingDrawer />
             </div>
