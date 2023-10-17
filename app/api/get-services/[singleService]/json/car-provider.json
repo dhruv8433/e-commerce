@@ -1,117 +1,126 @@
 {
-    "success": true,
-    "message": "car provider and repairing service data",
-    "data": [
-      {
-        "id": 581,
-        "image": "https://media.istockphoto.com/id/1191778420/photo/young-auto-mechanic-cleaning-hands-after-working-on-car-engine-in-a-garage.webp?s=2048x2048&w=is&k=20&c=oJmiJRESGbx6ymNt5qtffYVQ9P1v3PgmCZEbDvPaUc4=",
-        "title": "Car Mechanic",
-        "provider_id": 131,
-        "description": "Expert car mechanics for all your car repair needs.",
-        "rating": 4.9,
-        "price": 80,
-        "discounted_price": 70,
-        "offer": 13
-      },
-      {
-        "id": 582,
-        "image": "https://media.istockphoto.com/id/1128018249/photo/the-car-wash.webp?s=2048x2048&w=is&k=20&c=Uek5vie1YrbNVLD6MrIw1rdV5swW7kG4hmgm5YsIWxU=",
-        "title": "Car Wash",
-        "provider_id": 132,
-        "description": "Professional car washing and detailing services.",
-        "rating": 4.8,
-        "price": 50,
-        "discounted_price": 45,
-        "offer": 10
-      },
-      {
-        "id": 583,
-        "image": "https://media.istockphoto.com/id/1337272787/photo/automobile-technician-painting-auto-with-spraying-gun.webp?s=2048x2048&w=is&k=20&c=c7lvn-IknsomDhwgxEgQOR5E47Rt9UcI3-jLzeU58a0=",
-        "title": "Car Painting",
-        "provider_id": 133,
-        "description": "High-quality car painting and customization.",
-        "rating": 4.7,
-        "price": 120,
-        "discounted_price": 110,
-        "offer": 8
-      },
-      {
-        "id": 584,
-        "image": "https://media.istockphoto.com/id/846758642/photo/tire-changing-at-car-service.webp?s=2048x2048&w=is&k=20&c=oNB50_wPphWKsFyQMW4E-R_GswDOXTXosdrWS_WAvQA=",
-        "title": "Tire Replacement",
-        "provider_id": 134,
-        "description": "Replace old tires with new ones for improved safety.",
-        "rating": 4.8,
-        "price": 90,
-        "discounted_price": 80,
-        "offer": 11
-      },
-      {
-        "id": 585,
-        "image": "https://media.istockphoto.com/id/1212092642/photo/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.webp?s=2048x2048&w=is&k=20&c=n01ZTQgCGUX0oqbfundLYqL81LbYC2LjoDPnn-8q6y8=",
-        "title": "Oil Change",
-        "provider_id": 135,
-        "description": "Efficient oil change services to keep your car running smoothly.",
-        "rating": 4.7,
-        "price": 40,
-        "discounted_price": 35,
-        "offer": 12
-      },
-      {
-        "id": 586,
-        "image": "https://media.istockphoto.com/id/1413409340/photo/car-towing-worker-securing-a-vehicle-on-his-truck.webp?s=2048x2048&w=is&k=20&c=k1CGdic6QuIee00FBSBIENKzVYewWexcYp6rnU1w9T0=",
-        "title": "Car Towing",
-        "provider_id": 136,
-        "description": "24/7 car towing and roadside assistance.",
-        "rating": 4.9,
-        "price": 60,
-        "discounted_price": 50,
-        "offer": 17
-      },
-      {
-        "id": 587,
-        "image": "https://media.istockphoto.com/id/1349412663/photo/supervisor-at-a-car-workshop-checking-tablet-while-mechanic-works-at-background-on-a-car.webp?s=2048x2048&w=is&k=20&c=nJPLr1k860uBdRkGulBEqDkNhOt1Z9lkbgOOQr7WsjM=",
-        "title": "Car Inspection",
-        "provider_id": 137,
-        "description": "Thorough car inspection and diagnostic services.",
-        "rating": 4.8,
-        "price": 70,
-        "discounted_price": 60,
-        "offer": 14
-      },
-      {
-        "id": 588,
-        "image": "https://media.istockphoto.com/id/1387759698/photo/hand-of-car-mechanic-with-wrench-auto-repair-garage-mechanic-works-on-the-engine-of-the-car.jpg?s=2048x2048&w=is&k=20&c=e8dba8xAoFJNlYLi1Dyq_A2NC8PnnNnPLr_q8FhsG7c=",
-        "title": "Auto Body Repair",
-        "provider_id": 138,
-        "description": "Repair car body damage with precision.",
-        "rating": 4.9,
-        "price": 110,
-        "discounted_price": 100,
-        "offer": 9
-      },
-      {
-        "id": 589,
-        "image": "https://media.istockphoto.com/id/1288971827/photo/car-detailing-service.webp?s=2048x2048&w=is&k=20&c=n-qrBFOIWoirwfxFiIVWWVs6cGN0pSHgbQGLb2yPZqE=",
-        "title": "Car AC Repair",
-        "provider_id": 139,
-        "description": "Reliable car air conditioning repair services.",
-        "rating": 4.7,
-        "price": 75,
-        "discounted_price": 70,
-        "offer": 7
-      },
-      {
-        "id": 590,
-        "image": "https://media.istockphoto.com/id/1165311626/photo/mechanic-using-a-ratchet-wrench.webp?s=2048x2048&w=is&k=20&c=55Ck8H4bL94KiK0ZAjVwUYLQsHc9lNNmHmNKv9wyHro=",
-        "title": "Engine Repair",
-        "provider_id": 140,
-        "description": "Skilled mechanics for comprehensive engine repair.",
-        "rating": 4.8,
-        "price": 130,
-        "discounted_price": 120,
-        "offer": 8
-      }
-    ]
-  }
-  
+  "success": true,
+  "message": "car provider and repairing service data",
+  "data": [
+    {
+      "id": 581,
+      "image": "https://media.istockphoto.com/id/1191778420/photo/young-auto-mechanic-cleaning-hands-after-working-on-car-engine-in-a-garage.webp?s=2048x2048&w=is&k=20&c=oJmiJRESGbx6ymNt5qtffYVQ9P1v3PgmCZEbDvPaUc4=",
+      "title": "Car Mechanic",
+      "slug": "car-mechanic",
+      "provider_id": 131,
+      "description": "Expert car mechanics for all your car repair needs. Our team of experienced car mechanics is ready to handle all your car repair and maintenance needs. From routine services like oil changes and tire replacements to complex engine repairs, we provide top-quality service at competitive prices. Trust us to keep your vehicle in excellent condition and ensure your safety on the road.",
+      "rating": 4.9,
+      "price": 80,
+      "discounted_price": 70,
+      "offer": 13
+    },
+    {
+      "id": 582,
+      "image": "https://media.istockphoto.com/id/1128018249/photo/the-car-wash.webp?s=2048x2048&w=is&k=20&c=Uek5vie1YrbNVLD6MrIw1rdV5swW7kG4hmgm5YsIWxU=",
+      "title": "Car Wash",
+      "slug": "car-wash",
+      "provider_id": 132,
+      "description": "Professional car washing and detailing services. Treat your car to a spa day with our professional car wash and detailing services. We'll leave your vehicle sparkling clean, both inside and out. Our team uses the latest techniques and high-quality products to ensure your car looks and feels brand new. Experience the ultimate car pampering today.",
+      "rating": 4.8,
+      "price": 50,
+      "discounted_price": 45,
+      "offer": 10
+    },
+    {
+      "id": 583,
+      "image": "https://media.istockphoto.com/id/1337272787/photo/automobile-technician-painting-auto-with-spraying-gun.webp?s=2048x2048&w=is&k=20&c=c7lvn-IknsomDhwgxEgQOR5E47Rt9UcI3-jLzeU58a0=",
+      "title": "Car Painting",
+      "slug": "car-painting",
+      "provider_id": 133,
+      "description": "High-quality car painting and customization. Transform your car with our high-quality car painting and customization services. We offer a wide range of colors and finishes to suit your style. Whether you need a touch-up or a complete makeover, our experts will make your car stand out. Drive in style with a freshly painted vehicle.",
+      "rating": 4.7,
+      "price": 120,
+      "discounted_price": 110,
+      "offer": 8
+    },
+    {
+      "id": 584,
+      "image": "https://media.istockphoto.com/id/846758642/photo/tire-changing-at-car-service.webp?s=2048x2048&w=is&k=20&c=oNB50_wPphWKsFyQMW4E-R_GswDOXTXosdrWS_WAvQA=",
+      "title": "Tire Replacement",
+      "slug": "tire-replacement",
+      "provider_id": 134,
+      "description": "Replace old tires with new ones for improved safety. Your safety on the road is our priority. We provide efficient tire replacement services to ensure your vehicle's tires are in top condition. Our experts will help you select the right tires for your car, enhancing traction and handling. Drive with confidence on our new, high-quality tires.",
+      "rating": 4.8,
+      "price": 90,
+      "discounted_price": 80,
+      "offer": 11
+    },
+    {
+      "id": 585,
+      "image": "https://media.istockphoto.com/id/1212092642/photo/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.webp?s=2048x2048&w=is&k=20&c=n01ZTQgCGUX0oqbfundLYqL81LbYC2LjoDPnn-8q6y8=",
+      "title": "Oil Change",
+      "slug": "oil-change",
+      "provider_id": 135,
+      "description": "Efficient oil change services to keep your car running smoothly. Regular oil changes are essential for your car's health. Our efficient oil change services will keep your engine running smoothly, ensuring optimal performance and fuel efficiency. We use high-quality oil and filters to protect your engine and extend its lifespan.",
+      "rating": 4.7,
+      "price": 40,
+      "discounted_price": 35,
+      "offer": 12
+    },
+    {
+      "id": 586,
+      "image": "https://media.istockphoto.com/id/1413409340/photo/car-towing-worker-securing-a-vehicle-on-his-truck.webp?s=2048x2048&w=is&k=20&c=k1CGdic6QuIee00FBSBIENKzVYewWexcYp6rnU1w9T0=",
+      "title": "Car Towing",
+      "slug": "car-towing",
+      "provider_id": 136,
+      "description": "24/7 car towing and roadside assistance. We're here for you 24/7 when you need car towing and roadside assistance. Whether you're stranded with a flat tire, locked out of your car, or need a tow, our experienced team will get you back on the road. Count on us for prompt and reliable service.",
+      "rating": 4.9,
+      "price": 60,
+      "discounted_price": 50,
+      "offer": 17
+    },
+    {
+      "id": 587,
+      "image": "https://media.istockphoto.com/id/1349412663/photo/supervisor-at-a-car-workshop-checking-tablet-while-mechanic-works-at-background-on-a-car.webp?s=2048x2048&w=is&k=20&c=nJPLr1k860uBdRkGulBEqDkNhOt1Z9lkbgOOQr7WsjM=",
+      "title": "Car Inspection",
+      "slug": "car-inspection",
+      "provider_id": 137,
+      "description": "Thorough car inspection and diagnostic services. Our thorough car inspection and diagnostic services will identify any hidden issues with your vehicle. We use advanced tools and technology to provide accurate assessments. Trust us to ensure your car is safe and running at its best. Drive with peace of mind.",
+      "rating": 4.8,
+      "price": 70,
+      "discounted_price": 60,
+      "offer": 14
+    },
+    {
+      "id": 588,
+      "image": "https://media.istockphoto.com/id/1387759698/photo/hand-of-car-mechanic-with-wrench-auto-repair-garage-mechanic-works-on-the-engine-of-the-car.jpg?s=2048x2048&w=is&k=20&c=e8dba8xAoFJNlYLi1Dyq_A2NC8PnnNnPLr_q8FhsG7c=",
+      "title": "Auto Body Repair",
+      "slug": "auto-body-repair",
+      "provider_id": 138,
+      "description": "Repair car body damage with precision. When your car's body is damaged, our experts are here to restore it with precision. We'll repair dents, scratches, and more, ensuring your car looks like new. Our commitment to quality and detail ensures your complete satisfaction.",
+      "rating": 4.9,
+      "price": 110,
+      "discounted_price": 100,
+      "offer": 9
+    },
+    {
+      "id": 589,
+      "image": "https://media.istockphoto.com/id/1288971827/photo/car-detailing-service.webp?s=2048x2048&w=is&k=20&c=n-qrBFOIWoirwfxFiIVWWVs6cGN0pSHgbQGLb2yPZqE=",
+      "title": "Car AC Repair",
+      "slug": "car-ac-repair",
+      "provider_id": 139,
+      "description": "Reliable car air conditioning repair services. Stay cool and comfortable in your car with our reliable car air conditioning repair services. We'll diagnose AC issues and provide efficient repairs to keep you comfortable during hot days. Don't suffer in the heat; let us restore your car's AC to its optimal condition.",
+      "rating": 4.7,
+      "price": 75,
+      "discounted_price": 70,
+      "offer": 7
+    },
+    {
+      "id": 590,
+      "image": "https://media.istockphoto.com/id/1165311626/photo/mechanic-using-a-ratchet-wrench.webp?s=2048x2048&w=is&k=20&c=55Ck8H4bL94KiK0ZAjVwUYLQsHc9lNNmHmNKv9wyHro=",
+      "title": "Engine Repair",
+      "slug": "engine-repair",
+      "provider_id": 140,
+      "description": "Skilled mechanics for comprehensive engine repair. When your car's engine is ailing, our skilled mechanics are ready to provide comprehensive engine repair services. We diagnose and fix a wide range of engine issues, ensuring your car runs smoothly and efficiently. Trust us with your car's heart, and we'll have it beating strong.",
+      "rating": 4.8,
+      "price": 130,
+      "discounted_price": 120,
+      "offer": 8
+    }
+  ]
+}
