@@ -16,7 +16,7 @@ const DetailedProvider = ({ provider }) => {
           component={"img"}
           image={provider.banner}
           alt="card banner"
-          sx={{ height: 350, objectFit: "cover" }}
+          sx={{ height: 300, objectFit: "cover" }}
         />
         <div className="flex justify-center">
           <CardMedia
