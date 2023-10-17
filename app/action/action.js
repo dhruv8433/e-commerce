@@ -1,5 +1,6 @@
 // authActions.js
 // Import action types if you defined them in a separate file
+import { ADD_TO_CART } from "../reducer/cartReducer";
 import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
@@ -21,4 +22,10 @@ export const loginFailure = (error) => ({
 // Action creator for successful logout
 export const logoutSuccess = () => ({
   type: LOGOUT_SUCCESS,
+});
+
+// add to cart action that recive data and store inside cart
+export const addToCart = (data) => ({
+  type: ADD_TO_CART,
+  payload: data,
 });
