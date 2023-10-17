@@ -7,7 +7,6 @@ import { Container, Grid } from "@mui/material";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DetailedProvider from "@/app/components/DetailedProvider";
-import UserReviewCard from "@/app/components/UserReviewCard";
 
 const page = () => {
   const [services, setServices] = useState([]);
@@ -37,7 +36,7 @@ const page = () => {
       <div className="breadcrums"></div>
       <Container>
         <Grid container spacing={2}>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={4}>
             <div className="right mt-24">
               <DetailedProvider provider={provider} />
             </div>
@@ -51,11 +50,15 @@ const page = () => {
               </div> */}
             </div>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={8}>
             <div className="left mt-24 p-3 rounded bg-slate-100">
-              {services.map((service) => (
-                <ServiceCard key={service.id} services={service} />
-              ))}
+              <Grid container spacing={3}>
+                {services.map((service) => (
+                  <Grid item xs={12} sm={8} md={4} key={service.id}>
+                    <ServiceCard key={service.id} services={service} />
+                  </Grid>
+                ))}
+              </Grid>
             </div>
           </Grid>
         </Grid>
