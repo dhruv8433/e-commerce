@@ -2,12 +2,37 @@ import { Button, Container, Grid } from "@mui/material";
 import React from "react";
 import toast from "react-hot-toast";
 import CustomButton from "../common/CustomButton";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../action/action";
 
 const ParticularService = ({ service }) => {
+  const dispatch = useDispatch();
+
+  // to get user details
+  const user = useSelector((state) => state.isAuthenticate.user);
+  const cart = useSelector((state) => state.cart.data); // Get the cart from the Redux store
+
+  // Check if the service is already in the cart
+  const isServiceInCart = cart.some((item) => item.id === service.id);
+
   //  function to add to cart
-  async function addToCart() {
-    toast.success("Added Success");
-    console.log(service);
+  function addItemsToCart() {
+    try {
+      // if user is authenicated than only
+      if (user) {
+        if (isServiceInCart) {
+          toast.error("Service alredy existing inside cart");
+          return;
+        }
+        dispatch(addToCart(service));
+        toast.success("Added Success");
+        console.log(service);
+      } else {
+        toast.error("Please login first!!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <Container>
@@ -50,7 +75,7 @@ const ParticularService = ({ service }) => {
               children={"Add to Cart"}
               varient={"contained"}
               customClass={"w-full my-10"}
-              customFunction={() => addToCart()}
+              customFunction={() => addItemsToCart()}
             >
               Add to card
             </CustomButton>
