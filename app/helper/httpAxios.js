@@ -1,4 +1,7 @@
+import { crossOrigin } from "@/next.config";
 import axios from "axios";
+
+crossOrigin: "*"
 
 // here we create a httpaxios for our website base url
 export const httpAxios = axios.create({
