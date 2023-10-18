@@ -7,11 +7,11 @@ import SettingDrawer from "../drawers/SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
 import { Avatar, Box, Container, IconButton } from "@mui/material";
-import PhoneModal from "./phoneModal";
+import PhoneModal from "./PhoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
 import { useSelector } from "react-redux";
-import CartDrawer from "../drawers/cartDrawer";
+import CartDrawer from "../drawers/CartDrawer";
 
 // navigation for routing in different pages
 const Navigation = () => {

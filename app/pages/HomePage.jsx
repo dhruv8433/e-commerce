@@ -1,5 +1,5 @@
 import React from "react";
-import HomeAnimation from "../components/homeAnimation";
+import HomeAnimation from "../components/HomeAnimation";
 import "@/app/styles/style.css";
 import ProviderSection from "../components/ProviderSection";
 import Tweets from "../components/Tweets";
