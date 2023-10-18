@@ -7,7 +7,6 @@ import SettingDrawer from "../drawers/SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
 import { Avatar, Box, Container, IconButton } from "@mui/material";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PhoneModal from "./phoneModal";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";

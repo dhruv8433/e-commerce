@@ -6,7 +6,6 @@ import homeAnimationJSON from "@/app/json/animations/homescreen.json";
 import { useTranslations } from "next-intl";
 import { Grid } from "@mui/material";
 import "@/app/styles/style.css";
-import CustomButton from "../common/CustomButton";
 
 // starting component
 // use client because lottie only support in client component
