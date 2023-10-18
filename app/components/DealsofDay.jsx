@@ -4,9 +4,8 @@ import { Box, Container, Grid } from "@mui/material";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import { getHomeScreen } from "../httpFetch";
-import discountAnimation from "@/app/json/animations/discount.json";
 import Deal from "./Deal";
-import Lottie from "lottie-react";
+
 
 const DealsofDay = () => {
   const t = useTranslations("home_ads");

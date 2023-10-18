@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Container, Grid } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 import bookingAnimation from "@/app/json/animations/booking.json";
 import dealsAnimation from "@/app/json/animations/deals.json";

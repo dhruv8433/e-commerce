@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Card, CardContent, CardMedia, IconButton } from "@mui/material";
 import { useTranslations } from "next-intl";

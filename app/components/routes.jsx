@@ -1,3 +1,5 @@
+"use client";
+
 import {
   HomeOutlined,
   SettingsOutlined,
@@ -8,7 +10,6 @@ import { Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 // routes contain all necassary pages link
 const Routes = ({ display, icons, padding, spacing }) => {
