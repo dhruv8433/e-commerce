@@ -19,11 +19,10 @@ const cartReducer = (state = initialState, action) => {
       };
     case REMOVE_FROM_CART:
       // action.payload should contain the item to be removed from the cart
-      const updatedCart = state.cart.filter(
+      const updatedCart = state.data.filter(
         (item) => item.id !== action.payload.id
       );
       return {
-        ...state,
         cart: updatedCart,
         status: "pending",
       };
