@@ -4,7 +4,7 @@ import { Card, CardContent, CardMedia, Skeleton } from "@mui/material";
 export const ProviderSkeleton = () => {
   return (
     <div className="p-1 items-center text-center">
-      <Card>
+      <Card sx={{width: 400}}>
         {/* Skeleton loader for banner image */}
         <Skeleton variant="rectangular" sx={{ height: 250 }} />
 
