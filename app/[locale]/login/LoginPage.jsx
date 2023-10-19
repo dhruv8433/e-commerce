@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { Grid } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Button, Grid } from "@mui/material";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import { verifyUser } from "@/app/services/verifyUser";
@@ -44,6 +44,16 @@ const LoginPage = () => {
       dispatch(loginFailure("Login Error"));
       toast.error("Something went wrong");
     }
+  };
+
+  const setGuestUser = () => {
+    console.log("button click");
+    setLoginData({
+      email: "guestuser@gmail.com",
+      password: "12345",
+    });
+    document.getElementById("email").value = "guestuser@gmail.com";
+    document.getElementById("password").value = "12345";
   };
 
   const t = useTranslations("login");
@@ -107,9 +117,14 @@ const LoginPage = () => {
               </form>
               <div className="text-center">
                 <p className="text-gray-600">{t("no_account")}</p>
+                <Button onClick={() => setGuestUser()}>
+                  {t("guest_user")}
+                </Button>{" "}
+                <br />
                 <Link href="/signup" className="text-blue-500 hover:underline">
                   {t("signup")}
                 </Link>
+                <br />
               </div>
             </div>
           </div>
