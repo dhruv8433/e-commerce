@@ -33,7 +33,11 @@ const Providers = () => {
       <Container>
         <Box className="py-2">
           {loading ? (
-            <ProviderSkeleton />
+            <>
+              <ProviderSkeleton />
+              <ProviderSkeleton />
+              <ProviderSkeleton />
+            </>
           ) : (
             <div className="providercard">
               <Box>

@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { DeleteOutline } from "@mui/icons-material";
 import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { removeToCart } from "../action/action";
 
 const ServiceCard = ({ services, deleteIcon }) => {
   const t = useTranslations("service");
@@ -14,8 +16,11 @@ const ServiceCard = ({ services, deleteIcon }) => {
   const { providerId } = useParams();
   const { providerSlug } = useParams();
 
+  const dispatch = useDispatch();
+
   const deleteService = () => {
     toast.success("Service Deleted Success !");
+    dispatch(removeToCart(services));
   };
 
   return (
