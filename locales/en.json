@@ -41,7 +41,8 @@
         "email": "Email",
         "password": "Password",
         "signup": "Sign Up",
-        "no_account": "Don't Have Account"
+        "no_account": "Don't Have Account",
+        "guest_user": "Login as Guest"
     },
     "footer": {
         "one_stop": "Your one-stop solution for all your requirements.",
