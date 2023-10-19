@@ -9,7 +9,7 @@ import ServiceCard from "../components/ServiceCard";
 const CartDrawer = () => {
   const [openCart, setOpenCart] = useState(false);
 
-  const items = useSelector((state) => state.cart.data);
+  const items = useSelector((state) => state.cart.cartItems);
   return (
     <>
       <IconButton onClick={() => open(setOpenCart)}>
@@ -21,13 +21,14 @@ const CartDrawer = () => {
             <h1 className="font-semibold text-2xl">Your Services</h1>
             <Divider />
             {/* reuser service card and i have to just display delete icon on that based on props -- simple */}
-            {items.map((service) => (
-              <ServiceCard
-                key={service.id}
-                services={service}
-                deleteIcon={true}
-              />
-            ))}
+            {items &&
+              items.map((service) => (
+                <ServiceCard
+                  key={service.id}
+                  services={service}
+                  deleteIcon={true}
+                />
+              ))}
           </div>
         </Box>
       </Drawer>

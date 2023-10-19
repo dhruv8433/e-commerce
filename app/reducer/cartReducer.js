@@ -1,6 +1,6 @@
 // initial stage for cart functionallity
 const initialState = {
-  data: [],
+  cartItems: [],
   status: "pending",
 };
 
@@ -14,16 +14,17 @@ const cartReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return {
         ...state,
-        data: [...state.data, action.payload],
+        cartItems: [...state.cart, action.payload],
         status: "pending",
       };
     case REMOVE_FROM_CART:
       // action.payload should contain the item to be removed from the cart
-      const updatedCart = state.data.filter(
+      const updatedCart = state.cartItems.filter(
         (item) => item.id !== action.payload.id
       );
       return {
-        cart: updatedCart,
+        ...state,
+        cartItems: updatedCart,
         status: "pending",
       };
     default:

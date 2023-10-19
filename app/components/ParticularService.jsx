@@ -10,10 +10,10 @@ const ParticularService = ({ service }) => {
 
   // to get user details
   const user = useSelector((state) => state.isAuthenticate.user);
-  const cart = useSelector((state) => state.cart.data); // Get the cart from the Redux store
+  const cart = useSelector((state) => state.cart.cartItems); // Get the cart from the Redux store
 
   // Check if the service is already in the cart
-  const isServiceInCart = cart.some((item) => item.id === service.id);
+  const isServiceInCart = cart ? cart.some((item) => item.id === service.id) : "";
 
   //  function to add to cart
   function addItemsToCart() {
