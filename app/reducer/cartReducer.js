@@ -14,7 +14,7 @@ const cartReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       return {
         ...state,
-        cartItems: [...state.cart, action.payload],
+        cartItems: [...state.cartItems, action.payload],
         status: "pending",
       };
     case REMOVE_FROM_CART:

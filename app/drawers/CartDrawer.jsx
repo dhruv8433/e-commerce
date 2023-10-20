@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import ServiceCard from "../components/ServiceCard";
 import emptyCartAnimation from "@/app/json/animations/empty_cart.json";
 import Lottie from "lottie-react";
+import CustomButton from "../common/CustomButton";
 
 const CartDrawer = () => {
   const [openCart, setOpenCart] = useState(false);
@@ -35,6 +36,13 @@ const CartDrawer = () => {
               <div className="flex justify-center items-center h-screen">
                 <Lottie animationData={emptyCartAnimation} />
               </div>
+            )}
+
+            {/* payment button integration */}
+            {items.length > 0 ? (
+              <CustomButton children={"Place order"} varient={"outlined"} />
+            ) : (
+              ""
             )}
           </div>
         </Box>
