@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { close, open } from "../config/config";
 import { useSelector } from "react-redux";
 import ServiceCard from "../components/ServiceCard";
+import emptyCartAnimation from "@/app/json/animations/empty_cart.json";
+import Lottie from "lottie-react";
 
 const CartDrawer = () => {
   const [openCart, setOpenCart] = useState(false);
@@ -21,14 +23,19 @@ const CartDrawer = () => {
             <h1 className="font-semibold text-2xl">Your Services</h1>
             <Divider />
             {/* reuser service card and i have to just display delete icon on that based on props -- simple */}
-            {items &&
+            {items > 0 ? (
               items.map((service) => (
                 <ServiceCard
                   key={service.id}
                   services={service}
                   deleteIcon={true}
                 />
-              ))}
+              ))
+            ) : (
+              <div className="flex justify-center items-center h-screen">
+                <Lottie animationData={emptyCartAnimation} />
+              </div>
+            )}
           </div>
         </Box>
       </Drawer>
