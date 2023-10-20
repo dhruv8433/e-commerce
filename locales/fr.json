@@ -1,58 +1,95 @@
 {
     "translation": {
-        "welcome": "Bienvenue sur notre site Web",
-        "greeting": "Bonjour, {{name}} !",
-        "buttonLabel": "Cliquez-moi"
+      "welcome": "Bienvenue sur notre site Web",
+      "greeting": "Bonjour, {{name}} !",
+      "buttonLabel": "Cliquez sur moi"
     },
     "contact": {
-        "contact": "Nous Contacter",
-        "name": "Nom",
-        "email": "E-mail",
-        "message": "Message",
-        "submit": "Envoyer"
+      "contact": "Contactez-nous",
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Envoyer"
     },
     "navigation": {
-        "home": "Accueil",
-        "about": "À propos",
-        "provider": "Fournisseurs",
-        "contact": "Contact",
-        "login": "Connexion",
-        "signup": "S'inscrire",
-        "erequirement": "eRequirement"
+      "home": "Accueil",
+      "about": "À propos",
+      "provider": "Fournisseurs",
+      "contact": "Contact",
+      "login": "Se connecter",
+      "signup": "S'inscrire",
+      "erequirement": "eRequirement"
     },
     "home_ads": {
-        "welcome": "Bienvenue sur eRequirement",
-        "one_stop": "Votre solution unique pour tous vos besoins.",
-        "get_start": "Commencer",
-        "top_provider": "NOS PRESTATAIRES LES MIEUX NOTÉS",
-        "deals": "OFFRES DU JOUR"
+      "welcome": "Bienvenue sur eRequirement",
+      "one_stop": "Votre solution unique pour toutes vos exigences.",
+      "get_start": "Commencer",
+      "top_provider": "NOS FOURNISSEURS LES MIEUX NOTÉS",
+      "deals": "OFFRES DU JOUR",
+      "explore_here": "explorez notre site Web"
     },
     "signup": {
-        "signup": "S'inscrire",
-        "email": "Email",
-        "password": "Mot de passe",
-        "phone": "Téléphone",
-        "name": "Nom complet",
-        "address": "Adresse"
+      "signup": "S'inscrire",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "phone": "Téléphone",
+      "name": "Nom complet",
+      "address": "Adresse"
     },
     "login": {
-        "login": "Se connecter",
-        "email": "Email",
-        "password": "Mot de passe",
-        "signup": "S'inscrire",
-        "no_account": "Pas encore de compte ?"
+      "login": "Se connecter",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "signup": "S'inscrire",
+      "no_account": "Vous n'avez pas de compte",
+      "guest_user": "Se connecter en tant qu'invité"
     },
     "footer": {
-        "one_stop": "Votre solution unique pour toutes vos exigences.",
-        "erequirement": "eRequirement",
-        "follow": "Suivez-nous",
-        "quick_links": "Liens rapides",
-        "home": "Accueil",
-        "about": "À propos",
-        "provider": "Fournisseurs",
-        "contact": "Contactez-nous",
-        "address": "Adresse",
-        "phone": "Téléphone",
-        "email": "E-mail"
+      "one_stop": "Votre solution unique pour toutes vos exigences.",
+      "erequirement": "eRequirement",
+      "follow": "Suivez-nous",
+      "quick_links": "Liens rapides",
+      "home": "Accueil",
+      "about": "À propos",
+      "provider": "Fournisseurs",
+      "contact": "Contactez-nous",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail"
+    },
+    "providers": {
+      "order_completed": "commande terminée",
+      "address": "Adresse",
+      "available": "Fournisseurs disponibles"
+    },
+    "discount": {
+      "register": "Inscrivez-vous et envoyez vos reçus d'achat à",
+      "company_email": "erequirement@gmail.com",
+      "discount": "pour obtenir une réduction chez votre fournisseur préféré"
+    },
+    "work": {
+      "how": "Comment fonctionne ",
+      "company": "eRequirement",
+      "work": "Travail",
+      "online_book": "Réservez en ligne un service",
+      "step_1": "Trouvez où vous pouvez trouver un service particulier et comparez son prix parmi les fournisseurs disponibles",
+      "best_price": "Trouvez les meilleurs prix",
+      "step_2": "Créez et enregistrez votre liste de courses pour pouvoir parcourir où vous pouvez l'acheter au prix le moins cher.",
+      "save_time": "Économisez du temps et de l'argent",
+      "step_3": "Comparez avant d'acheter ! Inscrivez-vous gratuitement. Gérez vos achats en toute simplicité - pas de frais cachés."
+    },
+    "service": {
+      "rating": "Évaluation",
+      "add": "Ajouter"
+    },
+    "reviews": {
+      "customer_review": "Avis des clients"
+    },
+    "profile": {
+      "booking": "Réservations",
+      "bookmark": "Signet",
+      "notification": "Notifications",
+      "delete_account": "Supprimer le compte"
     }
-}
+  }
+  
