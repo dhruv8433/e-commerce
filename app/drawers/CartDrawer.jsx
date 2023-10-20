@@ -23,7 +23,7 @@ const CartDrawer = () => {
             <h1 className="font-semibold text-2xl">Your Services</h1>
             <Divider />
             {/* reuser service card and i have to just display delete icon on that based on props -- simple */}
-            {items > 0 ? (
+            {items.length > 0 ? (
               items.map((service) => (
                 <ServiceCard
                   key={service.id}
