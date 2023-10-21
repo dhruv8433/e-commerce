@@ -7,7 +7,7 @@ import Image from "next/image";
 const ProfileLeft = ({ user, logout }) => {
   return (
     <div>
-      <div className="border border-red-300 bg-theme rounded justify-center">
+      <div className="border h-[590px] border-red-300 bg-theme rounded justify-center">
         <div>
           <div className="user-image h-56 w-56 mx-auto text-center">
             <Image
@@ -21,6 +21,8 @@ const ProfileLeft = ({ user, logout }) => {
                 borderRadius: "120px",
                 maxHeight: "100%",
                 width: "100%",
+                marginBlock: 20,
+                padding: 10
               }}
             />
           </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import ProfileBooking from "@/app/components/ProfileBooking";
 import UserProfile from "@/app/components/UserProfile";
 import { Container } from "@mui/material";
 import { useParams } from "next/navigation";
@@ -13,7 +12,10 @@ const page = () => {
     <Container>
       {/* if params is bookings than render this section */}
       {parmas && parmas.profileOption === "bookings" ? (
-        <UserProfile content={<ProfileBooking />} />
+        <>
+          <UserProfile />
+          <h1>Bookings </h1>
+        </>
       ) : (
         <UserProfile />
       )}

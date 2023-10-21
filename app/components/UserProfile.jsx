@@ -7,8 +7,10 @@ import toast from "react-hot-toast";
 import { Grid } from "@mui/material";
 import { ProfileRoutes } from "./routes";
 import ProfileLeft from "./ProfileLeft";
+import profileAnimation from "@/app/json/animations/profile.json";
+import Lottie from "lottie-react";
 
-const UserProfile = ({ content }) => {
+const UserProfile = ({ profilePage }) => {
   // dispatch for using redux
   const dispatch = useDispatch();
 
@@ -35,8 +37,9 @@ const UserProfile = ({ content }) => {
           <div className="border border-red-300 rounded">
             {/* user navigation links that contain common user profile but different user route */}
             <ProfileRoutes />
-            {/* content that based on link displayed */}
-            <div className="content">{content}</div>
+          </div>
+          <div className="content border border-red-300 rounded  my-6">
+            {profileAnimation && <Lottie animationData={profileAnimation} style={{height: 500}}/>}
           </div>
         </Grid>
       </Grid>
