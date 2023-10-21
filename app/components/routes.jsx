@@ -64,8 +64,8 @@ export const ProfileRoutes = () => {
   // internationalization
   const t = useTranslations("profile");
   return (
-    <div className="bg-white h-10 flex items-center">
-      <ul className="flex justify-around w-full">
+    <div className="bg-white h-16 flex items-center px-2  ">
+      <ul className="flex justify-around w-full overflow-auto px-2">
         <li>
           <Link href={"/profile/bookings"}>{t("booking")}</Link>
         </li>
