@@ -3,7 +3,7 @@ import React from "react";
 import ProviderPage from "@/app/pages/ProviderPage";
 
 export const metadata = {
-  title: `Provider | ${company_name}`,
+  title: `Providers | ${company_name}`,
 };
 
 const page = () => {
