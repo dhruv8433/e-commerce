@@ -2,16 +2,12 @@ import "../globals.css";
 // for using multi language in our project
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import { company_name } from "../config/config";
 import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
 require("dotenv").config();
 
-export const metadata = {
-  title: `Home | ${company_name}`,
-};
 
 // static params for our languages file
 export function generateStaticParams() {
