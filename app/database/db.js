@@ -4,7 +4,7 @@ require('dotenv').config();
 export async function dbConnect() {
   try {
     // Use await to properly wait for the connection
-    const connection = await mongoose.connect(process.env.MONGO, {
+    const connection = await mongoose.connect(process.env.MONGODB_URI, {
       dbName: "e-commerce",
     });
 
