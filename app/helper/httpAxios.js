@@ -7,6 +7,6 @@ import axios from "axios";
 // here we create a httpaxios for our website base url
 export const httpAxios = axios.create({
   //  localhost live
-  //   baseURL: "http://localhost:8000",
-  baseURL: "https://e-requirement.vercel.app/",
+    baseURL: "http://localhost:8000",
+  // baseURL: "https://e-requirement.vercel.app/",
 });
