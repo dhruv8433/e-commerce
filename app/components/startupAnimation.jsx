@@ -6,22 +6,35 @@ import "@/app/styles/style.css";
 import Lottie from "lottie-react";
 // just import json file of lottie animation from 'https://lottiefiles.com/animations/welcome-ioV4tbykLt'
 import animationData from "@/app/json/animations/welcome.json";
+import { useSelector } from "react-redux";
 
 // welcome animation
 function StartupAnimation() {
+  const animationVisible = useSelector(
+    (state) => !state.isAuthenticate.isAuthenticated
+  );
+
   useEffect(() => {
     // getting div of animation using query selector
-    const animationContainer = document.querySelector(".startup-animation");
-    // the removal of the animation container after 4s
-    setTimeout(() => {
-      animationContainer.style.display = "none";
-    }, 4000);
+    if (animationVisible) {
+      const animationContainer = document.querySelector(".startup-animation");
+      // the removal of the animation container after 4s
+      setTimeout(() => {
+        animationContainer.style.display = "none";
+      }, 4000);
+    }
   }, []);
 
   return (
-    <div className="startup-animation">
-      <Lottie animationData={animationData} />
-    </div>
+    <>
+      {animationVisible ? (
+        <div className="startup-animation">
+          <Lottie animationData={animationData} />
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 }
 
