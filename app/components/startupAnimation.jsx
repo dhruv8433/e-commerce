@@ -6,17 +6,18 @@ import "@/app/styles/style.css";
 import Lottie from "lottie-react";
 // just import json file of lottie animation from 'https://lottiefiles.com/animations/welcome-ioV4tbykLt'
 import animationData from "@/app/json/animations/welcome.json";
-import { useSelector } from "react-redux";
+import Cookie from "js-cookie";
 
 // welcome animation
 function StartupAnimation() {
-  const animationVisible = useSelector(
-    (state) => !state.isAuthenticate.isAuthenticated
-  );
-
+  // first check if this cookie is exist or not
+  const animationShown = Cookie.get("animationShow");
   useEffect(() => {
-    // getting div of animation using query selector
-    if (animationVisible) {
+    if (!animationShown) {
+      // if cookie not exist then set and expire in 1 days
+      Cookie.set("animationShow", true, {
+        expires: 1,
+      });
       const animationContainer = document.querySelector(".startup-animation");
       // the removal of the animation container after 4s
       setTimeout(() => {
@@ -27,12 +28,12 @@ function StartupAnimation() {
 
   return (
     <>
-      {animationVisible ? (
+      {animationShown ? (
+        ""
+      ) : (
         <div className="startup-animation">
           <Lottie animationData={animationData} />
         </div>
-      ) : (
-        ""
       )}
     </>
   );
