@@ -1,14 +1,20 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent, CardMedia, IconButton } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+} from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { DeleteOutline } from "@mui/icons-material";
 import toast from "react-hot-toast";
-import { useDispatch } from "react-redux";
-import { removeToCart } from "../action/action";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeToCart } from "../action/action";
 
 const ServiceCard = ({ services, deleteIcon }) => {
   const t = useTranslations("service");
@@ -23,12 +29,39 @@ const ServiceCard = ({ services, deleteIcon }) => {
     dispatch(removeToCart(services));
   };
 
+  // check is user authenticated
+  const isUserAuthenicated = useSelector(
+    (state) => state.isAuthenticate.isAuthenticated
+  );
+
+  // fetch cart details
+  const cart = useSelector((state) => state.cart.cartItems);
+
+  // Check if the service is already in the cart
+  const isServiceInCart = cart
+    ? cart.some((item) => item.id === services.id)
+    : "";
+
+  // add items to cart function
+  const addItem = () => {
+    if (isUserAuthenicated) {
+      if (isServiceInCart) {
+        toast.error("Service already in cart");
+        return;
+      }
+      dispatch(addToCart(services));
+      toast.success("Item added to cart");
+    } else {
+      toast.error("Please login first!!");
+    }
+  };
+
   return (
     <>
       <Link
         href={`/${providerId}/${providerSlug}/${services.id}/${services.slug}`}
       >
-        <Card className="my-3 hover:cursor-pointer" sx={{ p: 1, height: 320 }}>
+        <Card className="my-1 hover:cursor-pointer" sx={{ p: 1, height: 350 }}>
           {/* Left side with image, title, and rating */}
           <CardMedia
             component="img"
@@ -46,7 +79,7 @@ const ServiceCard = ({ services, deleteIcon }) => {
             </p>
 
             {/* Right side with the "Add" button */}
-            <div className="mt-2 flex justify-between items-center">
+            <div className="flex justify-between items-center">
               <div className="price">
                 <p className="text-blue-500 text-2xl">
                   ${services.discounted_price}
@@ -61,6 +94,7 @@ const ServiceCard = ({ services, deleteIcon }) => {
           </CardContent>
         </Card>
       </Link>
+
       {deleteIcon === true ? (
         <IconButton
           sx={{ mt: "-100px", ml: "80%" }}
@@ -69,7 +103,14 @@ const ServiceCard = ({ services, deleteIcon }) => {
           <DeleteOutline sx={{ color: "red" }} />
         </IconButton>
       ) : (
-        ""
+        <Button
+          sx={{ mt: "-100px", ml: "20px" }}
+          variant="outlined"
+          size="small"
+          onClick={() => addItem()}
+        >
+          Add
+        </Button>
       )}
     </>
   );
