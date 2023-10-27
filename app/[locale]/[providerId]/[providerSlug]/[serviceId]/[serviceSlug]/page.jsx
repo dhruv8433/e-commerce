@@ -1,5 +1,6 @@
 "use client";
 import ParticularService from "@/app/components/ParticularService";
+import { company_name } from "@/app/config/config";
 import { getService } from "@/app/services/getServices";
 import { Box } from "@mui/material";
 import { useParams } from "next/navigation";
@@ -26,9 +27,12 @@ const page = () => {
     <Box sx={{ pt: { xs: "4rem", md: "5rem" } }}>
       {service.map((response) => {
         //  if service id existing inside provider service
-        if (serviceId == response.id)
+        if (serviceId == response.id) {
+          // title based on service
+          document.title = `${response.title} | ${company_name}`;
           // if condition match then return this component
           return <ParticularService key={response.id} service={response} />;
+        }
       })}
     </Box>
   );

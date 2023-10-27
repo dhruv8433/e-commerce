@@ -7,6 +7,7 @@ import { Container, Grid } from "@mui/material";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DetailedProvider from "@/app/components/DetailedProvider";
+import { company_name } from "@/app/config/config";
 
 const page = () => {
   const [services, setServices] = useState([]);
@@ -25,7 +26,12 @@ const page = () => {
       console.log(error);
     }
   }
+
+  // title of every dynamic page
+  document.title = `${provider.title} | ${company_name}`;
+
   useEffect(() => {
+    // temp delay and without that we can't see page
     const delay = setTimeout(() => {
       getServices();
     }, 2000);

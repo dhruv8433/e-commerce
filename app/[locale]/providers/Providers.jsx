@@ -33,11 +33,9 @@ const Providers = () => {
       <Container>
         <Box className="py-2">
           {loading ? (
-            <>
-              <ProviderSkeleton />
-              <ProviderSkeleton />
-              <ProviderSkeleton />
-            </>
+            <Grid container>
+              <MultiSkeleton />
+            </Grid>
           ) : (
             <div className="providercard">
               <Box>
@@ -60,3 +58,28 @@ const Providers = () => {
 };
 
 export default Providers;
+
+const MultiSkeleton = () => {
+  return (
+    <>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+      <Grid item xs={12} sm={8} md={4}>
+        <ProviderSkeleton />
+      </Grid>
+    </>
+  );
+};
