@@ -1,5 +1,8 @@
+import { dbConnect } from "@/app/database/db";
 import { ProviderModel } from "@/app/model/providerModel";
 import { NextResponse } from "next/server";
+
+dbConnect();
 
 // fetching all providerss
 export async function POST(request) {
