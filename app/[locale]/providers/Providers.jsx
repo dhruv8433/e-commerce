@@ -14,7 +14,7 @@ const Providers = () => {
     try {
       const response = await GetProviders();
       console.log(response);
-      setProviders(response.data);
+      setProviders(response);
       setLoading(false);
     } catch (error) {
       console.log("Error in Getting Providers: ", error);
