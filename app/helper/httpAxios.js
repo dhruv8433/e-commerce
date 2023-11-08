@@ -8,5 +8,6 @@ import axios from "axios";
 export const httpAxios = axios.create({
   //  localhost live
   //   baseURL: "http://localhost:8000",
+  // baseURL: "http://localhost:8000",
   baseURL: "https://e-requirement.vercel.app/",
 });
