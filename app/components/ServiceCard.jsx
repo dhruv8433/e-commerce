@@ -30,7 +30,7 @@ const ServiceCard = ({ services, deleteIcon }) => {
   };
 
   // check is user authenticated
-  const isUserAuthenicated = useSelector(
+  const isUserAuthenticated = useSelector(
     (state) => state.isAuthenticate.isAuthenticated
   );
 
@@ -44,7 +44,10 @@ const ServiceCard = ({ services, deleteIcon }) => {
 
   // add items to cart function
   const addItem = () => {
-    if (isUserAuthenicated) {
+    console.log(cart);
+    // item add only when user is authenticated
+    if (isUserAuthenticated) {
+      // if service already in cart
       if (isServiceInCart) {
         toast.error("Service already in cart");
         return;
