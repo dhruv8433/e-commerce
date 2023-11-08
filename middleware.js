@@ -1,33 +1,21 @@
 import createMiddleware from "next-intl/middleware";
+import { isAuthenticated } from "./app/helper/AuthenticatedService";
 import { NextResponse } from "next/server";
 
-const headersOption = () => {
-  const res = NextResponse.next();
-  // add the CORS headers to the response
-  res.headers.append("Access-Control-Allow-Credentials", "true");
-  res.headers.append("Access-Control-Allow-Origin", "*"); // replace this your actual origin
-  res.headers.append(
-    "Access-Control-Allow-Methods",
-    "GET,DELETE,PATCH,POST,PUT"
-  );
-  res.headers.append(
-    "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-  );
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ["en", "hi", "fr"],
+  defaultLocale: "sen",
+});
 
-  return res;
-};
-
-export default createMiddleware(
-  {
-    // A list of all locales that are supported
-    locales: ["en", "hi", "fr"],
-
-    // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
-    defaultLocale: "en",
-  },
-  headersOption
-);
+// export async function middleware(request) {
+//   if (!isAuthenticated) {
+//     console.log("authenticated");
+//     return;
+//   }
+//   console.log("unautho");
+//   return NextResponse.redirect(new URL("/en/", request.url));
+// }
 
 export const config = {
   // Skip all paths that should not be internationalized. This example skips the
