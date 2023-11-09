@@ -18,7 +18,7 @@ const page = () => {
     try {
       // service of particular provider
       const result = await getService(providerId);
-      setServices(result.data);
+      setServices(result);
       // particular provider
       const serviceProvider = await GetSingleProvider(providerId);
       setProvider(serviceProvider);
@@ -59,11 +59,15 @@ const page = () => {
           <Grid item sm={12} md={8}>
             <div className="left mt-24 p-3 rounded bg-slate-100">
               <Grid container spacing={3}>
-                {services.map((service) => (
-                  <Grid item xs={12} sm={8} md={4} key={service.id}>
-                    <ServiceCard key={service.id} services={service} />
-                  </Grid>
-                ))}
+                {services.map((service) => {
+                  if (service.provider_id == providerId) {
+                    return (
+                      <Grid item xs={12} sm={8} md={4} key={service.id}>
+                        <ServiceCard key={service.id} services={service} />
+                      </Grid>
+                    );
+                  }
+                })}
               </Grid>
             </div>
           </Grid>

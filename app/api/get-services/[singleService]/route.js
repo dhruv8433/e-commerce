@@ -1,63 +1,24 @@
 import { NextResponse } from "next/server";
-import {
-  carProviderId,
-  electricId,
-  fullServiceId,
-  homeId,
-  kitchenExprertId,
-  laundryId,
-  newBarberId,
-  pestControlId,
-  plumbingId,
-  providersId,
-} from "@/app/config/config";
+import { providersId } from "@/app/config/config";
+import { serviceModel } from "@/app/model/serviceModel";
+import { dbConnect } from "@/app/database/db";
 
-// json file based in their id's
-import homeResponse from "./json/home-cleaner.json";
-import laundryCleaner from "./json/laundry-cleaner.json";
-import fullService from "./json/full-service-cleaner.json";
-import newBarber from "./json/new-barber.json";
-import electric from "./json/electric.json";
-import pestControl from "./json/pest-control.json";
-import plumbing from "./json/plumbing.json";
-import kitchenExprert from "./json/kitchen-expert.json";
-import carProvider from "./json/car-provider.json";
+dbConnect();
 
 export async function POST(request) {
   const { id } = await request.json(); // Extract the 'id' parameter from the URL
 
+  let services = [];
   if (providersId.includes(id)) {
-    if (id === homeId) {
-      return NextResponse.json(homeResponse);
-    }
-    if (id === laundryId) {
-      return NextResponse.json(laundryCleaner);
-    }
-    if (id === fullServiceId) {
-      return NextResponse.json(fullService);
-    }
-    if (id === newBarberId) {
-      return NextResponse.json(newBarber);
-    }
-    if (id === electricId) {
-      return NextResponse.json(electric);
-    }
-    if (id === pestControlId) {
-      return NextResponse.json(pestControl);
-    }
-    if (id === plumbingId) {
-      return NextResponse.json(plumbing);
-    }
-    if (id === kitchenExprertId) {
-      return NextResponse.json(kitchenExprert);
-    }
-    if (id === carProviderId) {
-      return NextResponse.json(carProvider);
-    }
+    try {
+      services = await serviceModel.find();
+    } catch (error) {}
   } else {
     return NextResponse.json({
       success: false,
       message: "Provider not exist",
     });
   }
+
+  return NextResponse.json(services)
 }
