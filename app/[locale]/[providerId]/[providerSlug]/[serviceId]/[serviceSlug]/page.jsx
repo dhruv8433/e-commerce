@@ -17,7 +17,7 @@ const page = () => {
   // async function to find particular provider
   async function particularProvider() {
     const response = await getService(providerId);
-    setService(response.data);
+    setService(response);
   }
 
   useEffect(() => {

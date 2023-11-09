@@ -60,6 +60,7 @@ const page = () => {
             <div className="left mt-24 p-3 rounded bg-slate-100">
               <Grid container spacing={3}>
                 {services.map((service) => {
+                  // if service's provider id match with this provider id that we got from params
                   if (service.provider_id == providerId) {
                     return (
                       <Grid item xs={12} sm={8} md={4} key={service.id}>
