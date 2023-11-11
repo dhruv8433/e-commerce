@@ -27,7 +27,7 @@ const Provider = ({ provider }) => {
               sx={{
                 height: 120,
                 width: 120,
-                borderRadius: 50,
+                borderRadius: 2,
                 mt: -8,
                 border: "5px solid white",
               }}

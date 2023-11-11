@@ -14,24 +14,10 @@ const DetailedProvider = ({ provider }) => {
       <Card>
         <CardMedia
           component={"img"}
-          image={provider.banner}
+          image={provider.logo}
           alt="card banner"
           sx={{ height: 300, objectFit: "cover" }}
         />
-        <div className="flex justify-center">
-          <CardMedia
-            component={"img"}
-            image={provider.logo} // Provide the URL of the logo image here
-            alt="card banner"
-            sx={{
-              height: 120,
-              width: 120,
-              borderRadius: 50,
-              mt: -8,
-              border: "5px solid white",
-            }}
-          />
-        </div>
         <CardContent className="text-center relative">
           {/* Position the Lottie animation in the top-left corner */}
           <div className="absolute -bottom-5 left-0">
