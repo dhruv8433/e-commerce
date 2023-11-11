@@ -2,12 +2,14 @@
 
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import toast from "react-hot-toast";
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100; // Stripe wants the price in cents
 
   const onToken = (token) => {
     console.log(token); // You can send the token to your server for processing
+    toast.success("order success");
   };
 
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY;
