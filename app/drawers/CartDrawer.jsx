@@ -8,11 +8,16 @@ import ServiceCard from "../components/ServiceCard";
 import emptyCartAnimation from "@/app/json/animations/empty_cart.json";
 import Lottie from "lottie-react";
 import CustomButton from "../common/CustomButton";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "../components/CheckOut";
+import { loadStripe } from "@stripe/stripe-js";
+import StripeCheckoutButton from "../components/CheckOut";
 
 const CartDrawer = () => {
   const [openCart, setOpenCart] = useState(false);
 
   const items = useSelector((state) => state.cart.cartItems);
+
   return (
     <>
       <IconButton onClick={() => open(setOpenCart)}>
@@ -39,11 +44,7 @@ const CartDrawer = () => {
             )}
 
             {/* payment button integration */}
-            {items.length > 0 ? (
-              <CustomButton children={"Place order"} varient={"outlined"} />
-            ) : (
-              ""
-            )}
+            {items.length > 0 ? <StripeCheckoutButton price={10} /> : ""}
           </div>
         </Box>
       </Drawer>
