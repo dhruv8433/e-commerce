@@ -23,7 +23,7 @@ const StripeCheckoutButton = ({ price }) => {
       amount={priceForStripe}
       panelLabel="Pay Now"
       token={onToken}
-      stripeKey={PUBLIC_KEY}
+      stripeKey={process.env.NEXT_PUBLIC_KEY}
     />
   );
 };
