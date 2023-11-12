@@ -1,3 +1,4 @@
+import { dbConnect } from "@/app/database/db";
 import { NextResponse } from "next/server";
 
 // it is static data but how can we add and use db here ?
@@ -12,6 +13,8 @@ import { NextResponse } from "next/server";
 // id 221 to 230 for home sub cat
 // id 250 to 260 for deals of day
 // id 260 to 270 for deals of day
+
+dbConnect();
 
 export async function POST(request) {
   return NextResponse.json(
