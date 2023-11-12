@@ -1,6 +1,9 @@
 import { userModel } from "@/app/model/userModel";
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
+import { dbConnect } from "@/app/database/db";
+
+dbConnect();
 
 export async function POST(request) {
   // we are fetching data from user using json

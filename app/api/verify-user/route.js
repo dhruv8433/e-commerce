@@ -1,6 +1,9 @@
+import { dbConnect } from "@/app/database/db";
 import httpNextResponse from "@/app/helper/NextResponse";
 import { userModel } from "@/app/model/userModel";
 import { NextResponse } from "next/server";
+
+dbConnect();
 
 export async function POST(request) {
   const { email, password } = await request.json();

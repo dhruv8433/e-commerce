@@ -1,5 +1,8 @@
+import { dbConnect } from "@/app/database/db";
 import { userModel } from "@/app/model/userModel";
 import { NextResponse } from "next/server";
+
+dbConnect();
 
 // fetching all users
 export async function POST(request) {
