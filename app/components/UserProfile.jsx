@@ -10,7 +10,7 @@ import ProfileLeft from "./ProfileLeft";
 import profileAnimation from "@/app/json/animations/profile.json";
 import Lottie from "lottie-react";
 
-const UserProfile = ({ profilePage }) => {
+const UserProfile = ({ profilePage, data, changeRoute }) => {
   // dispatch for using redux
   const dispatch = useDispatch();
 
@@ -39,7 +39,13 @@ const UserProfile = ({ profilePage }) => {
             <ProfileRoutes />
           </div>
           <div className="content border border-red-300 rounded  my-6">
-            {profileAnimation && <Lottie animationData={profileAnimation} style={{height: 500}}/>}
+            {!changeRoute && (
+              <Lottie
+                animationData={profileAnimation}
+                style={{ height: 500 }}
+              />
+            )}
+            <div>{data}</div>
           </div>
         </Grid>
       </Grid>
