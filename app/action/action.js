@@ -1,6 +1,10 @@
 // authActions.js
 // Import action types if you defined them in a separate file
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../reducer/cartReducer";
+import {
+  ADD_TO_CART,
+  CLEAR_CART,
+  REMOVE_FROM_CART,
+} from "../reducer/cartReducer";
 import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
@@ -30,7 +34,13 @@ export const addToCart = (data) => ({
   payload: data,
 });
 
+// remove any item from cart
 export const removeToCart = (data) => ({
   type: REMOVE_FROM_CART,
   payload: data,
+});
+
+// clear cart after place order
+export const celarCart = () => ({
+  type: CLEAR_CART,
 });
