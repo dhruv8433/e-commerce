@@ -1,5 +1,6 @@
 "use client";
 
+import Bookings from "@/app/components/Bookings";
 import UserProfile from "@/app/components/UserProfile";
 import { Container } from "@mui/material";
 import { useParams } from "next/navigation";
@@ -13,8 +14,7 @@ const page = () => {
       {/* if params is bookings than render this section */}
       {parmas && parmas.profileOption === "bookings" ? (
         <>
-          <UserProfile />
-          <h1>Bookings </h1>
+          <UserProfile data={<Bookings />} changeRoute={true} />
         </>
       ) : (
         <UserProfile />
