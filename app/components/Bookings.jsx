@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ServiceCard from "./ServiceCard";
 import { GetOrdersService } from "../services/getOrdersService";
 import { useSelector } from "react-redux";
+import SummeryCard from "./SummeryCard";
 
 const Bookings = () => {
   const [services, setServices] = useState([]);
   const token = useSelector((state) => state.isAuthenticate.user.token);
-
   async function gettingServices() {
     try {
       const service = await GetOrdersService();
@@ -22,21 +21,13 @@ const Bookings = () => {
   }, []);
   return (
     <>
-      <div>Bookings</div>
+      <h1 className="text-3xl font-bold">Bookings</h1>
       <hr />
       {services.map((order) => {
-        if (order.userToken == token)
-          return (
-            <div className="p-1 border border-gray-300 my-2 text-start">
-              <div className="">Order Date: {order.orderDate}</div>
-              <div className="">Order Status: {order.status}</div>
-              <div className="">
-                {order.data.map((singleOrder) => (
-                  <ServiceCard services={singleOrder} />
-                ))}
-              </div>
-            </div>
-          );
+        if (order.userToken === token) {
+          let total = 0;
+          return <SummeryCard key={order._id} order={order} total={total} />;
+        }
       })}
     </>
   );
