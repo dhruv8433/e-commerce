@@ -1,6 +1,7 @@
 // StripeCheckoutButton.js
 
 import React from "react";
+import toast from "react-hot-toast";
 import StripeCheckout from "react-stripe-checkout";
 
 const StripeCheckoutButton = ({ price }) => {
@@ -8,6 +9,7 @@ const StripeCheckoutButton = ({ price }) => {
 
   const onToken = (token) => {
     console.log(token); // You can send the token to your server for processing
+    toast.success("order success");
   };
 
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY;

@@ -7,16 +7,13 @@ import { useSelector } from "react-redux";
 import ServiceCard from "../components/ServiceCard";
 import emptyCartAnimation from "@/app/json/animations/empty_cart.json";
 import Lottie from "lottie-react";
-import CustomButton from "../common/CustomButton";
-import { Elements } from "@stripe/react-stripe-js";
-import CheckoutForm from "../components/CheckOut";
-import { loadStripe } from "@stripe/stripe-js";
 import StripeCheckoutButton from "../components/CheckOut";
 
 const CartDrawer = () => {
   const [openCart, setOpenCart] = useState(false);
 
   const items = useSelector((state) => state.cart.cartItems);
+  let price = 0;
 
   return (
     <>
@@ -30,13 +27,16 @@ const CartDrawer = () => {
             <Divider />
             {/* reuser service card and i have to just display delete icon on that based on props -- simple */}
             {items.length > 0 ? (
-              items.map((service) => (
-                <ServiceCard
-                  key={service.id}
-                  services={service}
-                  deleteIcon={true}
-                />
-              ))
+              items.map((service) => {
+                price = price + service.discounted_price;
+                return (
+                  <ServiceCard
+                    key={service.id}
+                    services={service}
+                    deleteIcon={true}
+                  />
+                );
+              })
             ) : (
               <div className="flex justify-center items-center h-screen">
                 <Lottie animationData={emptyCartAnimation} />
@@ -44,7 +44,7 @@ const CartDrawer = () => {
             )}
 
             {/* payment button integration */}
-            {items.length > 0 ? <StripeCheckoutButton price={10} /> : ""}
+            {items.length > 0 ? <StripeCheckoutButton price={price} /> : ""}
           </div>
         </Box>
       </Drawer>
