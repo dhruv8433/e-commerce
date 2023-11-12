@@ -3,7 +3,6 @@
 import React from "react";
 import toast from "react-hot-toast";
 import StripeCheckout from "react-stripe-checkout";
-import toast from "react-hot-toast";
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100; // Stripe wants the price in cents
