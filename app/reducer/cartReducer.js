@@ -7,6 +7,7 @@ const initialState = {
 // Define action types (constants)
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_TO_CART";
+export const CLEAR_CART = "CLEAR_CART";
 
 // reducer that handle which case fired
 const cartReducer = (state = initialState, action) => {
@@ -26,6 +27,11 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: updatedCart,
         status: "pending",
+      };
+    case CLEAR_CART:
+      // if order is placed than clear cart
+      return {
+        cartItems: [],
       };
     default:
       return state;
