@@ -1,4 +1,7 @@
+import { dbConnect } from "@/app/database/db";
 import { NextResponse } from "next/server";
+
+dbConnect();
 
 export async function POST(request) {
   const items = await request.json();
