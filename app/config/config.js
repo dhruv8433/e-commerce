@@ -29,3 +29,19 @@ export function open(open) {
 export function close(close) {
   close(false);
 }
+
+// type of notification we recived
+export const order_success = "order_success";
+export const order_cancle = "order_cancle";
+export const order_processed = "order_processed";
+
+export const order_success_msg = "Your Service Order Placed Success 🥳";
+export const order_canlce_msg = "Your order cancellation request recivied..!";
+export const order_processed_msg = "Your Service order is processed 🥳";
+
+export const order_success_details =
+  "Hello, your service order has been received. We will send another text when it’s on the way home.";
+export const order_canlce_details =
+  "Your order will be canceling soon, we refund amount into your bank account";
+export const order_processed_details =
+  "Your Service order is currently processing, don't forgot to review it";
