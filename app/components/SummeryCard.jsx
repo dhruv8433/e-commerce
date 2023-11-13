@@ -52,7 +52,7 @@ const SummeryCard = ({ order, total }) => {
         {/* Displaying total amount */}
         <div className="mb-4 text-right">
           <h2 className="font-semibold text-xl">Total Amount:</h2>
-          <p className="text-blue-600">${total}</p>
+          <p className="text-blue-600 text-xl font-semibold">${total}</p>
         </div>
 
         {/* Displaying order date */}
