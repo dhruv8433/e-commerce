@@ -1,13 +1,16 @@
 import { dbConnect } from "@/app/database/db";
+import { token } from "@/app/helper/userToken";
 import { notificationModel } from "@/app/model/notificationModel";
 import { NextResponse } from "next/server";
 
 dbConnect();
 
 export async function POST(request) {
+  const { token } = await request.json();
+  let notifications = [];
   try {
-    const notifications = await notificationModel.find();
-    return NextResponse.json(notifications);
+    notifications = await notificationModel.find({ token });
+    return NextResponse.json(notifications)
   } catch (error) {
     console.log(error);
     return NextResponse.json({
