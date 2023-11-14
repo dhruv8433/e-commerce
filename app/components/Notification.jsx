@@ -5,6 +5,8 @@ import { GetNotification } from "../services/getNotification";
 import { useSelector } from "react-redux";
 import NotificationCard from "./NotificationCard";
 import { NotificationSkeleton } from "./Skeletons";
+import Lottie from "lottie-react";
+import noNotification from "@/app/json/animations/no-notification-1.json";
 
 const Notification = () => {
   const [notification, setNotification] = useState([]);
@@ -26,11 +28,20 @@ const Notification = () => {
     <div>
       {loading ? (
         <NotificationSkeletons />
-      ) : (
+      ) : notification && notification.length > 0 ? (
         notification.map((notify) => {
-          if (notify.token == userToken)
-            return <NotificationCard notify={notify} />;
+          return notify.token === userToken ? (
+            <NotificationCard notify={notify} />
+          ) : null;
         })
+      ) : (
+        <div
+          className="flex justify-center items-center"
+          style={{ height: "500px" }}
+        >
+          {/* If no notification found for a particular user */}
+          <Lottie animationData={noNotification} />
+        </div>
       )}
     </div>
   );
@@ -39,6 +50,7 @@ const Notification = () => {
 export default Notification;
 
 const NotificationSkeletons = () => {
+  // notification skeleton layout
   return (
     <>
       <NotificationSkeleton />
