@@ -9,7 +9,7 @@ const Bookings = () => {
   const token = useSelector((state) => state.isAuthenticate.user.token);
   async function gettingServices() {
     try {
-      const service = await GetOrdersService();
+      const service = await GetOrdersService(token);
       console.log(service);
       setServices(service);
     } catch (error) {
