@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Grid,
   Skeleton,
   Table,
   TableBody,
@@ -157,6 +158,30 @@ export const NotificationSkeleton = () => {
           </div>
         </Card>
       </div>
+    </>
+  );
+};
+
+export const SkeletonServiceLoading = () => {
+  return (
+    <>
+      <Grid container spacing={2} paddingY={1}>
+        <Grid item xs={12} sm={8} md={4}>
+          <Serviceskeleton />
+          <Serviceskeleton />
+          <Serviceskeleton />
+        </Grid>
+        <Grid item xs={12} sm={8} md={4}>
+          <Serviceskeleton />
+          <Serviceskeleton />
+          <Serviceskeleton />
+        </Grid>
+        <Grid item xs={12} sm={8} md={4}>
+          <Serviceskeleton />
+          <Serviceskeleton />
+          <Serviceskeleton />
+        </Grid>
+      </Grid>
     </>
   );
 };
