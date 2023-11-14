@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 
 const DetailedProvider = ({ provider }) => {
   const t = useTranslations("providers");
+  console.log("hehe", provider);
   return (
     <div className="p-1 items-center text-center">
       <Card>
@@ -36,7 +37,8 @@ const DetailedProvider = ({ provider }) => {
 
             <div className="address">
               <p>
-                {t("address")}: <span className="font-bold">{provider.address}</span>
+                {t("address")}:{" "}
+                <span className="font-bold">{provider.address}</span>
               </p>
             </div>
 

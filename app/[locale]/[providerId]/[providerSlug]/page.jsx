@@ -13,6 +13,7 @@ import ProviderSkeleton, { Serviceskeleton } from "@/app/components/Skeletons";
 const page = () => {
   const [services, setServices] = useState([]);
   const [provider, setProvider] = useState([]);
+
   const [providerLoading, setProviderLoading] = useState(true);
   const [serviceLoading, setServiceLoading] = useState(true);
   const { providerId } = useParams();
@@ -33,14 +34,9 @@ const page = () => {
     }
   }
 
-  // title of every dynamic page
-  document.title = `${provider.title} | ${company_name}`;
-
   useEffect(() => {
     // temp delay and without that we can't see page
-    const delay = setTimeout(() => {
-      getServices();
-    }, 2000);
+    getServices();
   }, []);
 
   return (
@@ -53,17 +49,16 @@ const page = () => {
               {providerLoading ? (
                 <ProviderSkeleton />
               ) : (
-                <DetailedProvider provider={provider} />
+                provider.map((singleProvider) => {
+                  document.title = `${singleProvider.title} | ${company_name}`;
+                  return <DetailedProvider provider={singleProvider} />;
+                })
               )}
             </div>
             <div className="mt-4  rounded-md justify-center items-center bg-slate-100">
               <div className="flex justify-center">
                 <h1 className="text-2xl py-1">User Reviews</h1>
               </div>
-              {/* user reviews based on providers */}
-              {/* <div className="div">
-                <UserReviewCard review={"lorem"} user={"dhruv"} />
-              </div> */}
             </div>
           </Grid>
           <Grid item sm={12} md={8}>
