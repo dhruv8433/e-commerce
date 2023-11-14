@@ -12,7 +12,7 @@ const Notification = () => {
 
   // get all notification related to particular user
   async function getNotifications() {
-    const allNotification = await GetNotification();
+    const allNotification = await GetNotification(userToken);
     setNotification(allNotification);
     console.log(allNotification);
   }
