@@ -1,5 +1,15 @@
 import React from "react";
-import { Card, CardContent, CardMedia, Skeleton } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Skeleton,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+} from "@mui/material";
 
 export const ProviderSkeleton = () => {
   return (
@@ -63,5 +73,90 @@ export const Serviceskeleton = () => {
         <Skeleton variant="text" width={50} height={12} />
       </CardContent>
     </Card>
+  );
+};
+
+export const BookingSkeleton = () => {
+  return (
+    <Card className="p-4 m-2 border border-gray-300 rounded my-2">
+      <CardContent>
+        <div className="flex justify-between">
+          <h1 className="font-semibold text-2xl mb-4 text-start">
+            <Skeleton variant="text" width={150} />
+          </h1>
+          <div className="mb-4 text-right">
+            <Skeleton variant="text" width={100} />
+          </div>
+        </div>
+
+        <div className="mb-4">
+          <h2 className="font-semibold text-xl mb-2 text-start">
+            <Skeleton variant="text" width={120} />
+          </h2>
+          <ul className="text-start">
+            <TableContainer>
+              <Table>
+                <TableBody>
+                  {[1, 2, 3].map((index) => (
+                    <TableRow key={index}>
+                      <TableCell>
+                        <Skeleton variant="text" width={150} />
+                      </TableCell>
+                      <TableCell align="right">
+                        <Skeleton variant="text" width={50} />
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </ul>
+        </div>
+
+        <div className="mb-4 text-right grid justify-items-end">
+          <h2 className="font-semibold text-xl">
+            <Skeleton variant="text" width={120} />
+          </h2>
+          <p className="text-blue-600 text-xl font-semibold">
+            <Skeleton variant="text" width={80} />
+          </p>
+        </div>
+
+        <div className="text-right text-gray-500 text-sm grid justify-end">
+          <h2 className="font-semibold text-xl">
+            <Skeleton variant="text" width={100} />
+          </h2>
+          <p>
+            <Skeleton variant="text" width={100} />
+          </p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+export const NotificationSkeleton = () => {
+  return (
+    <>
+      <div>
+        <Card sx={{ display: "flex", p: 1, mx: 2, my: 3 }}>
+          <CardMedia className="grid items-center pr-2">
+            <Skeleton
+              variant="circular"
+              width={40}
+              height={40}
+              animation="wave"
+            />
+          </CardMedia>
+          <div className="w-full">
+            <div className="flex justify-between items-center">
+              <Skeleton variant="text" width={200} />
+              <Skeleton variant="text" width={80} />
+            </div>
+            <Skeleton variant="text" width="100%" />
+          </div>
+        </Card>
+      </div>
+    </>
   );
 };
