@@ -3,17 +3,19 @@
 import React, { useEffect, useState } from "react";
 import { GetNotification } from "../services/getNotification";
 import { useSelector } from "react-redux";
-import { Card, CardMedia } from "@mui/material";
-import { NotificationsRounded } from "@mui/icons-material";
+import NotificationCard from "./NotificationCard";
+import { NotificationSkeleton } from "./Skeletons";
 
 const Notification = () => {
   const [notification, setNotification] = useState([]);
+  const [loading, setLoading] = useState(true);
   let userToken = useSelector((state) => state.isAuthenticate.user.token);
 
   // get all notification related to particular user
   async function getNotifications() {
     const allNotification = await GetNotification(userToken);
     setNotification(allNotification);
+    setLoading(false);
     console.log(allNotification);
   }
 
@@ -22,29 +24,30 @@ const Notification = () => {
   }, []);
   return (
     <div>
-      {notification.map((notify) => {
-        if (notify.token == userToken)
-          return (
-            <div key={notify.id}>
-              <Card sx={{ display: "flex", p: 1, m: 1 }}>
-                <CardMedia className="grid items-center pr-2">
-                  <NotificationsRounded />
-                </CardMedia>
-                <div className="w-full">
-                  <div className="flex justify-between items-center">
-                    <h1 className="text-start text-lg">{notify.message}</h1>
-                    <p className="text-xs text-gray-400">{notify.date}</p>
-                  </div>
-                  <p className="text-start text-sm text-gray-500">
-                    {notify.details}
-                  </p>
-                </div>
-              </Card>
-            </div>
-          );
-      })}
+      {loading ? (
+        <NotificationSkeletons />
+      ) : (
+        notification.map((notify) => {
+          if (notify.token == userToken)
+            return <NotificationCard notify={notify} />;
+        })
+      )}
     </div>
   );
 };
 
 export default Notification;
+
+const NotificationSkeletons = () => {
+  return (
+    <>
+      <NotificationSkeleton />
+      <NotificationSkeleton />
+      <NotificationSkeleton />
+
+      <NotificationSkeleton />
+      <NotificationSkeleton />
+      <NotificationSkeleton />
+    </>
+  );
+};
