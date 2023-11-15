@@ -1,24 +1,30 @@
 import createMiddleware from "next-intl/middleware";
-import { isAuthenticated } from "./app/helper/AuthenticatedService";
 import { NextResponse } from "next/server";
+import { store } from "./app/[locale]/store";
 
 export default createMiddleware({
-  // A list of all locales that are supported
   locales: ["en", "hi", "fr"],
-  defaultLocale: "sen",
+  defaultLocale: "en",
 });
 
-// export async function middleware(request) {
-//   if (!isAuthenticated) {
-//     console.log("authenticated");
-//     return;
-//   }
-//   console.log("unautho");
-//   return NextResponse.redirect(new URL("/en/", request.url));
-// }
+let isRedirected = false;
+export async function middleware(request, next) {
+  // Access the Redux store state
+  const isAuthenticate = store.getState().isAuthenticate.isAuthenticated;
+
+  if (!isAuthenticate && !isRedirected) {
+    console.log("User is not authenticated. Redirecting...");
+    isRedirected = true;
+    const redirectUrl = `/en/`;
+
+    // Set status and headers for redirection
+    return NextResponse.rewrite(new URL(redirectUrl, request.url))
+  }
+
+  // If the user is authenticated or has already been redirected, continue with the next middleware
+  return;
+}
 
 export const config = {
-  // Skip all paths that should not be internationalized. This example skips the
-  // folders "api", "_next" and all files with an extension (e.g. favicon.ico)
   matcher: ["/((?!api|_next|.*\\..*).*)", "/profile"],
 };
