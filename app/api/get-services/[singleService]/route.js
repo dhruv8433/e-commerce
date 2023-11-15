@@ -12,7 +12,9 @@ export async function POST(request) {
   if (providersId.includes(id)) {
     try {
       services = await serviceModel.find();
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   } else {
     return NextResponse.json({
       success: false,
