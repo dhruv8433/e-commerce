@@ -7,6 +7,7 @@ import NotificationCard from "./NotificationCard";
 import { NotificationSkeleton } from "./Skeletons";
 import Lottie from "lottie-react";
 import noNotification from "@/app/json/animations/no-notification-1.json";
+import ProfilePageName from "./ProfilePageName";
 
 const Notification = () => {
   const [notification, setNotification] = useState([]);
@@ -26,6 +27,7 @@ const Notification = () => {
   }, []);
   return (
     <div>
+      <ProfilePageName name={"Notifications"} />
       {loading ? (
         <NotificationSkeletons />
       ) : notification && notification.length > 0 ? (
@@ -35,10 +37,7 @@ const Notification = () => {
           ) : null;
         })
       ) : (
-        <div
-          className="flex justify-center items-center"
-          style={{ height: "500px" }}
-        >
+        <div className="flex justify-center items-center h-[466px]">
           {/* If no notification found for a particular user */}
           <Lottie animationData={noNotification} />
         </div>
