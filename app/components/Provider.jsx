@@ -16,7 +16,13 @@ import { useSelector } from "react-redux";
 // reusable provider card
 const Provider = ({ provider, bookmarkIconVisible }) => {
   const t = useTranslations("providers");
-  const token = useSelector((state) => state.isAuthenticate.user.token);
+  const isAuthenticated = useSelector(
+    (state) => state.isAuthenticate.isAuthenticated
+  );
+  let token;
+  if (isAuthenticated) {
+    token = useSelector((state) => state.isAuthenticate.user.token);
+  }
 
   async function toogleBookmark(data) {
     const response = await BookmarkService(data, token);
@@ -30,7 +36,7 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
   }
   return (
     <div className="p-1 items-center text-center">
-      {bookmarkIconVisible ? (
+      {bookmarkIconVisible && isAuthenticated ? (
         <Box
           className="absolute rounded-sm bg-white"
           sx={{
