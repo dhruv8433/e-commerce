@@ -42,18 +42,8 @@ const LoginPage = () => {
     } catch (error) {
       console.log(error);
       dispatch(loginFailure("Login Error"));
-      toast.error("Something went wrong");
+      toast.error(error);
     }
-  };
-
-  const setGuestUser = () => {
-    console.log("button click");
-    setLoginData({
-      email: "guestuser@gmail.com",
-      password: "12345",
-    });
-    document.getElementById("email").value = "guestuser@gmail.com";
-    document.getElementById("password").value = "12345";
   };
 
   const t = useTranslations("login");
