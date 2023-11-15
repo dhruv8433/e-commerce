@@ -84,7 +84,7 @@ const ServiceCard = ({ services, deleteIcon }) => {
             {/* Right side with the "Add" button */}
             <div className="flex justify-between items-center">
               <div className="price">
-                <p className="text-blue-500 text-2xl">
+                <p className="text-violet-500 text-2xl">
                   ${services.discounted_price}
                   <del>
                     <span className="text-xs text-slate-500">
@@ -107,7 +107,8 @@ const ServiceCard = ({ services, deleteIcon }) => {
         </IconButton>
       ) : (
         <Button
-          sx={{ mt: "-100px", ml: "20px" }}
+          sx={{ mt: "-100px", ml: "64%" }}
+          className="text-violet-500"
           variant="outlined"
           size="small"
           onClick={() => addItem()}

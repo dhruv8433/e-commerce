@@ -1,19 +1,24 @@
 import { Box, Button, Container, Grid } from "@mui/material";
 import React from "react";
 import toast from "react-hot-toast";
-import CustomButton from "../common/CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../action/action";
+import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ParticularService = ({ service }) => {
   const dispatch = useDispatch();
+  const { providerId, providerSlug } = useParams();
+  const route = useRouter();
 
   // to get user details
   const user = useSelector((state) => state.isAuthenticate.user);
   const cart = useSelector((state) => state.cart.cartItems); // Get the cart from the Redux store
 
   // Check if the service is already in the cart
-  const isServiceInCart = cart ? cart.some((item) => item.id === service.id) : "";
+  const isServiceInCart = cart
+    ? cart.some((item) => item.id === service.id)
+    : "";
 
   //  function to add to cart
   function addItemsToCart() {
@@ -78,17 +83,29 @@ const ParticularService = ({ service }) => {
                 <h1 className="mt-4">{service.description}</h1>
               </div>
 
-              <CustomButton
-                children={"Add to Cart"}
-                varient={"contained"}
-                customClass={"w-full my-10"}
-                customFunction={() => addItemsToCart()}
+              <Button
+                fullWidth
+                variant="contained"
+                onClick={() => addItemsToCart()}
+                className="bg-violet-500"
+                sx={{
+                  bgcolor: "#c61aed",
+                  mt: 2,
+                  "&:hover": { backgroundColor: "#c61aed" },
+                }}
               >
-                Add to card
-              </CustomButton>
-              <Button fullWidth sx={{ mt: 1, mb: 1 }} variant="outlined">
-                Add to Wishlist
+                Add to cart
               </Button>
+              <Link href={`/${providerId}/${providerSlug}`}>
+                <Button
+                  fullWidth
+                  sx={{ mt: 1, mb: 1 }}
+                  variant="outlined"
+                  className="text-violet-500"
+                >
+                  Explore More Services
+                </Button>
+              </Link>
             </Box>
           </Grid>
         </Grid>
