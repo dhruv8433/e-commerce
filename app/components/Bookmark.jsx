@@ -2,9 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { GetBookmarks } from "../services/getBookmarks";
 import { useSelector } from "react-redux";
-import Provider from "./Provider";
-import { Grid } from "@mui/material";
-import ProviderVertical from "./ProviderVertical";
+import ProviderHorizontal from "./ProviderHorizontal";
 
 const Bookmark = () => {
   const [bookmark, setBookmark] = useState([]);
@@ -28,7 +26,7 @@ const Bookmark = () => {
             <div>
               {bookData.data.map((singleBokmark) => {
                 console.log(singleBokmark);
-                return <ProviderVertical provider={singleBokmark} />;
+                return <ProviderHorizontal provider={singleBokmark} />;
               })}
             </div>
           );
