@@ -6,6 +6,9 @@ import SummeryCard from "./SummeryCard";
 import { BookingSkeleton } from "./Skeletons";
 import Lottie from "lottie-react";
 import noBookings from "@/app/json/animations/empty_cart.json";
+import ProfilePageName from "./ProfilePageName";
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 const Bookings = () => {
   const [services, setServices] = useState([]);
@@ -26,8 +29,7 @@ const Bookings = () => {
   }, []);
   return (
     <>
-      <h1 className="text-3xl font-bold">Bookings</h1>
-      <hr />
+      <ProfilePageName name={"Bookings"} />
       {/* if loading bookings than */}
       {loading ? (
         <>
@@ -46,10 +48,19 @@ const Bookings = () => {
       ) : (
         // if there is no bookings
         <div
-          className="flex justify-center items-center"
+          className="flex flex-col justify-center items-center"
           style={{ height: "460px" }}
         >
-          <Lottie animationData={noBookings} style={{ height: 300 }} />
+          <Lottie animationData={noBookings} style={{ height: 260 }} />
+          <h1 className="text-2xl font-semibold">No Bookings!!</h1>
+          <p className="mb-4">
+            Explore our best provider's service and book now!
+          </p>
+          <Link href={"/providers"}>
+            <Button variant="outlined" size="small">
+              Explore
+            </Button>
+          </Link>
         </div>
       )}
     </>
