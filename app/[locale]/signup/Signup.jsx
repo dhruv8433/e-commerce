@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import { userService } from "@/app/services/userService";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
+import SignUpForm from "@/app/components/SignUpForm";
 
 const Signup = () => {
   const [signupData, setSignupData] = useState({
@@ -58,105 +59,12 @@ const Signup = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="bg-white p-8 rounded shadow-md w-96">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-                {t("signup")}
-              </h2>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block text-gray-700 font-medium"
-                  >
-                    {t("email")}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
-                    placeholder="Enter your email"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="password"
-                    className="block text-gray-700 font-medium"
-                  >
-                    {t("password")}
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
-                    placeholder="Enter your password"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="phone"
-                    className="block text-gray-700 font-medium"
-                  >
-                    {t("phone")}
-                  </label>
-                  <input
-                    type="text"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
-                    placeholder="Enter your phone number"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="name"
-                    className="block text-gray-700 font-medium"
-                  >
-                    {t("name")}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
-                    placeholder="Enter your full name"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="address"
-                    className="block text-gray-700 font-medium"
-                  >
-                    {t("address")}
-                  </label>
-                  <textarea
-                    id="address"
-                    name="address"
-                    rows="4"
-                    className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
-                    placeholder="Enter your address"
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
-                <div className="mb-4">
-                  <button
-                    type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
-                  >
-                    {t("signup")}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <SignUpForm
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            t={t}
+            isItSignup={true}
+          />
         </Grid>
       </Grid>
     </Box>
