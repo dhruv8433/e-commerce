@@ -34,7 +34,8 @@
         "password": "Password",
         "phone": "Phone",
         "name": "Full Name",
-        "address": "Address"
+        "address": "Address",
+        "update_profile": "Update Your Profile"
     },
     "login": {
         "login": "Login",
