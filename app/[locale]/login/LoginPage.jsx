@@ -117,9 +117,6 @@ const LoginPage = () => {
               </form>
               <div className="text-center">
                 <p className="text-gray-600">{t("no_account")}</p>
-                <Button onClick={() => setGuestUser()}>
-                  {t("guest_user")}
-                </Button>{" "}
                 <br />
                 <Link href="/signup" className="text-blue-500 hover:underline">
                   {t("signup")}
