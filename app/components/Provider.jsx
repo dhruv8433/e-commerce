@@ -1,7 +1,14 @@
 "use client";
 
 import { EastRounded, StarBorderOutlined } from "@mui/icons-material";
-import { Box, Card, CardContent, CardMedia, Checkbox } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Checkbox,
+  Rating,
+} from "@mui/material";
 import waveAnimation from "@/app/json/animations/wave.json";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
@@ -36,7 +43,7 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
   }
   return (
     <div className="p-1 items-center text-center">
-      {bookmarkIconVisible && isAuthenticated ? (
+      {isAuthenticated ? (
         <Box
           className="absolute rounded-sm bg-white"
           sx={{
@@ -58,9 +65,9 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
           <CardMedia
             image={provider.banner}
             alt="card banner"
-            sx={{ height: 250, objectFit: "cover" }}
+            sx={{ height: 220, objectFit: "cover" }}
           />
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <CardMedia
               image={provider.logo}
               alt="card banner"
@@ -72,26 +79,24 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
                 border: "5px solid white",
               }}
             />
-          </div>
-          <CardContent className="text-center relative">
+          </div> */}
+          <CardContent className="text-start relative">
             {/* Position the Lottie animation in the top-left corner */}
-            <div className="absolute top-0 left-0">
+            <div className="absolute top-4 left-0">
               <Lottie animationData={waveAnimation} />
             </div>
             <div className="info -mt-4 z-10 relative">
               <h1 className="text-2xl font-bold">{provider.title}</h1>
-              <div className="flex justify-center p-1">
+              <div className="flex justify-start items-center">
+                <Rating value={provider.rating} readOnly />
+              </div>
+              <div className="flex justify-start p-1">
                 <h1 className="border bg-violet-500 p-1 rounded text-white">
-                  {provider.order_complted}
-                  {""}
+                  {provider.order_completed}{" "}
                   {t("order_completed")}
                 </h1>
               </div>
-              <div className="flex justify-center items-center">
-                <StarBorderOutlined />
-                <h1>{provider.rating} / 5</h1>
-              </div>
-              <div className="flex justify-center items-center mt-4 mb-2 p-2">
+              <div className="flex justify-end items-center mt-4 mb-2 p-2">
                 <EastRounded
                   sx={{ border: "1px solid gray", borderRadius: "50px" }}
                 />
