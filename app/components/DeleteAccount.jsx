@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import React, { useState } from "react";
 import DeleteAccountAnimation from "@/app/json/animations/delete.json";
 import { Box, Button, Divider, Modal } from "@mui/material";
-import { open } from "../config/config";
+import { close, open } from "../config/config";
 import { DeleteAccountService } from "../services/deleteAccountService";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
@@ -57,7 +57,7 @@ const DeleteAccount = () => {
             <h1>Beware</h1>
           </div>
           <Divider />
-          <div className="msg flex justify-center flex-col">
+          <div className="msg flex justify-center flex-col p-2">
             <p>
               Are you sure you want to delete your account? This action is
               irreversible. All your data will be permanently deleted and if you
@@ -68,6 +68,7 @@ const DeleteAccount = () => {
                 size="small"
                 variant="outlined"
                 sx={{ marginInline: "10px" }}
+                onClick={() => close(setPopup)}
               >
                 Cancle
               </Button>
