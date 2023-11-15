@@ -3,14 +3,18 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Divider,
   Grid,
+  IconButton,
   Skeleton,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableRow,
+  Typography,
 } from "@mui/material";
+import { ArrowRightAltRounded } from "@mui/icons-material";
 
 export const ProviderSkeleton = () => {
   return (
@@ -169,5 +173,49 @@ export const SkeletonServiceLoading = () => {
         </Grid>
       </Grid>
     </>
+  );
+};
+
+export const ProviderHorizontalSkeleton = () => {
+  return (
+    <Card style={{ height: "200px", marginBlock: 10, padding: 1, display: "flex" }}>
+      <div
+        className="h-full flex justify-center items-center"
+        style={{ borderRadius: "10px", width: 300 }}
+      >
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width="100%"
+          height="100%"
+          style={{ borderRadius: "10px" }}
+        />
+      </div>
+      <CardContent className="w-full">
+        <Skeleton
+          animation="wave"
+          height={40}
+          width="80%"
+          style={{ marginBottom: 6 }}
+        />
+
+        <Skeleton animation="wave" height={30} width="40%" />
+
+        <Divider />
+
+        <Skeleton animation="wave" height={40} style={{ marginBottom: 6 }} />
+
+        <Skeleton
+          animation="wave"
+          height={20}
+          width="50%"
+          style={{ marginBottom: 3 }}
+        />
+
+        <div className="text-end flex justify-end">
+          <Skeleton variant="rounded" animation="pulse" height={25} width={25} sx={{borderRadius: "50%", textAlign: "end"}} />
+        </div>
+      </CardContent>
+    </Card>
   );
 };
