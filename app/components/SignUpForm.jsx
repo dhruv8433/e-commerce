@@ -107,7 +107,7 @@ const SignUpForm = ({
                   name="phone"
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
                   placeholder="Enter your phone number"
-                  value={UserData.mobile}
+                  value={UserData.phone}
                   disabled
                   style={{ color: "gray" }}
                 />
