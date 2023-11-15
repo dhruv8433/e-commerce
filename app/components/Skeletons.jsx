@@ -19,36 +19,22 @@ export const ProviderSkeleton = () => {
         {/* Skeleton loader for banner image */}
         <Skeleton variant="rectangular" sx={{ height: 250 }} />
 
-        <div className="flex justify-center">
-          {/* Skeleton loader for logo image */}
-          <Skeleton
-            variant="rectangular"
-            sx={{
-              height: 120,
-              width: 120,
-              borderRadius: "10%",
-              mt: -8,
-              border: "5px solid white",
-            }}
-          />
-        </div>
-
         <CardContent className="text-center relative">
           <div className="info -mt-4 z-10 relative">
             {/* Skeleton loader for title */}
             <Skeleton variant="text" />
 
-            <div className="flex justify-center p-1">
+            <div className="flex justify-Start p-1">
               {/* Skeleton loader for order completed */}
               <Skeleton variant="text" width={200} />
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-start items-center">
               {/* Skeleton loader for rating */}
               <Skeleton variant="text" width={100} height={30} />
             </div>
 
-            <div className="flex justify-center items-center mt-4 mb-2 p-2">
+            <div className="flex justify-end items-center mt-4 mb-2 p-2">
               {/* Skeleton loader for an icon */}
               <Skeleton variant="circular" sx={{ width: 50, height: 50 }} />
             </div>
