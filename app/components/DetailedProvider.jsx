@@ -27,8 +27,8 @@ const DetailedProvider = ({ provider }) => {
           <div className="info -mt-4 z-10 relative">
             <h1 className="text-3xl font-bold my-2">{provider.title}</h1>
             <div className="flex justify-center">
-              <p className="bg-blue-500 px-4 py-2 text-white w-max rounded">
-                {provider.order_complted} {t("order_completed")}
+              <p className=" bg-violet-500 px-4 py-2 text-white w-max rounded">
+                {provider.order_completed} {t("order_completed")}
               </p>
             </div>
             <div className="p-1 my-2">
