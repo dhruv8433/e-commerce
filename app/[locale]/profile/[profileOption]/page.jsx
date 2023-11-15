@@ -1,6 +1,7 @@
 "use client";
 
 import Bookings from "@/app/components/Bookings";
+import Bookmark from "@/app/components/Bookmark";
 import Notification from "@/app/components/Notification";
 import UserProfile from "@/app/components/UserProfile";
 import { Container } from "@mui/material";
@@ -21,6 +22,12 @@ const page = () => {
     return (
       <Container>
         <UserProfile data={<Notification />} changeRoute={true} />
+      </Container>
+    );
+  } else if (parmas && parmas.profileOption == "bookmark") {
+    return (
+      <Container>
+        <UserProfile data={<Bookmark />} changeRoute={true} />
       </Container>
     );
   } else {
