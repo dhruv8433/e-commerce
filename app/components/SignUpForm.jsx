@@ -190,15 +190,17 @@ const SignUpForm = ({
                   type="submit"
                   className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
                 >
-                  Update
+                  {t("update")}
                 </button>
               )}
             </div>
           </form>
           {isItSignup ? (
-            <div className="flex flex-col justify-center">
-              <h1>Already have Account ?</h1>
-              <Link href={"/login"}>Login</Link>
+            <div className="w-full flex flex-col justify-center items-center">
+              <h1>{t("alredy_account")}</h1>
+              <Link href={"/login"} className="text-blue-500 hover:underline">
+                {t("login")}
+              </Link>
             </div>
           ) : (
             ""
