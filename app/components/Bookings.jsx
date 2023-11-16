@@ -9,6 +9,7 @@ import noBookings from "@/app/json/animations/empty_cart.json";
 import ProfilePageName from "./ProfilePageName";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Bookings = () => {
   const [services, setServices] = useState([]);
@@ -27,9 +28,11 @@ const Bookings = () => {
   useEffect(() => {
     gettingServices();
   }, []);
+
+  const t = useTranslations("profile");
   return (
     <>
-      <ProfilePageName name={"Bookings"} />
+      <ProfilePageName name={t("booking")} />
       {/* if loading bookings than */}
       {loading ? (
         <>
@@ -52,13 +55,11 @@ const Bookings = () => {
           style={{ height: "460px" }}
         >
           <Lottie animationData={noBookings} style={{ height: 260 }} />
-          <h1 className="text-2xl font-semibold">No Bookings!!</h1>
-          <p className="mb-4">
-            Explore our best provider's service and book now!
-          </p>
+          <h1 className="text-2xl font-semibold">{t("no_bookings")}</h1>
+          <p className="mb-4">{t("explore_book")}</p>
           <Link href={"/providers"}>
             <Button variant="outlined" size="small">
-              Explore
+              {t("explore")}
             </Button>
           </Link>
         </div>
