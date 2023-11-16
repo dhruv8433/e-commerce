@@ -9,6 +9,7 @@ import { DeleteAccountService } from "../services/deleteAccountService";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { LOGOUT_SUCCESS } from "../reducer/isLoggedIn";
+import { useTranslations } from "next-intl";
 
 const DeleteAccount = () => {
   const [popup, setPopup] = useState(false);
@@ -22,6 +23,8 @@ const DeleteAccount = () => {
     toast.success(response.message);
     window.location.assign("/");
   }
+
+  const t = useTranslations("profile");
   return (
     <div className="h-[500px] flex flex-col justify-center items-center">
       <div className="flex justify-center">
@@ -31,7 +34,7 @@ const DeleteAccount = () => {
         />
       </div>
       <div>
-        <h1>Are You Sure To Delete Account?</h1>
+        <h1>{t("conform_delete")}</h1>
         <div className="mt-2">
           {/* <Button size="small" variant="outlined"  sx={{ marginInline: "10px"}}>Cancle</Button> */}
           <Button
@@ -40,7 +43,7 @@ const DeleteAccount = () => {
             sx={{ marginInline: "10px" }}
             onClick={() => open(setPopup)}
           >
-            Delete Account
+            {t("delete_account")}
           </Button>
         </div>
       </div>
@@ -54,15 +57,11 @@ const DeleteAccount = () => {
           // height={400}
         >
           <div className="flex justify-center">
-            <h1>Beware</h1>
+            <h1>{t("beware")}</h1>
           </div>
           <Divider />
           <div className="msg flex justify-center flex-col p-2">
-            <p>
-              Are you sure you want to delete your account? This action is
-              irreversible. All your data will be permanently deleted and if you
-              have a transfer in process, it cannot be issued to you.
-            </p>
+            <p>{t("delete_msg")}</p>
             <div className="btns mt-4">
               <Button
                 size="small"
@@ -70,7 +69,7 @@ const DeleteAccount = () => {
                 sx={{ marginInline: "10px" }}
                 onClick={() => close(setPopup)}
               >
-                Cancle
+                {t("cancle")}
               </Button>
               <Button
                 size="small"
@@ -78,7 +77,7 @@ const DeleteAccount = () => {
                 sx={{ marginInline: "10px", bgcolor: "red" }}
                 onClick={() => deleteAccountFun()}
               >
-                Delete Account
+                {t("delete_account")}
               </Button>
             </div>
           </div>
