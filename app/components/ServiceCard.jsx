@@ -113,7 +113,7 @@ const ServiceCard = ({ services, deleteIcon }) => {
           size="small"
           onClick={() => addItem()}
         >
-          Add
+          {t("add")}
         </Button>
       )}
     </>
