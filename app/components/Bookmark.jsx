@@ -9,6 +9,7 @@ import Lottie from "lottie-react";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import ProfilePageName from "./ProfilePageName";
+import { useTranslations } from "next-intl";
 
 const Bookmark = () => {
   const [bookmark, setBookmark] = useState([]);
@@ -24,9 +25,11 @@ const Bookmark = () => {
   useEffect(() => {
     getUserBookmarks();
   }, []);
+
+  const t = useTranslations("profile");
   return (
     <div>
-      <ProfilePageName name={"Bookmarks"} />
+      <ProfilePageName name={t("bookmark")} />
       <>
         {loading ? (
           <>
@@ -51,17 +54,15 @@ const Bookmark = () => {
               animationData={bookmarkAnimation}
               style={{ height: "200px" }}
             />
-            <h1 className="text-2xl font-semibold">No Bookmarks!!</h1>
-            <h1 className="mb-4">
-              Explore our providers and add them to your bookmarks!
-            </h1>
+            <h1 className="text-2xl font-semibold">{t("no_bookmark")}</h1>
+            <h1 className="mb-4">{t("explore_save")} </h1>
             <Link href={"/providers"}>
               <Button
                 variant="outlined"
                 size="small"
                 className="text-violet-500"
               >
-                Explore
+                {t("explore")}
               </Button>
             </Link>
           </div>
