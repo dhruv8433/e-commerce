@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Card,
   CardContent,
   CardMedia,
@@ -15,6 +16,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ArrowRightAltRounded } from "@mui/icons-material";
+import { Container } from "postcss";
 
 export const ProviderSkeleton = () => {
   return (
@@ -178,7 +180,9 @@ export const SkeletonServiceLoading = () => {
 
 export const ProviderHorizontalSkeleton = () => {
   return (
-    <Card style={{ height: "200px", marginBlock: 10, padding: 1, display: "flex" }}>
+    <Card
+      style={{ height: "200px", marginBlock: 10, padding: 1, display: "flex" }}
+    >
       <div
         className="h-full flex justify-center items-center"
         style={{ borderRadius: "10px", width: 300 }}
@@ -213,9 +217,96 @@ export const ProviderHorizontalSkeleton = () => {
         />
 
         <div className="text-end flex justify-end">
-          <Skeleton variant="rounded" animation="pulse" height={25} width={25} sx={{borderRadius: "50%", textAlign: "end"}} />
+          <Skeleton
+            variant="rounded"
+            animation="pulse"
+            height={25}
+            width={25}
+            sx={{ borderRadius: "50%", textAlign: "end" }}
+          />
         </div>
       </CardContent>
     </Card>
+  );
+};
+
+export const ServiceDetailsSkeleton = () => {
+  return (
+    <div className="h-auto my-10">
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+          <Box
+            className="image"
+            sx={{
+              height: { xs: "300px", md: "460px" },
+              width: { xs: "360px", md: "500px" },
+            }}
+          >
+            <Skeleton
+              animation="wave"
+              variant="rectangular"
+              width="100%"
+              height="100%"
+              style={{ borderRadius: "10px" }}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box sx={{ mt: { xs: 5, md: 0 } }}>
+            <div className="info p-4 border border-gray-300 rounded-lg">
+              <Skeleton
+                animation="wave"
+                height={30}
+                width="80%"
+                style={{ marginBottom: 6 }}
+              />
+              <Skeleton
+                animation="wave"
+                height={40}
+                width="50%"
+                style={{ marginBottom: 6 }}
+              />
+              <Skeleton
+                animation="wave"
+                height={20}
+                width="20%"
+                style={{ marginBottom: 6 }}
+              />
+            </div>
+
+            <div className="info mt-4 p-4 border border-gray-300 rounded-lg">
+              <h1 className="text-2xl font-semibold">Service Description:</h1>
+              <Skeleton
+                animation="wave"
+                height={20}
+                width="100%"
+                style={{ marginTop: 10 }}
+              />
+              <Skeleton
+                animation="wave"
+                height={20}
+                width="90%"
+                style={{ marginTop: 10 }}
+              />
+              {/* Add more Skeletons for additional lines of description */}
+            </div>
+
+            <Skeleton
+              animation="wave"
+              height={40}
+              width="100%"
+              style={{ marginTop: 20 }}
+            />
+
+            <Skeleton
+              animation="wave"
+              height={40}
+              width="100%"
+              style={{ marginTop: 10 }}
+            />
+          </Box>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
