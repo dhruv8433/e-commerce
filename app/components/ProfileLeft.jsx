@@ -55,7 +55,7 @@ const ProfileLeft = ({ user, logout }) => {
           <div className="user-image h-56 w-56 mx-auto text-center">
             <Image
               src={
-                "https://i.pinimg.com/736x/95/14/a2/9514a2106bdf506dc2ed2047ae4ba908.jpg"
+                "https://i.pinimg.com/originals/a7/77/26/a777268f7701fbf12bdc2ed4175758d5.png"
               }
               width={"200"}
               height={"200"}
@@ -82,7 +82,7 @@ const ProfileLeft = ({ user, logout }) => {
 
         <div className="edit ml-auto m-1 px-4">
           <CustomButton
-            children={"Edit profile"}
+            children={t("edit_profile")}
             varient={"outlined"}
             size={"small"}
             customClass={"text-white w-full"}
@@ -108,7 +108,7 @@ const ProfileLeft = ({ user, logout }) => {
 
         {/* logout functionallity */}
         <Button varient={"contained"} onClick={() => logout()}>
-          Logout
+          {t("logout")}
         </Button>
       </div>
     </div>
