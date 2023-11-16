@@ -8,6 +8,7 @@ import { NotificationSkeleton } from "./Skeletons";
 import Lottie from "lottie-react";
 import noNotification from "@/app/json/animations/no-notification-1.json";
 import ProfilePageName from "./ProfilePageName";
+import { useTranslations } from "next-intl";
 
 const Notification = () => {
   const [notification, setNotification] = useState([]);
@@ -25,9 +26,11 @@ const Notification = () => {
   useEffect(() => {
     getNotifications();
   }, []);
+
+  const t = useTranslations("profile")
   return (
     <div>
-      <ProfilePageName name={"Notifications"} />
+      <ProfilePageName name={t("notification")} />
       {loading ? (
         <NotificationSkeletons />
       ) : notification && notification.length > 0 ? (
