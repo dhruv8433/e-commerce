@@ -6,7 +6,7 @@ import { addToCart } from "../action/action";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
-const ParticularService = ({ service }) => {
+const ParticularService = ({ service, t }) => {
   const dispatch = useDispatch();
   const { providerId, providerSlug } = useParams();
   const route = useRouter();
@@ -94,7 +94,7 @@ const ParticularService = ({ service }) => {
                   "&:hover": { backgroundColor: "#c61aed" },
                 }}
               >
-                Add to cart
+                {t("add_cart")}
               </Button>
               <Link href={`/${providerId}/${providerSlug}`}>
                 <Button
@@ -103,7 +103,7 @@ const ParticularService = ({ service }) => {
                   variant="outlined"
                   className="text-violet-500"
                 >
-                  Explore More Services
+                  {t("explore")}
                 </Button>
               </Link>
             </Box>

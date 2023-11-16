@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { homeService } from "../services/homeService";
 import ProviderLogos from "./ProviderLogos";
@@ -38,12 +38,15 @@ const ProviderSection = () => {
 
         <div className="flex justify-center ">
           <Link href={"/providers"}>
-            <CustomButton
-              children={"view all providers"}
-              varient={"contained"}
-              customClass={"bg-violet-400 hover:bg-violet-500"}
-              size={"large"}
-            />
+            <Button
+              variant="contained"
+              className="bg-violet-400 hover:bg-violet-500"
+              sx={{ background: "#cc36ee", "&:hover":{
+                background: "#cc36ee"
+              }}}
+            >
+              {t("all_provider")}
+            </Button>
           </Link>
         </div>
       </Container>
