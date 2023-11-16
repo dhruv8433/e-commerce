@@ -35,7 +35,11 @@
         "phone": "Phone",
         "name": "Full Name",
         "address": "Address",
-        "update_profile": "Update Your Profile"
+        "update_profile": "Update Your Profile",
+        "edit_profile": "Edit Profile",
+        "logout": "Logout",
+        "update": "Update",
+        "alredy_account": "Already have Account ?"
     },
     "login": {
         "login": "Login",
@@ -61,7 +65,8 @@
     "providers": {
         "order_completed": "order completed",
         "address": "Address",
-        "available": "Available Providers"
+        "available": "Available Providers",
+        "all_provider": "View All Providers"
     },
     "discount": {
         "register": "Register and send your shopping recipts to",
@@ -81,7 +86,9 @@
     },
     "service": {
         "rating": "Rating",
-        "add": "Add"
+        "add": "Add",
+        "add_cart": "Add To Cart",
+        "explore": "Explore More"
     },
     "reviews": {
         "customer_review": "Customer Reviews"
@@ -90,6 +97,18 @@
         "booking": "Bookings",
         "bookmark": "Bookmark",
         "notification": "Notifications",
-        "delete_account": "Delete Account"
+        "delete_account": "Delete Account",
+        "no_bookings": "No Bookings!!",
+        "explore_book": "Explore our best provider's service and book now!",
+        "explore": "Explore",
+        "no_bookmark": "No Bookmarks!!",
+        "explore_save": "Explore our providers and add them to your bookmarks!",
+        "conform_delete": "Are You Sure To Delete Account?",
+        "beware": "Beware",
+        "delete_msg": "Are you sure you want to delete your account? This action is irreversible. All your data will be permanently deleted and if you have a transfer in process, it cannot be issued to you.",
+        "cancle": "Cancle"
+    },
+    "drawer": {
+        "service": "Your Services"
     }
 }
