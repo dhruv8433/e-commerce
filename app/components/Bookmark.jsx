@@ -33,9 +33,9 @@ const Bookmark = () => {
       <>
         {loading ? (
           <>
-            <ProviderHorizontalSkeleton />
-            <ProviderHorizontalSkeleton />
-            <ProviderHorizontalSkeleton />
+            <ProviderHorizontalSkeleton myWidth={300}/>
+            <ProviderHorizontalSkeleton myWidth={300}/>
+            <ProviderHorizontalSkeleton myWidth={300}/>
           </>
         ) : bookmark.length > 0 ? (
           bookmark.map((bookData) => {
