@@ -21,7 +21,7 @@ export async function middleware(request) {
   }
 
   // Redirect unauthenticated users trying to access profile paths
-  if (!isAuthenticate && pathname.startsWith(`${locale}/profile`)) {
+  if (!isAuthenticate && pathname.startsWith("/profile")) {
     console.log("Unauthenticated user accessing profile. Redirecting to /");
     return NextResponse.rewrite(new URL("/en", request.url));
   }
@@ -34,10 +34,7 @@ export async function middleware(request) {
     return;
   }
 
-  if (
-    isAuthenticate &&
-    (pathname === `${locale}/login` || pathname === `${locale}/signup`)
-  ) {
+  if (isAuthenticate && (pathname === `${locale}/login` || pathname === `${locale}/signup`)) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
     return NextResponse.rewrite(new URL("/", request.url));
   }
