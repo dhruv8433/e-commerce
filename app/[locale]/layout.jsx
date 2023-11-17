@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
 require("dotenv").config();
 
-
 // static params for our languages file
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "hi" }, { locale: "de" }];
@@ -25,14 +24,14 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     // passing locale as lang in html so we can translate in defined json language file
-    <html lang={locale}>
+    <html lang={"en"}>
       <head>
         {/* if web don't have fav icon */}
         <link rel="shortcut icon" href="#" />
       </head>
       <body>
         {/* internationalization */}
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider defaultTranslationValues={"en"} locale={locale} messages={messages}>
           {/* redux provider */}
           <ProviderStore>
             <Navigation />
