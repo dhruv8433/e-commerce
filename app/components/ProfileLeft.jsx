@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
-import CustomButton from "../common/CustomButton";
-import { Box, Button, Modal } from "@mui/material";
+import { Box, Button, Divider, IconButton, Modal } from "@mui/material";
 import Image from "next/image";
 import { close, open } from "../config/config";
 import SignUpForm from "./SignUpForm";
@@ -12,9 +11,11 @@ import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { UpdateUserService } from "../services/updateUserService";
 import { loginSuccess } from "../action/action";
+import { Mode } from "@mui/icons-material";
 
 const ProfileLeft = ({ user, logout }) => {
   const [popup, setPopup] = useState(false);
+  const [logoutPopup, setLogoutPopup] = useState(false);
 
   const t = useTranslations("signup");
   const userData = useSelector((state) => state.isAuthenticate.user);
@@ -50,45 +51,96 @@ const ProfileLeft = ({ user, logout }) => {
 
   return (
     <div>
-      <div className="border h-[590px] border-red-300 bg-theme rounded justify-center">
-        <div>
-          <div className="user-image h-56 w-56 mx-auto text-center">
-            <Image
-              src={
-                "https://i.pinimg.com/originals/a7/77/26/a777268f7701fbf12bdc2ed4175758d5.png"
-              }
-              width={"200"}
-              height={"200"}
-              alt="user-picture"
-              style={{
-                borderRadius: "120px",
-                maxHeight: "100%",
-                width: "100%",
-                marginBlock: 20,
-                padding: 10,
-              }}
-            />
-          </div>
-          <div className="user-details text-center items-center">
-            <div className="block">
-              <h1 className="text-3xl font-bold">{user.name}</h1>
-              <h1 className="text-2xl font-bold">{user.email}</h1>
-              <h1 className="text-2xl font-semibold">{user.phone}</h1>
-            </div>
-          </div>
-        </div>
-
-        <SocialMediaIcons />
-
-        <div className="edit ml-auto m-1 px-4">
-          <CustomButton
-            children={t("edit_profile")}
-            varient={"outlined"}
-            size={"small"}
-            customClass={"text-white w-full"}
-            customFunction={() => open(setPopup)}
+      <div className="border h-[590px] border-red-300 bg-theme rounded justify-center overflow-hidden">
+        <div className="user-image h-56 w-56 mx-auto text-center z-10">
+          <Image
+            src={
+              "https://i.pinimg.com/originals/a7/77/26/a777268f7701fbf12bdc2ed4175758d5.png"
+            }
+            width={"200"}
+            height={"200"}
+            alt="user-picture"
+            style={{
+              borderRadius: "120px",
+              maxHeight: "100%",
+              width: "100%",
+              marginBlock: 20,
+              padding: 10,
+              zIndex: 10,
+              position: "relative",
+            }}
           />
         </div>
+
+        <div
+          className=" h-96 -mt-[376px] rounded-full rotate-90 w-full"
+          style={{ background: "#f328f3" }}
+        ></div>
+        <div className="user-details text-center items-center relative">
+          <div className="block">
+            <h1 className="text-3xl font-bold">{user.name}</h1>
+            <h1 className="text-2xl font-bold">{user.email}</h1>
+            <h1 className="text-2xl font-semibold">{user.phone}</h1>
+          </div>
+        </div>
+        <SocialMediaIcons />
+
+        {/* edit icon */}
+        <div className="-mt-[390px] absolute ml-80">
+          <IconButton
+            className="border border-white"
+            onClick={() => open(setPopup)}
+          >
+            <Mode color="white" sx={{ color: "white" }} />
+          </IconButton>
+        </div>
+
+        {/* logout functionallity */}
+        <Button varient={"contained"} onClick={() => open(setLogoutPopup)}>
+          {t("logout")}
+        </Button>
+
+        <Modal open={logoutPopup} onClose={() => close(setLogoutPopup)}>
+          <Box
+            bgcolor={"white"}
+            width={280}
+            height={140}
+            borderRadius={"10px"}
+            p={2}
+          >
+            <h1>{t("logout_confirm")}</h1>
+            <Divider />
+            <div className="mt-2">
+              <p>{t("logout_msg")}</p>
+            </div>
+            <div className="flex mt-2 items-end text-end justify-end">
+              <Button
+                className=""
+                size="small"
+                sx={{ marginInline: 1 }}
+                variant="outlined"
+                onClick={() => close(setLogoutPopup)}
+              >
+                {t("cancle")}
+              </Button>
+              <Button
+                className=""
+                size="small"
+                sx={{
+                  marginInline: 1,
+                  background: "red",
+                  "&:hover": {
+                    background: "red",
+                  },
+                }}
+                variant="contained"
+                onClick={() => logout()}
+              >
+                {t("logout")}
+              </Button>
+            </div>
+          </Box>
+        </Modal>
 
         <Modal open={popup} onClose={() => close(setPopup)}>
           <Box borderRadius={"10px"} p={2}>
@@ -105,11 +157,6 @@ const ProfileLeft = ({ user, logout }) => {
             </div>
           </Box>
         </Modal>
-
-        {/* logout functionallity */}
-        <Button varient={"contained"} onClick={() => logout()}>
-          {t("logout")}
-        </Button>
       </div>
     </div>
   );
