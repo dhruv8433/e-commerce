@@ -4,9 +4,10 @@ import { Card as MUICard } from "@mui/material";
 import Link from "next/link";
 
 const Card = ({ homecard }) => {
+  console.log("card", homecard);
   return (
     <Grid item xs={12} sm={8} md={4}>
-      <Link href={`${homecard.slug}`}>
+      <Link href={`/cards/${homecard.slug}`}>
         <MUICard className=" bg-gray-200 hover:bg-white rounded-md cursor-pointer">
           <CardMedia
             src={homecard.image}
