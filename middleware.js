@@ -16,7 +16,6 @@ export async function middleware(request) {
   console.log("Authenticated:", isAuthenticate);
 
   if (pathname == "/") {
-    Cookies.set("locale", "en");
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
