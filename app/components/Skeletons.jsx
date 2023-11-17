@@ -178,14 +178,14 @@ export const SkeletonServiceLoading = () => {
   );
 };
 
-export const ProviderHorizontalSkeleton = () => {
+export const ProviderHorizontalSkeleton = ({ myWidth }) => {
   return (
     <Card
       style={{ height: "200px", marginBlock: 10, padding: 1, display: "flex" }}
     >
       <div
         className="h-full flex justify-center items-center"
-        style={{ borderRadius: "10px", width: 300 }}
+        style={{ borderRadius: "10px", width: myWidth }}
       >
         <Skeleton
           animation="wave"
@@ -307,6 +307,14 @@ export const ServiceDetailsSkeleton = () => {
           </Box>
         </Grid>
       </Grid>
+    </div>
+  );
+};
+
+export const SwiperSkeleton = ({ width, height }) => {
+  return (
+    <div className="-mt-48">
+      <Skeleton width={width} height={height} />
     </div>
   );
 };
