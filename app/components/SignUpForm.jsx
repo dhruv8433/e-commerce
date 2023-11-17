@@ -3,6 +3,7 @@
 // this is reusable component that used in signup as well update profile
 import Link from "next/link";
 import React from "react";
+import { close } from "../config/config";
 
 const SignUpForm = ({
   handleSubmit,
@@ -13,6 +14,7 @@ const SignUpForm = ({
   updateData,
   setUpdateData,
   updateUser,
+  setPopup,
 }) => {
   return (
     <>
@@ -186,12 +188,20 @@ const SignUpForm = ({
                   {t("signup")}
                 </button>
               ) : (
-                <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
-                >
-                  {t("update")}
-                </button>
+                <>
+                  <button
+                    type="submit"
+                    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200"
+                  >
+                    {t("update")}
+                  </button>
+                  <button
+                    className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200 ml-2"
+                    onClick={() => close(setPopup)}
+                  >
+                    {t("cancle")}
+                  </button>
+                </>
               )}
             </div>
           </form>
