@@ -15,7 +15,7 @@ export async function middleware(request) {
   console.log("Path:", pathname);
   console.log("Authenticated:", isAuthenticate);
 
-  if (pathname == "/") {
+  if (pathname == "/") {  
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
@@ -33,7 +33,10 @@ export async function middleware(request) {
     return;
   }
 
-  if (isAuthenticate && (pathname === `${locale}/login` || pathname === `${locale}/signup`)) {
+  if (
+    isAuthenticate &&
+    (pathname === `${locale}/login` || pathname === `${locale}/signup`)
+  ) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
     return NextResponse.rewrite(new URL("/", request.url));
   }
