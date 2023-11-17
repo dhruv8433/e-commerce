@@ -11,6 +11,7 @@ import loginAnimation from "@/app/json/animations/login.json";
 import { useTranslations } from "next-intl";
 import { useDispatch } from "react-redux";
 import { loginFailure, loginSuccess } from "@/app/action/action";
+import Cookies from "js-cookie";
 // import { loginSuccess } from "./LoginSuccess";
 
 const LoginPage = () => {
@@ -36,6 +37,7 @@ const LoginPage = () => {
       toast.success("Login Success");
       // redux store save user data
       dispatch(loginSuccess(user));
+      Cookies.set("authenticated", true);
       if (typeof window !== "undefined") {
         window.location.assign("/");
       }
