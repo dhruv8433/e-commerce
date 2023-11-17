@@ -5,41 +5,58 @@ import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 import { getHomeScreen } from "../httpFetch";
 import Deal from "./Deal";
-
+import Breadcrumb from "../common/Breadcrumbs";
+import ProviderSkeleton, { ProviderHorizontalSkeleton } from "./Skeletons";
 
 const DealsofDay = () => {
   const t = useTranslations("home_ads");
 
   const [deals, setDeals] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   async function setDealseOfDay() {
     const response = await getHomeScreen();
     setDeals(response.data.deals.data);
+    setLoading(false);
   }
 
   useEffect(() => {
     setDealseOfDay();
   }, []);
   return (
-    <div className="md:h-50 sm:h-max scroll-slides items-center pt-2 pb-2 advertisment">
+    <div className="pt-20 h-50">
+      <Breadcrumb breadcrumb={"Deals of Day"} title={"Deals"} />
       <Container>
-        {/* heading that contian deals of the day */}
-        <div className="heading">
-          <h1 className="text-2xl font-bold items-center flex justify-start pt-2">
-            {t("deals")}
-          </h1>
-          <hr />
-        </div>
-
         <div className="flex justify-between items-center">
           <Box>
             <Grid container spacing={2}>
-              {deals.map((deal) => (
-                <Grid item xs={12} md={6} key={deal.id}>
-                  {/* we use reusable component deal and pass deal as a props */}
-                  <Deal deal={deal} />
+              {loading ? (
+                <Grid container>
+                  <Grid item xs={12} md={6}>
+                    <Box sx={{ display: { xs: "none", md: "block" } }}>
+                      <ProviderHorizontalSkeleton myWidth={500} />
+                    </Box>
+                    <Box sx={{ display: { xs: "block", md: "none" } }}>
+                      <ProviderSkeleton />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Box sx={{ display: { xs: "none", md: "block" } }}>
+                      <ProviderHorizontalSkeleton myWidth={500} />
+                    </Box>
+                    <Box sx={{ display: { xs: "block", md: "none" } }}>
+                      <ProviderSkeleton />
+                    </Box>
+                  </Grid>
                 </Grid>
-              ))}
+              ) : (
+                deals.map((deal) => (
+                  <Grid item xs={12} md={6} key={deal.id}>
+                    {/* we use reusable component deal and pass deal as a props */}
+                    <Deal deal={deal} />
+                  </Grid>
+                ))
+              )}
             </Grid>
           </Box>
         </div>
