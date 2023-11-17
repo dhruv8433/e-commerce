@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 
@@ -13,6 +14,11 @@ export async function middleware(request) {
   console.log("Path:", pathname);
   console.log("Authenticated:", isAuthenticate);
 
+  if (pathname == "/") {
+    Cookies.set("locale", "en");
+    return NextResponse.rewrite(new URL("/en", request.url));
+  }
+
   if (
     !pathname.startsWith("/en") &&
     !pathname.startsWith("/hi") &&
@@ -23,18 +29,12 @@ export async function middleware(request) {
     return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
   }
 
-  if (
-    (pathname === "/en/login" || pathname === "/en/signup") &&
-    !isAuthenticate
-  ) {
+  if ((pathname === "/login" || pathname === "/signup") && !isAuthenticate) {
     console.log("Unauthenticated user accessing login/signup");
     return;
   }
 
-  if (
-    isAuthenticate &&
-    (pathname === "/en/login" || pathname === "/en/signup")
-  ) {
+  if (isAuthenticate && (pathname === "/login" || pathname === "/signup")) {
     console.log(
       "Authenticated user accessing login/signup. Redirecting to /en"
     );
@@ -42,9 +42,9 @@ export async function middleware(request) {
   }
 
   // Redirect unauthenticated users trying to access profile paths
-  if (!isAuthenticate && pathname.startsWith("/en/profile")) {
+  if (!isAuthenticate && pathname.startsWith("/profile")) {
     console.log("Unauthenticated user accessing profile. Redirecting to /en");
-    return NextResponse.rewrite(new URL("/en/login", request.url));
+    return NextResponse.rewrite(new URL("/login", request.url));
   }
 }
 
