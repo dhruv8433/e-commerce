@@ -24,7 +24,7 @@ const DealsofDay = () => {
     setDealseOfDay();
   }, []);
   return (
-    <div className="pt-20 h-50">
+    <div className="pt-20">
       <Breadcrumb breadcrumb={"Deals of Day"} title={"Deals"} />
       <Container>
         <div className="flex justify-between items-center">
