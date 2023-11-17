@@ -10,6 +10,7 @@ export default createMiddleware({
 export async function middleware(request) {
   const isAuthenticate = request.cookies.get("authenticated")?.value === "true";
   const { pathname } = request.nextUrl;
+  const locale = request.cookies.get("locale")?.value;
 
   console.log("Path:", pathname);
   console.log("Authenticated:", isAuthenticate);
@@ -20,17 +21,23 @@ export async function middleware(request) {
   }
 
   // Redirect unauthenticated users trying to access profile paths
-  if (!isAuthenticate && pathname.startsWith("/profile")) {
+  if (!isAuthenticate && pathname.startsWith(`${locale}/profile`)) {
     console.log("Unauthenticated user accessing profile. Redirecting to /");
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
-  if ((pathname === "/login" || pathname === "/signup") && !isAuthenticate) {
+  if (
+    (pathname === `${locale}/login` || pathname === `${locale}/signup`) &&
+    !isAuthenticate
+  ) {
     console.log("Unauthenticated user accessing login/signup");
     return;
   }
 
-  if (isAuthenticate && (pathname === "/login" || pathname === "/signup")) {
+  if (
+    isAuthenticate &&
+    (pathname === `${locale}/login` || pathname === `${locale}/signup`)
+  ) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
     return NextResponse.rewrite(new URL("/", request.url));
   }
@@ -40,8 +47,6 @@ export async function middleware(request) {
     !pathname.startsWith("/hi") &&
     !pathname.startsWith("/fr")
   ) {
-    const locale = request.cookies.get("locale")?.value;
-
     return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
   }
 }
