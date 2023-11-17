@@ -39,7 +39,11 @@
     "edit_profile": "Modifier le profil",
     "logout": "Se déconnecter",
     "update": "Mettre à jour",
-    "alredy_account": "Vous avez déjà un compte ?"
+    "alredy_account": "Vous avez déjà un compte ?",
+    "logout_confirm": "Confirmation de déconnexion !!",
+    "logout_msg": "Etes-vous sûr de vouloir vous déconnecter ?",
+    "cancle": "Annuler",
+    "login": "Se connecter"
   },
   "login": {
     "login": "Se connecter",

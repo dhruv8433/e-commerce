@@ -39,7 +39,11 @@
         "edit_profile": "Edit Profile",
         "logout": "Logout",
         "update": "Update",
-        "alredy_account": "Already have Account ?"
+        "alredy_account": "Already have Account ?",
+        "logout_confirm": "Logout Conformation!!",
+        "logout_msg": "Are you sure you want to logout?",
+        "cancle": "Cancle",
+        "login": "Login"
     },
     "login": {
         "login": "Login",
