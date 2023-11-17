@@ -6,11 +6,13 @@ import homeAnimationJSON from "@/app/json/animations/homescreen.json";
 import { useTranslations } from "next-intl";
 import { Grid } from "@mui/material";
 import "@/app/styles/style.css";
+import Cookies from "js-cookie";
 
 // starting component
 // use client because lottie only support in client component
 const HomeAnimation = () => {
   const t = useTranslations("home_ads");
+  Cookies.set("locale", "en");
   return (
     <>
       <div className="h-full">
