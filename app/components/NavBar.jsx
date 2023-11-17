@@ -7,7 +7,7 @@ import SettingDrawer from "../drawers/SettingDrawer";
 import Image from "next/image";
 import logo from "@/app/asset/logo.png";
 import { Avatar, Box, Container, IconButton } from "@mui/material";
-import PhoneModal from "./PhoneModal";
+import LoginIcon from "@mui/icons-material/Login";
 import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
 import { useSelector } from "react-redux";
@@ -107,7 +107,11 @@ const Navigation = () => {
             {/* Sign-up and Login Buttons */}
             <div className="flex justify-center items-center">
               {isLoggedIn === false ? (
-                <PhoneModal login={t("login")} signup={t("signup")} />
+                <Link href={"/signup"}>
+                  <IconButton>
+                    <LoginIcon />
+                  </IconButton>
+                </Link>
               ) : (
                 <div>
                   <IconButton>
