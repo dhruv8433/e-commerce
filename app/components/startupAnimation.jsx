@@ -18,6 +18,7 @@ function StartupAnimation() {
       Cookie.set("animationShow", true, {
         expires: 1,
       });
+      Cookie.set("locale", "en");
       const animationContainer = document.querySelector(".startup-animation");
       // the removal of the animation container after 4s
       setTimeout(() => {
