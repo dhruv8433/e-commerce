@@ -19,14 +19,10 @@ export async function middleware(request) {
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
-  if (
-    !pathname.startsWith("/en") &&
-    !pathname.startsWith("/hi") &&
-    !pathname.startsWith("/fr")
-  ) {
-    const locale = request.cookies.get("locale")?.value;
-
-    return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
+  // Redirect unauthenticated users trying to access profile paths
+  if (!isAuthenticate && pathname.startsWith("/profile")) {
+    console.log("Unauthenticated user accessing profile. Redirecting to /");
+    return NextResponse.rewrite(new URL("/en", request.url));
   }
 
   if ((pathname === "/login" || pathname === "/signup") && !isAuthenticate) {
@@ -35,16 +31,18 @@ export async function middleware(request) {
   }
 
   if (isAuthenticate && (pathname === "/login" || pathname === "/signup")) {
-    console.log(
-      "Authenticated user accessing login/signup. Redirecting to /en"
-    );
-    return NextResponse.rewrite(new URL("/en", request.url));
+    console.log("Authenticated user accessing login/signup. Redirecting to /");
+    return NextResponse.rewrite(new URL("/", request.url));
   }
 
-  // Redirect unauthenticated users trying to access profile paths
-  if (!isAuthenticate && pathname.startsWith("/profile")) {
-    console.log("Unauthenticated user accessing profile. Redirecting to /en");
-    return NextResponse.rewrite(new URL("/login", request.url));
+  if (
+    !pathname.startsWith("/en") &&
+    !pathname.startsWith("/hi") &&
+    !pathname.startsWith("/fr")
+  ) {
+    const locale = request.cookies.get("locale")?.value;
+
+    return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
   }
 }
 
