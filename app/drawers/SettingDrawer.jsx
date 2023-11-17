@@ -7,6 +7,7 @@ import { useState } from "react";
 import Heading from "../components/Heading";
 import Link from "next/link";
 import React from "react";
+import Cookies from "js-cookie";
 
 // setting drawer that contain all nacessary settings for this website
 const SettingDrawer = () => {
@@ -30,15 +31,15 @@ const SettingDrawer = () => {
             <h1>select preffered language : </h1>
             <div className="mt-2 border border-gray-400 rounded w-full flex justify-evenly items-center p-2 text-center">
               <Link href={"/en"} locale={"en"}>
-                English
+                <p onClick={() => Cookies.set("locale", "en")}>English</p>
               </Link>{" "}
               |{" "}
               <Link href={"/hi"} locale={"hi"}>
-                Hindi
+                <p onClick={() => Cookies.set("locale", "hi")}>Hindi</p>
               </Link>{" "}
               |{" "}
               <Link href={"/fr"} locale={"fr"}>
-                French
+                <p onClick={() => Cookies.set("locale", "fr")}>French</p>
               </Link>
             </div>
           </div>
