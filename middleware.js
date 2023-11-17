@@ -1,29 +1,52 @@
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
-import { store } from "./app/[locale]/store";
 
 export default createMiddleware({
   locales: ["en", "hi", "fr"],
-  defaultLocale: "sen"
+  defaultLocale: "en",
 });
 
-// let isRedirected = false;
-// export async function middleware(request) {
-//   // Access the Redux store state
-//   const isAuthenticate = store.getState().isAuthenticate.isAuthenticated;
+export async function middleware(request) {
+  const isAuthenticate = request.cookies.get("authenticated")?.value === "true";
+  const { pathname } = request.nextUrl;
 
-//   if (!isAuthenticate && !isRedirected) {
-//     console.log("User is not authenticated. Redirecting...");
-//     isRedirected = true;
-//     const redirectUrl = `/en/`;
+  console.log("Path:", pathname);
+  console.log("Authenticated:", isAuthenticate);
 
-//     // Set status and headers for redirection
-//     return NextResponse.rewrite(new URL(redirectUrl, request.url))
-//   }
+  if (
+    !pathname.startsWith("/en") &&
+    !pathname.startsWith("/hi") &&
+    !pathname.startsWith("/fr")
+  ) {
+    const locale = request.cookies.get("locale")?.value;
 
-//   // If the user is authenticated or has already been redirected, continue with the next middleware
-//   return;
-// }
+    return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
+  }
+
+  if (
+    (pathname === "/en/login" || pathname === "/en/signup") &&
+    !isAuthenticate
+  ) {
+    console.log("Unauthenticated user accessing login/signup");
+    return;
+  }
+
+  if (
+    isAuthenticate &&
+    (pathname === "/en/login" || pathname === "/en/signup")
+  ) {
+    console.log(
+      "Authenticated user accessing login/signup. Redirecting to /en"
+    );
+    return NextResponse.rewrite(new URL("/en", request.url));
+  }
+
+  // Redirect unauthenticated users trying to access profile paths
+  if (!isAuthenticate && pathname.startsWith("/en/profile")) {
+    console.log("Unauthenticated user accessing profile. Redirecting to /en");
+    return NextResponse.rewrite(new URL("/en/login", request.url));
+  }
+}
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)", "/profile"],
