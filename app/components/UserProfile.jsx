@@ -9,6 +9,7 @@ import { ProfileRoutes } from "./routes";
 import ProfileLeft from "./ProfileLeft";
 import profileAnimation from "@/app/json/animations/profile.json";
 import Lottie from "lottie-react";
+import Cookies from "js-cookie";
 
 const UserProfile = ({ profilePage, data, changeRoute }) => {
   // dispatch for using redux
@@ -18,6 +19,7 @@ const UserProfile = ({ profilePage, data, changeRoute }) => {
   function logout() {
     dispatch({ type: LOGOUT_SUCCESS });
     toast.success("Logout Success");
+    Cookies.set("authenticated", false);
     if (typeof window !== "undefined") {
       window.location.assign("/");
     }
