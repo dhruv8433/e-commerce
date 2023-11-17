@@ -114,5 +114,10 @@
   },
   "drawer": {
     "service": "Vos services"
+  },
+  "card": {
+    "provider": "Fournisseurs",
+    "address": "Adresse",
+    "off": "de réduction"
   }
 }

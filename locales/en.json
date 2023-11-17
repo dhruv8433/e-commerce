@@ -114,5 +114,10 @@
     },
     "drawer": {
         "service": "Your Services"
+    },
+    "card": {
+        "provider": "Providers",
+        "address": "Address",
+        "off": "off"
     }
 }
