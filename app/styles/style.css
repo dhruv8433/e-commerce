@@ -135,3 +135,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.profile-bg {
+  background: url("https://img.freepik.com/free-vector/geometric-shapes-vector-pastel-background_53876-176702.jpg?w=740&t=st=1700285130~exp=1700285730~hmac=63c5b627901c1e06578f3bbae8df669790691954c5f21e978fc5cbc2a5319b7d");
+  object-fit: cover;
+  backdrop-filter: opacity(31.5);
+}
