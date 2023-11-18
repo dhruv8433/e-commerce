@@ -1,4 +1,5 @@
 "use client";
+import "@/app/styles/style.css";
 
 import React, { useState } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
@@ -51,7 +52,7 @@ const ProfileLeft = ({ user, logout }) => {
 
   return (
     <div>
-      <div className="border h-[590px] border-red-300 bg-theme rounded justify-center overflow-hidden">
+      <div className="profile-bg border h-[590px] border-red-300 bg-theme rounded justify-center overflow-hidden">
         <div className="user-image h-56 w-56 mx-auto text-center z-10">
           <Image
             src={
@@ -66,37 +67,34 @@ const ProfileLeft = ({ user, logout }) => {
               width: "100%",
               marginBlock: 20,
               padding: 10,
-              zIndex: 10,
-              position: "relative",
             }}
           />
         </div>
 
-        <div
-          className=" h-96 -mt-[376px] rounded-full rotate-90 w-full"
-          style={{ background: "#f328f3" }}
-        ></div>
         <div className="user-details text-center items-center relative">
           <div className="block">
-            <h1 className="text-3xl font-bold">{user.name}</h1>
             <h1 className="text-2xl font-bold">{user.email}</h1>
+            <h1 className="text-3xl font-bold">{user.name}</h1>
             <h1 className="text-2xl font-semibold">{user.phone}</h1>
           </div>
         </div>
-        <SocialMediaIcons />
+        {/* <SocialMediaIcons /> */}
 
-        {/* edit icon */}
-        <div className="-mt-[390px] absolute ml-80">
-          <IconButton
-            className="border border-white"
+        {/* edit button */}
+        <div>
+          <Button
+            endIcon={<Mode />}
             onClick={() => open(setPopup)}
+            variant="outlined"
+            size="small"
+            sx={{mt:2}}
           >
-            <Mode color="white" sx={{ color: "white" }} />
-          </IconButton>
+            {t("edit_profile")}
+          </Button>
         </div>
 
         {/* logout functionallity */}
-        <Button varient={"contained"} onClick={() => open(setLogoutPopup)}>
+        <Button varient={"contained"} sx={{background: "#dccde0", marginBlock: 2}} onClick={() => open(setLogoutPopup)}>
           {t("logout")}
         </Button>
 
