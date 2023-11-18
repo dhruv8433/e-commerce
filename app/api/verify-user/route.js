@@ -14,7 +14,10 @@ export async function POST(request) {
 
     if (!user) {
       // User not found
-      return httpNextResponse(false, "User not Exist", 404);
+      return NextResponse.json({
+        success: false,
+        message: "User not exist",
+      });
     }
 
     if (password === user.password) {
@@ -33,7 +36,10 @@ export async function POST(request) {
         }
       );
     } else {
-      return httpNextResponse(false, "unauthorized", 401);
+      return NextResponse.json({
+        success: false,
+        message: "unauthorized! Wrong Password",
+      });
     }
   } catch (error) {
     console.error("Error while querying the database:", error);
