@@ -30,21 +30,21 @@ const LoginPage = () => {
     e.preventDefault();
     // Handle login logic here
     console.log("Login Data:", loginData);
-    try {
-      const user = await verifyUser(loginData);
+
+    const user = await verifyUser(loginData);
+    console.log("user", user);
+    if (user.success == true) {
       console.log("success");
       console.log(user);
-      toast.success("Login Success");
+      toast.success(user.message);
       // redux store save user data
       dispatch(loginSuccess(user));
       Cookies.set("authenticated", true);
       if (typeof window !== "undefined") {
-        window.location.assign("/");
+        window.location.assign("/en");
       }
-    } catch (error) {
-      console.log(error);
-      dispatch(loginFailure("Login Error"));
-      toast.error(error);
+    } else {
+      toast.error(user.message);
     }
   };
 
