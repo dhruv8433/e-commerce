@@ -1,4 +1,3 @@
-import Cookies from "js-cookie";
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 
@@ -15,30 +14,47 @@ export async function middleware(request) {
   console.log("Path:", pathname);
   console.log("Authenticated:", isAuthenticate);
 
-  if (pathname == "/") {  
+  if (pathname == "/") {
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
   // Redirect unauthenticated users trying to access profile paths
-  if (!isAuthenticate && pathname.startsWith("/profile")) {
+  if (
+    !isAuthenticate &&
+    (pathname.startsWith("/profile") ||
+      pathname.startsWith(`/${locale}/profile`))
+  ) {
     console.log("Unauthenticated user accessing profile. Redirecting to /");
-    return NextResponse.rewrite(new URL("/en", request.url));
+    return NextResponse.redirect(
+      new URL(`http://localhost:8000/${locale}`, request.url)
+    );
   }
 
   if (
-    (pathname === `${locale}/login` || pathname === `${locale}/signup`) &&
+    (pathname === `${locale}/login` ||
+      pathname === `${locale}/signup` ||
+      pathname === "/login" ||
+      pathname === "/signup") &&
     !isAuthenticate
   ) {
     console.log("Unauthenticated user accessing login/signup");
-    return;
+    return NextResponse.redirect(
+      `http://localhost:8000/${locale}` + pathname,
+      request.url
+    );
   }
 
   if (
     isAuthenticate &&
-    (pathname === `${locale}/login` || pathname === `${locale}/signup`)
+    (pathname === `/${locale}/login` ||
+      pathname === `/${locale}/signup` ||
+      pathname === "/login" ||
+      pathname === "/signup")
   ) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
-    return NextResponse.rewrite(new URL("/", request.url));
+    return NextResponse.redirect(
+      new URL(`http://localhost:8000/${locale}`, request.url)
+    );
   }
 
   if (
@@ -46,7 +62,9 @@ export async function middleware(request) {
     !pathname.startsWith("/hi") &&
     !pathname.startsWith("/fr")
   ) {
-    return NextResponse.rewrite(new URL(`/${locale}` + pathname, request.url));
+    return NextResponse.redirect(
+      new URL(`http://localhost:8000/${locale}` + pathname, request.url)
+    );
   }
 }
 
