@@ -6,6 +6,7 @@ import { Box, Grid } from "@mui/material";
 import Lottie from "lottie-react";
 import contactAnimation from "@/app/json/animations/contact.json";
 import Breadcrumb from "@/app/common/Breadcrumbs";
+import toast from "react-hot-toast";
 // import { httpAxios } from "../helper/httpAxios";
 
 const ContactForm = () => {
@@ -28,14 +29,13 @@ const ContactForm = () => {
     console.log(formData);
     try {
       const submit = await contactService(formData);
-
+      toast.success("your message recived success, we get in touch soon!!");
       console.log("contact submitted success");
     } catch (error) {
+      toast.error("something went wrong!!");
       console.log(error);
     }
   };
-
-  
 
   return (
     <>
