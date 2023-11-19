@@ -7,7 +7,6 @@ import React from "react";
 
 const page = () => {
   const { option } = useParams();
-  console.log(option);
 
   if (option == "showcase-of-week") {
     return <ShowCase />;
