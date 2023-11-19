@@ -28,7 +28,7 @@ This project is an e-commerce service providing website offering various feature
 
 ### Usage
 
-1. Start the application using `npm start`.
+1. Start the application using `npm run dev`.
 2. Access the website via the provided URL.
 3. Sign up or log in to begin using the platform.
 4. Explore products, add items to cart, and proceed to checkout.
