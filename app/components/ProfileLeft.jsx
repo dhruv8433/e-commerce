@@ -18,9 +18,16 @@ const ProfileLeft = ({ user, logout }) => {
   const [popup, setPopup] = useState(false);
   const [logoutPopup, setLogoutPopup] = useState(false);
 
+  const isUserAuthenticated = useSelector(
+    (state) => state.isAuthenticate.isAuthenticated
+  );
   const t = useTranslations("signup");
-  const userData = useSelector((state) => state.isAuthenticate.user);
-  console.log(userData);
+  let userData;
+  
+  if (isUserAuthenticated) {
+    userData = useSelector((state) => state.isAuthenticate.user);
+    console.log(userData);
+  }
 
   const dispatch = useDispatch();
 
@@ -87,14 +94,18 @@ const ProfileLeft = ({ user, logout }) => {
             onClick={() => open(setPopup)}
             variant="outlined"
             size="small"
-            sx={{mt:2}}
+            sx={{ mt: 2 }}
           >
             {t("edit_profile")}
           </Button>
         </div>
 
         {/* logout functionallity */}
-        <Button varient={"contained"} sx={{background: "#dccde0", marginBlock: 2}} onClick={() => open(setLogoutPopup)}>
+        <Button
+          varient={"contained"}
+          sx={{ background: "#dccde0", marginBlock: 2 }}
+          onClick={() => open(setLogoutPopup)}
+        >
           {t("logout")}
         </Button>
 
@@ -148,7 +159,7 @@ const ProfileLeft = ({ user, logout }) => {
                 t={t}
                 UserData={userData}
                 setPopup={setPopup}
-                updateData={updateData}
+                updateData={isUserAuthenticated ? updateData: ""}
                 setUpdateData={setUpdateData}
                 updateUser={updateUser}
               />
