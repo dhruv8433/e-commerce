@@ -40,7 +40,3 @@ This project is an e-commerce service providing website offering various feature
 - Database: MongoDB.
 - Payment Gateway: Stripe.
 - Authentication: JWT.
-
-## Contributing
-
-Contributions are welcome! Please follow the contribution guidelines specified in CONTRIBUTING.md.
