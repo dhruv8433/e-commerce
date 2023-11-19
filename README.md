@@ -45,6 +45,9 @@ This project is an e-commerce service providing website offering various feature
 
 Contributions are welcome! Please follow the contribution guidelines specified in CONTRIBUTING.md.
 
-## License
+# E-Requirement Website
 
-This project is licensed under the [License Name] License - see the LICENSE.md file for details.
+This project is an e-commerce service providing website offering various features for users to browse, shop, and manage their accounts. The live version of the website is currently accessible at [https://e-requirement.vercel.app](https://e-requirement.vercel.app).
+
+...
+
