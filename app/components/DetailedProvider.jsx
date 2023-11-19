@@ -9,7 +9,6 @@ import { useTranslations } from "next-intl";
 
 const DetailedProvider = ({ provider }) => {
   const t = useTranslations("providers");
-  console.log("hehe", provider);
   return (
     <div className="p-1 items-center text-center">
       <Card>
