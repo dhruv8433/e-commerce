@@ -27,7 +27,6 @@ const Signup = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     // Handle signup logic here
-    console.log("Signup Data:", signupData);
     try {
       const response = await userService(signupData);
       toast.success("user registration success");
