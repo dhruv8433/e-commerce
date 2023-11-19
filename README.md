@@ -48,6 +48,3 @@ Contributions are welcome! Please follow the contribution guidelines specified i
 # E-Requirement Website
 
 This project is an e-commerce service providing website offering various features for users to browse, shop, and manage their accounts. The live version of the website is currently accessible at [https://e-requirement.vercel.app](https://e-requirement.vercel.app).
-
-...
-
