@@ -29,13 +29,9 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log("Login Data:", loginData);
 
     const user = await verifyUser(loginData);
-    console.log("user", user);
     if (user.success == true) {
-      console.log("success");
-      console.log(user);
       toast.success(user.message);
       // redux store save user data
       dispatch(loginSuccess(user));
