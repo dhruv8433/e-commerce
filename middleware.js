@@ -15,6 +15,9 @@ export async function middleware(request) {
   console.log("Authenticated:", isAuthenticate);
 
   if (pathname == "/") {
+    if (locale) {
+      return NextResponse.rewrite(new URL(`/${locale}`, request.url));
+    }
     return NextResponse.rewrite(new URL("/en", request.url));
   }
 
