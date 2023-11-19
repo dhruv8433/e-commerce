@@ -1,4 +1,8 @@
-# E-Commerce Service Website
+# E-Requirement Website
+
+This project is an e-commerce service providing website offering various features for users to browse, shop, and manage their accounts. The live version of the website is currently accessible at [https://e-requirement.vercel.app](https://e-requirement.vercel.app).
+
+# E-Requirement Website
 
 This project is an e-commerce service providing website offering various features for users to browse, shop, and manage their accounts.
 
@@ -44,7 +48,3 @@ This project is an e-commerce service providing website offering various feature
 ## Contributing
 
 Contributions are welcome! Please follow the contribution guidelines specified in CONTRIBUTING.md.
-
-# E-Requirement Website
-
-This project is an e-commerce service providing website offering various features for users to browse, shop, and manage their accounts. The live version of the website is currently accessible at [https://e-requirement.vercel.app](https://e-requirement.vercel.app).
