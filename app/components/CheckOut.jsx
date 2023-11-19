@@ -22,7 +22,6 @@ const StripeCheckoutButton = ({ price }) => {
   // on successful payment
   const onToken = (token) => {
     console.log(token); // You can send the token to your server for processing
-    console.log("order of ", items);
     toast.success("order success");
     // clear the cart
     dispatch(celarCart());
