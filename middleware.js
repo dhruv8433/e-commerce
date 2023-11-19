@@ -29,7 +29,7 @@ export async function middleware(request) {
   ) {
     console.log("Unauthenticated user accessing profile. Redirecting to /");
     return NextResponse.redirect(
-      new URL(`http://localhost:8000/${locale}`, request.url)
+      new URL(`https://e-requirement.vercel.app/${locale}`, request.url)
     );
   }
 
@@ -42,7 +42,7 @@ export async function middleware(request) {
   ) {
     console.log("Unauthenticated user accessing login/signup");
     return NextResponse.redirect(
-      `http://localhost:8000/${locale}` + pathname,
+      `https://e-requirement.vercel.app/${locale}` + pathname,
       request.url
     );
   }
@@ -56,7 +56,7 @@ export async function middleware(request) {
   ) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
     return NextResponse.redirect(
-      new URL(`http://localhost:8000/${locale}`, request.url)
+      new URL(`https://e-requirement.vercel.app/${locale}`, request.url)
     );
   }
 
@@ -66,7 +66,7 @@ export async function middleware(request) {
     !pathname.startsWith("/fr")
   ) {
     return NextResponse.redirect(
-      new URL(`http://localhost:8000/${locale}` + pathname, request.url)
+      new URL(`https://e-requirement.vercel.app/${locale}` + pathname, request.url)
     );
   }
 }
