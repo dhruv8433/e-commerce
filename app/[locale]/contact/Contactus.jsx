@@ -30,7 +30,6 @@ const ContactForm = () => {
     try {
       const submit = await contactService(formData);
       toast.success("your message recived success, we get in touch soon!!");
-      console.log("contact submitted success");
     } catch (error) {
       toast.error("something went wrong!!");
       console.log(error);
