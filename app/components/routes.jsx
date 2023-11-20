@@ -10,15 +10,16 @@ import { Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
+import { close } from "../config/config";
 
 // routes contain all necassary pages link
-const Routes = ({ display, icons, padding, spacing }) => {
+const Routes = ({ display, icons, padding, spacing, closeMenu }) => {
   const t = useTranslations("navigation");
   return (
     <div>
       {/* we dynamicly pass display padding and spacing for required devices */}
       <ul className={`${display} ${padding} ${spacing}`}>
-        <li className="flex items-center">
+        <li className="flex items-center" onClick={() => close(closeMenu)}>
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <HomeOutlined />
           </Typography>
@@ -26,7 +27,7 @@ const Routes = ({ display, icons, padding, spacing }) => {
             {t("home")}
           </Link>
         </li>
-        <li className="flex items-center">
+        <li className="flex items-center" onClick={() => close(closeMenu)}>
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <SettingsOutlined />
           </Typography>
@@ -37,7 +38,7 @@ const Routes = ({ display, icons, padding, spacing }) => {
             {t("provider")}
           </Link>
         </li>
-        <li className="flex items-center">
+        <li className="flex items-center" onClick={() => close(closeMenu)}>
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <InfoOutlined />
           </Typography>
@@ -45,7 +46,7 @@ const Routes = ({ display, icons, padding, spacing }) => {
             {t("about")}
           </Link>
         </li>
-        <li className="flex items-center">
+        <li className="flex items-center" onClick={() => close(closeMenu)}>
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <ContactPageOutlined />
           </Typography>

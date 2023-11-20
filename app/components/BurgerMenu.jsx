@@ -31,6 +31,7 @@ const BurgerMenu = () => {
             icons={"flex"}
             padding={"px-6"}
             spacing={"0"}
+            closeMenu={setOpenMenu}
           />
         </div>
       </Drawer>
