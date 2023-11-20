@@ -26,11 +26,11 @@ const Signup = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
     // Handle signup logic here
-    try {
-      const response = await userService(signupData);
-      toast.success("user registration success");
-      // const result = await response.save();
+    const response = await userService(signupData);
+    if (response.success == true) {
+      toast.success(response.message);
       setSignupData({
         email: "",
         password: "",
@@ -38,10 +38,7 @@ const Signup = () => {
         name: "",
         address: "",
       });
-    } catch (error) {
-      toast.error("unable to register user");
-      console.log(error);
-    }
+    } else toast.error(response.message);
   }
 
   const t = useTranslations("signup");

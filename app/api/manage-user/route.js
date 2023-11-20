@@ -10,6 +10,14 @@ export async function POST(request) {
   const { email, password, phone, name, address } = await request.json();
 
   try {
+    const userExist = await userModel.find({ email });
+    if (userExist) {
+      return NextResponse.json({
+        success: false,
+        message: "User alredy exist...",
+      });
+    }
+
     // try to store data in userModel
     const response = new userModel({
       email: email,
@@ -24,7 +32,11 @@ export async function POST(request) {
     const result = await response.save();
 
     // return response that data is stored
-    return NextResponse.json(result);
+    return NextResponse.json({
+      success: true,
+      message: "User Registration Success",
+      data: result,
+    });
   } catch (error) {
     console.log("something went wrong");
     console.log(error);
