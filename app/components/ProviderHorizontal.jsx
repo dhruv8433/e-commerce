@@ -19,7 +19,7 @@ const ProviderHorizontal = ({ provider }) => {
           style={{
             display: "flex",
             alignItems: "center",
-            height: "200px",
+            height: "240px",
             padding: 1,
           }}
         >
