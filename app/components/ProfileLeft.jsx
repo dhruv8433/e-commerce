@@ -23,7 +23,7 @@ const ProfileLeft = ({ user, logout }) => {
   );
   const t = useTranslations("signup");
   let userData;
-  
+
   if (isUserAuthenticated) {
     userData = useSelector((state) => state.isAuthenticate.user);
     // console.log(userData);
@@ -109,7 +109,15 @@ const ProfileLeft = ({ user, logout }) => {
           {t("logout")}
         </Button>
 
-        <Modal open={logoutPopup} onClose={() => close(setLogoutPopup)}>
+        <Modal
+          open={logoutPopup}
+          onClose={() => close(setLogoutPopup)}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Box
             bgcolor={"white"}
             width={280}
@@ -159,7 +167,7 @@ const ProfileLeft = ({ user, logout }) => {
                 t={t}
                 UserData={userData}
                 setPopup={setPopup}
-                updateData={isUserAuthenticated ? updateData: ""}
+                updateData={isUserAuthenticated ? updateData : ""}
                 setUpdateData={setUpdateData}
                 updateUser={updateUser}
               />
