@@ -11,7 +11,8 @@ export async function POST(request) {
 
   try {
     const userExist = await userModel.find({ email });
-    if (userExist) {
+    console.log(userExist);
+    if (userExist.length > 0) {
       return NextResponse.json({
         success: false,
         message: "User alredy exist...",
