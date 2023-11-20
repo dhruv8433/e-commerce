@@ -65,17 +65,17 @@ export const ProfileRoutes = () => {
   const t = useTranslations("profile");
   return (
     <div className="bg-white h-16 flex items-center px-2  ">
-      <ul className="flex justify-around w-full overflow-auto px-2">
-        <li>
+      <ul className="flex justify-between w-full overflow-y-auto px-2">
+        <li className="mx-2">
           <Link href={"/profile/bookings"}>{t("booking")}</Link>
         </li>
-        <li>
+        <li className="mx-2">
           <Link href={"/profile/bookmark"}>{t("bookmark")}</Link>
         </li>
-        <li>
+        <li className="mx-2">
           <Link href={"/profile/notifications"}>{t("notification")}</Link>
         </li>
-        <li>
+        <li className="mx-2">
           <Link href={"/profile/delete-account"}>{t("delete_account")}</Link>
         </li>
       </ul>

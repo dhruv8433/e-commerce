@@ -26,7 +26,7 @@ const ProfileLeft = ({ user, logout }) => {
   
   if (isUserAuthenticated) {
     userData = useSelector((state) => state.isAuthenticate.user);
-    console.log(userData);
+    // console.log(userData);
   }
 
   const dispatch = useDispatch();
