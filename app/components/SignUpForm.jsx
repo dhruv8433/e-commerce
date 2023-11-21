@@ -101,6 +101,7 @@ const SignUpForm = ({
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
                   placeholder="Enter your phone number"
                   onChange={handleChange}
+                  required
                 />
               ) : (
                 <input
@@ -128,6 +129,7 @@ const SignUpForm = ({
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
                   placeholder="Enter your full name"
                   onChange={handleChange}
+                  required
                 />
               ) : (
                 <input
@@ -161,6 +163,7 @@ const SignUpForm = ({
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
                   placeholder="Enter your address"
                   onChange={handleChange}
+                  required
                 ></textarea>
               ) : (
                 <textarea
