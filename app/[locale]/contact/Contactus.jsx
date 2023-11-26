@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Box, Grid } from "@mui/material";
-import { contactService } from "@/app/services/contactService";
 import { useTranslations } from "next-intl";
 import Lottie from "lottie-react";
 import contactAnimation from "@/app/json/animations/contact.json";
