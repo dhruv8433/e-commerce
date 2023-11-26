@@ -38,6 +38,7 @@ const Signup = () => {
         name: "",
         address: "",
       });
+      window.location.href('/login')
     } else toast.error(response.message);
   }
 
