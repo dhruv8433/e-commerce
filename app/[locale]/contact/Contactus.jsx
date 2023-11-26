@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { Box, Grid } from "@mui/material";
+import { contactService } from "@/app/services/contactService";
+import { useTranslations } from "next-intl";
 import Lottie from "lottie-react";
-import contactAnimation from "@/app/animations/contactus.json";
+import contactAnimation from "@/app/json/animations/contact.json";
+import Breadcrumb from "@/app/common/Breadcrumbs";
 import toast from "react-hot-toast";
 import { contactService } from "@/app/services/contactService";
 // import { httpAxios } from "../helper/httpAxios";
@@ -48,14 +51,14 @@ const page = () => {
         <Grid item xs={12} md={6}>
           <div className="min-h-full flex items-center justify-center bg-theme py-2">
             <div className="w-96 p-6 bg-white rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-4">contact</h2>
+              <h2 className="text-2xl font-semibold mb-4">{t("contact")}</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label
                     htmlFor="name"
                     className="block text-gray-600 font-medium"
                   >
-                    name
+                    {t("name")}
                   </label>
                   <input
                     type="text"
@@ -109,7 +112,7 @@ const page = () => {
                     type="submit"
                     className="py-2 px-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:ring-blue-500 focus:ring-offset-blue-200 focus:outline-none"
                   >
-                    submit
+                    {t("submit")}
                   </button>
                 </div>
               </form>
