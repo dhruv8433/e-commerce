@@ -17,11 +17,11 @@ const ProviderDetailsPage = ({ providerLoading, provider }) => {
           })
         )}
       </div>
-      <div className="mt-4  rounded-md justify-center items-center bg-slate-100">
+      {/* <div className="mt-4  rounded-md justify-center items-center bg-slate-100">
         <div className="flex justify-center">
           <h1 className="text-2xl py-1">User Reviews</h1>
         </div>
-      </div>
+      </div> */}
     </Grid>
   );
 };
