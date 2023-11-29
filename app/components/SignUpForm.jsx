@@ -21,7 +21,7 @@ const SignUpForm = ({
       <div
         className={`${
           isItSignup ? "min-h-screen" : "h-auto"
-        } flex items-center justify-center bg-gray-100`}
+        } flex items-center justify-center  ${isItSignup ? "" : "bg-gray-100"} `}
       >
         <div className="bg-white p-8 rounded shadow-md w-96">
           {isItSignup ? (
