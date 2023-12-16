@@ -22,13 +22,6 @@ const Navigation = () => {
   const cookieChangesd = Cookies.get("authenticated");
   console.log(isLoggedIn);
   console.log("cookie", cookieChangesd);
-
-  useEffect(() => {
-    // Check if localStorage is available in the browser.
-    if (typeof window !== "undefined") {
-      isLoggedIn = Cookies.get("authenticated");
-    }
-  }, []);
   return (
     <>
       {/* computer screen navigation  */}
@@ -59,7 +52,7 @@ const Navigation = () => {
 
               <div className="flex justify-center items-center">
                 {/* Sign-up and Login Buttons */}
-                {isLoggedIn === false && !cookieChangesd ? (
+                {isLoggedIn === false || cookieChangesd == undefined ? (
                   <div className="flex space-x-4 items-center">
                     <Link href={"/signup"}>
                       <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">

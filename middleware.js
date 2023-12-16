@@ -6,6 +6,9 @@ export default createMiddleware({
   defaultLocale: "en",
 });
 
+const url = "https://e-requirement.vercel.app/";
+// "http://localhost:8000"
+
 export async function middleware(request) {
   const isAuthenticate = request.cookies.get("authenticated")?.value === "true";
   const { pathname } = request.nextUrl;
@@ -28,9 +31,7 @@ export async function middleware(request) {
       pathname.startsWith(`/${locale}/profile`))
   ) {
     console.log("Unauthenticated user accessing profile. Redirecting to /");
-    return NextResponse.redirect(
-      new URL(`https://e-requirement.vercel.app/${locale}`, request.url)
-    );
+    return NextResponse.redirect(new URL(`${url}/${locale}`, request.url));
   }
 
   if (
@@ -41,10 +42,7 @@ export async function middleware(request) {
     !isAuthenticate
   ) {
     console.log("Unauthenticated user accessing login/signup");
-    return NextResponse.redirect(
-      `https://e-requirement.vercel.app/${locale}` + pathname,
-      request.url
-    );
+    return NextResponse.redirect(`${url}/${locale}` + pathname, request.url);
   }
 
   if (
@@ -55,9 +53,7 @@ export async function middleware(request) {
       pathname === "/signup")
   ) {
     console.log("Authenticated user accessing login/signup. Redirecting to /");
-    return NextResponse.redirect(
-      new URL(`https://e-requirement.vercel.app/${locale}`, request.url)
-    );
+    return NextResponse.redirect(new URL(`${url}/${locale}`, request.url));
   }
 
   if (
@@ -66,7 +62,7 @@ export async function middleware(request) {
     !pathname.startsWith("/fr")
   ) {
     return NextResponse.redirect(
-      new URL(`https://e-requirement.vercel.app/${locale}` + pathname, request.url)
+      new URL(`${url}/${locale}` + pathname, request.url)
     );
   }
 }
