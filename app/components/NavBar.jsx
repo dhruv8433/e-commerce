@@ -12,18 +12,21 @@ import BurgerMenu from "./BurgerMenu";
 import Routes from "./routes";
 import { useSelector } from "react-redux";
 import CartDrawer from "../drawers/CartDrawer";
+import Cookies from "js-cookie";
 
 // navigation for routing in different pages
 const Navigation = () => {
   const t = useTranslations("navigation");
   // for checking user is logged in or not
   let isLoggedIn = useSelector((state) => state.isAuthenticate.isAuthenticated);
+  const cookieChangesd = Cookies.get("authenticated");
   console.log(isLoggedIn);
+  console.log("cookie", cookieChangesd);
 
   useEffect(() => {
     // Check if localStorage is available in the browser.
     if (typeof window !== "undefined") {
-      isLoggedIn = localStorage.getItem("login");
+      isLoggedIn = Cookies.get("authenticated");
     }
   }, []);
   return (
@@ -56,7 +59,7 @@ const Navigation = () => {
 
               <div className="flex justify-center items-center">
                 {/* Sign-up and Login Buttons */}
-                {isLoggedIn === false ? (
+                {isLoggedIn === false && !cookieChangesd ? (
                   <div className="flex space-x-4 items-center">
                     <Link href={"/signup"}>
                       <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
