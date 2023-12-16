@@ -5,12 +5,12 @@ This project is an e-commerce service providing website offering various feature
 ## Features
 
 - **User Authentication**: Sign up and log in functionality.
-- **Profile Management**: Update profile information, change password, etc.
-- **Shopping Cart**: Add items to the cart, remove items from the cart, update quantities.
-- **Product Catalog**: Browse products, filter and search functionality.
+- **Profile Management**: Update profile information, address etc.
+- **Shopping Cart**: Add items to the cart, remove items from the cart.
+- **Product Catalog**: Browse products, filter.
 - **Notifications**: Receive notifications for order updates, promotions, etc.
 - **Bookmarking**: Save favorite items or wish lists.
-- **Order Management**: Place orders, view order history, track shipments.
+- **Order Management**: Place orders, view order history.
 - **Payments**: Secure payment gateway integration.
 
 ## Getting Started
