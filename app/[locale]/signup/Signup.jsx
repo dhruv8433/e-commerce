@@ -27,19 +27,28 @@ const Signup = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // Handle signup logic here
-    const response = await userService(signupData);
-    if (response.success == true) {
-      toast.success(response.message);
-      setSignupData({
-        email: "",
-        password: "",
-        phone: "",
-        name: "",
-        address: "",
-      });
-      window.location.href('/login')
-    } else toast.error(response.message);
+    if (signupData.password.length < 8) {
+      toast.error("password must contain 8 character");
+      return;
+    }
+    else if(signupData.phone.length < 10){
+      toast.error('please enter valid number')
+    }
+    else {
+      // Handle signup logic here
+      const response = await userService(signupData);
+
+      if (response.success == true) {
+        toast.success(response.message);
+        setSignupData({
+          email: "",
+          password: "",
+          phone: "",
+          name: "",
+          address: "",
+        });
+      } else toast.error(response.message);
+    }
   }
 
   const t = useTranslations("signup");

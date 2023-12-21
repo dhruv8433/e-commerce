@@ -95,17 +95,24 @@ const SignUpForm = ({
               </label>
               {isItSignup ? (
                 <input
-                  type="text"
+                  type="tel"
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
                   placeholder="Enter your phone number"
                   onChange={handleChange}
+                  onKeyPress={(e) => {
+                    // Allow only numbers: 0-9 (keycodes 48-57)
+                    const keyCode = e.which || e.keyCode;
+                    if (keyCode < 48 || keyCode > 57) {
+                      e.preventDefault();
+                    }
+                  }}
                   required
                 />
               ) : (
                 <input
-                  type="text"
+                  type="number"
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200"
