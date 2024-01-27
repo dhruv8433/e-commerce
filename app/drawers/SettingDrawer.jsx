@@ -14,7 +14,7 @@ const SettingDrawer = () => {
   const [openSetting, setOpenSetting] = useState(false);
   return (
     <div>
-      <IconButton onClick={() => open(setOpenSetting)}>
+      <IconButton aria-label="setting" onClick={() => open(setOpenSetting)}>
         <SettingsOutlined />
       </IconButton>
       {/* drawer open when user click on setting icon */}

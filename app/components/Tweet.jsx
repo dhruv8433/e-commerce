@@ -20,13 +20,13 @@ const Tweet = ({ twitter }) => {
           {twitter.tweet} <span className="text-blue-600">{twitter.tags}</span>
         </Typography>
         <div className="flex justify-between mt-2">
-          <IconButton size="small">
+          <IconButton aria-label="chat-button" size="small">
             <ChatBubbleOutlineIcon fontSize="small" />
           </IconButton>
-          <IconButton size="small">
+          <IconButton aria-label="repete-button" size="small">
             <RepeatIcon fontSize="small" />
           </IconButton>
-          <IconButton size="small">
+          <IconButton aria-label="like-button" size="small">
             <FavoriteBorderIcon fontSize="small" />
           </IconButton>
         </div>
