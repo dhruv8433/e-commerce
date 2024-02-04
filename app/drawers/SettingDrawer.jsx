@@ -21,7 +21,7 @@ const SettingDrawer = () => {
       <Drawer
         open={openSetting}
         anchor="right"
-        onClose={() => close(setOpenSetting)}
+        onClose={() => setOpenSetting(false)}
       >
         <Box sx={{ width: { xs: "300px", md: "400px" } }}>
           {/* reusable heading component  */}

@@ -23,7 +23,7 @@ const CartDrawer = () => {
       <IconButton onClick={() => open(setOpenCart)}>
         <ShoppingCartOutlined />
       </IconButton>
-      <Drawer anchor="right" open={openCart} onClose={() => close(setOpenCart)}>
+      <Drawer anchor="right" open={openCart} onClose={() => setOpenCart(false)}>
         <Box sx={{ width: { xs: "300px", md: "400px" } }}>
           <div className="p-1">
             <h1 className="font-semibold text-2xl">{t("service")}</h1>
