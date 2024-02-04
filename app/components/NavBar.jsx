@@ -26,18 +26,19 @@ const Navigation = () => {
     <>
       {/* computer screen navigation  */}
       <Box
-        className="bg-gray-100 w-screen bg-opacity-70 backdrop-blur-md fixed z-40"
+        className="bg-gray-100 w-screen bg-opacity-70 backdrop-blur-md fixed h-16 items-center z-40"
         sx={{ display: { xs: "none", md: "block" } }}
       >
-        <Container>
-          <nav>
-            <div className="container flex justify-between items-center">
+        <Container className="h-full">
+          <nav className="flex justify-center items-center h-full  text-center">
+            <div className="container flex justify-between  h-full items-center">
               {/* Left Side Logo */}
               <Link href={"/"}>
                 <Image
                   src={logo}
                   alt="Logo"
-                  height={80}
+                  height={50}
+                  style={{ padding: 1 }}
                   // className="h-10 w-20"
                 />
               </Link>
@@ -48,6 +49,8 @@ const Navigation = () => {
                 icons={"none"}
                 padding={"0"}
                 spacing={"space-x-6"}
+                closeMenu={true}
+                isItMobileScreen={false}
               />
 
               <div className="flex justify-center items-center">
@@ -55,13 +58,8 @@ const Navigation = () => {
                 {isLoggedIn === false || cookieChangesd == undefined ? (
                   <div className="flex space-x-4 items-center">
                     <Link href={"/signup"}>
-                      <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
+                      <button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200">
                         {t("signup")}
-                      </button>
-                    </Link>
-                    <Link href={"/login"}>
-                      <button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full focus:ring focus:ring-gray-200">
-                        {t("login")}
                       </button>
                     </Link>
                   </div>
@@ -94,7 +92,7 @@ const Navigation = () => {
                 <Image
                   src={logo}
                   alt="Logo"
-                  height={80}
+                  height={50}
                   // className="h-10 w-20"
                 />
               </Link>
