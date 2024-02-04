@@ -1,23 +1,31 @@
+// have to ser default language eg
+
+import Cookies from "js-cookie";
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
+import { setLocale } from "./app/config/config";
 
 export default createMiddleware({
   locales: ["en", "hi", "fr"],
   defaultLocale: "en",
 });
 
-const url = "https://e-requirement.vercel.app/";
-// "http://localhost:8000"
+// const url = "https://e-requirement.vercel.app/";
+const url = "http://localhost:8000";
 
 export async function middleware(request) {
   const isAuthenticate = request.cookies.get("authenticated")?.value === "true";
   const { pathname } = request.nextUrl;
+
+  // if there is no locale set inside cookies, than we set again with en
+  setLocale();
+
   const locale = request.cookies.get("locale")?.value;
 
   console.log("Path:", pathname);
   console.log("Authenticated:", isAuthenticate);
 
-  if (pathname == "/") {
+  if (pathname == "/" || pathname == "/") {
     if (locale) {
       return NextResponse.rewrite(new URL(`/${locale}`, request.url));
     }
