@@ -10,16 +10,25 @@ import { Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
-import { close } from "../config/config";
 
 // routes contain all necassary pages link
-const Routes = ({ display, icons, padding, spacing, closeMenu }) => {
+const Routes = ({
+  display,
+  icons,
+  padding,
+  spacing,
+  closeMenu,
+  isItMobileScreen,
+}) => {
   const t = useTranslations("navigation");
   return (
     <div>
       {/* we dynamicly pass display padding and spacing for required devices */}
       <ul className={`${display} ${padding} ${spacing}`}>
-        <li className="flex items-center" onClick={() => close(closeMenu)}>
+        <li
+          className="flex items-center"
+          onClick={() => (isItMobileScreen ? closeMenu(false) : "")}
+        >
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <HomeOutlined />
           </Typography>
@@ -27,26 +36,38 @@ const Routes = ({ display, icons, padding, spacing, closeMenu }) => {
             {t("home")}
           </Link>
         </li>
-        <li className="flex items-center" onClick={() => close(closeMenu)}>
+        <li
+          className="flex items-center"
+          onClick={() => (isItMobileScreen ? closeMenu(false) : "")}
+        >
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <SettingsOutlined />
           </Typography>
           <Link
-            href={"/providers"}
+            href={{ pathname: "/providers" }}
             className="text-gray-600 hover:text-gray-800"
           >
             {t("provider")}
           </Link>
         </li>
-        <li className="flex items-center" onClick={() => close(closeMenu)}>
+        <li
+          className="flex items-center"
+          onClick={() => (isItMobileScreen ? closeMenu(false) : "")}
+        >
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <InfoOutlined />
           </Typography>
-          <Link href={"/about"} className="text-gray-600 hover:text-gray-800">
+          <Link
+            href={{ pathname: "/about" }}
+            className="text-gray-600 hover:text-gray-800"
+          >
             {t("about")}
           </Link>
         </li>
-        <li className="flex items-center" onClick={() => close(closeMenu)}>
+        <li
+          className="flex items-center"
+          onClick={() => (isItMobileScreen ? closeMenu(false) : "")}
+        >
           <Typography sx={{ display: icons, px: 1, py: 1 }}>
             <ContactPageOutlined />
           </Typography>
