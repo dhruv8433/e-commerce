@@ -4,7 +4,7 @@ import React from "react";
 
 const Breadcrumb = ({ title, breadcrumb }) => {
   return (
-    <div className="h-20 global-breadcrumb">
+    <div className="h-20">
       <Container>
         <div className="breadcrumb py-2">
           <Breadcrumbs aria-label="breadcrumb">
