@@ -17,10 +17,10 @@ const BurgerMenu = () => {
         <MenuIcon />
       </IconButton>
       {/* creating drawer to routing in responsive screen */}
-      <Drawer open={openMenu} onClose={() => close(setOpenMenu)}>
-        <Box sx={{ width: 300 }} display={"flex"} alignItems={"center"}>
+      <Drawer open={openMenu} onClose={() => setOpenMenu(false)}>
+        <Box sx={{ width: 300, my: 1, mx: 1 }} display={"flex"} alignItems={"center"}>
           {/* Left Side Logo */}
-          <Image src={logo} alt="Logo" height={80} />
+          <Image src={logo} alt="Logo" height={40} />
           <h1 className="text-2xl font-bold">eRequirement</h1>
         </Box>
         <Divider />
