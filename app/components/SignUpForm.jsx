@@ -207,7 +207,7 @@ const SignUpForm = ({
                   </button>
                   <button
                     className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-6 rounded-full focus:ring focus:ring-blue-200 ml-2"
-                    onClick={() => close(setPopup)}
+                    onClick={() => setPopup(false)}
                   >
                     {t("cancle")}
                   </button>
