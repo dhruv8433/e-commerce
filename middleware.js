@@ -10,8 +10,8 @@ export default createMiddleware({
   defaultLocale: "en",
 });
 
-// const url = "https://e-requirement.vercel.app/";
-const url = "http://localhost:8000";
+const url = "https://e-requirement.vercel.app/";
+// const url = "http://localhost:8000";
 
 export async function middleware(request) {
   const isAuthenticate = request.cookies.get("authenticated")?.value === "true";
