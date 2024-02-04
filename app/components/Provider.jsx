@@ -42,7 +42,7 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
     }
   }
   return (
-    <div className="p-1 items-center text-center">
+    <div className="p-1 items-center text-center mt-10">
       {isAuthenticated ? (
         <Box
           className="absolute rounded-sm bg-white"
@@ -61,45 +61,59 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
       )}
 
       <Link href={`/${provider.id}/${provider.slug}`}>
-        <Card>
+        <Card
+          sx={{
+            ":hover": {
+              transition: "all 0.3s ease-in-out", // Add transition for all properties
+              transform: "scale(1.05)", // Increase scale on hover
+              boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)", // Add a shadow on hover
+            },
+          }}
+        >
           <CardMedia
             image={provider.banner}
             alt="card banner"
             sx={{ height: 220, objectFit: "cover" }}
           />
-          {/* <div className="flex justify-center">
-            <CardMedia
-              image={provider.logo}
-              alt="card banner"
-              sx={{
+          <div className="flex justify-center -mt-7">
+            <div
+              className="border border-purple-700 -mt-10"
+              style={{
+                borderRadius: 60,
+                borderWidth: 7,
                 height: 120,
                 width: 120,
-                borderRadius: 2,
-                mt: -8,
-                border: "5px solid white",
               }}
-            />
-          </div> */}
-          <CardContent className="text-start relative">
+            >
+              <img
+                src={provider.logo}
+                alt="card banner"
+                className="border border-black "
+                style={{
+                  borderRadius: 60,
+                  borderWidth: 5,
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          </div>
+          <CardContent className="relative flex flex-col">
             {/* Position the Lottie animation in the top-left corner */}
             <div className="absolute top-4 left-0">
               <Lottie animationData={waveAnimation} />
             </div>
             <div className="info -mt-4 z-10 relative">
               <h1 className="text-2xl font-bold">{provider.title}</h1>
-              <div className="flex justify-start items-center">
+              <div className="flex items-center justify-center">
                 <Rating value={provider.rating} readOnly />
               </div>
-              <div className="flex justify-start p-1">
-                <h1 className="border bg-violet-500 p-1 rounded text-white">
-                  {provider.order_completed}{" "}
-                  {t("order_completed")}
+              <div className="flex p-1 justify-center">
+                <h1 className="border bg-violet-500 px-2 py-1 rounded text-white">
+                  {provider.order_completed} {t("order_completed")}
                 </h1>
               </div>
-              <div className="flex justify-end items-center mt-4 mb-2 p-2">
-                <EastRounded
-                  sx={{ border: "1px solid gray", borderRadius: "50px" }}
-                />
+              <div className="justify-end items-end text-end ml-auto border border-purple-700 hover:bg-violet-700 hover:text-white m-5 p-2 rounded-full w-min">
+                <EastRounded sx={{ borderRadius: "50px" }} />
               </div>
             </div>
           </CardContent>

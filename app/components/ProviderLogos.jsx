@@ -4,7 +4,7 @@ import React from "react";
 
 const ProviderLogos = ({ respnose }) => {
   return (
-    <div className="rounded h-72 flex justify-center items-center">
+    <div className="rounded h-72 flex justify-center items-center ">
       <Link href={`/${respnose.id}/${respnose.slug}`}>
         <Image
           src={respnose.logo}
@@ -13,7 +13,7 @@ const ProviderLogos = ({ respnose }) => {
           style={{
             borderRadius: "50%",
             height: "200px",
-            border: "3px solid var(--global-text-primary)",
+            border: "8px solid var(--global-text-primary)",
             objectFit: "cover",
             marginInline: "20px"
           }}

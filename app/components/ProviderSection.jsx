@@ -4,7 +4,6 @@ import { Box, Button, Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { homeService } from "../services/homeService";
 import ProviderLogos from "./ProviderLogos";
-import CustomButton from "../common/CustomButton";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -39,11 +38,17 @@ const ProviderSection = () => {
         <div className="flex justify-center ">
           <Link href={"/providers"}>
             <Button
-              variant="contained"
-              className="bg-violet-400 hover:bg-violet-500"
-              sx={{ background: "#cc36ee", "&:hover":{
-                background: "#cc36ee"
-              }}}
+              variant="outlined"
+              className="text-black hover:bg-violet-500 border hover:border-violet-950"
+              sx={{
+                background: "none",
+                color: "black",
+                border: "1px solid",
+                "&:hover": {
+                  background: "#cc36ee",
+                  color: "white",
+                },
+              }}
             >
               {t("all_provider")}
             </Button>
