@@ -6,17 +6,13 @@ import {
   CardMedia,
   Divider,
   Grid,
-  IconButton,
   Skeleton,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableRow,
-  Typography,
 } from "@mui/material";
-import { ArrowRightAltRounded } from "@mui/icons-material";
-import { Container } from "postcss";
 
 export const ProviderSkeleton = () => {
   return (
@@ -25,17 +21,27 @@ export const ProviderSkeleton = () => {
         {/* Skeleton loader for banner image */}
         <Skeleton variant="rectangular" sx={{ height: 250 }} />
 
-        <CardContent className="text-center relative">
-          <div className="info -mt-4 z-10 relative">
-            {/* Skeleton loader for title */}
-            <Skeleton variant="text" />
+        <div className="flex justify-center p-1 -mt-16 ">
+          <Skeleton
+            className="border border-white"
+            variant="circular"
+            sx={{ height: 120, width: 120, borderWidth: 5 }}
+          />
+        </div>
 
-            <div className="flex justify-Start p-1">
-              {/* Skeleton loader for order completed */}
+        <CardContent className="text-center justify-center relative">
+          <div className="info -mt-4 z-10 items-center justify-center text-center relative">
+            {/* Skeleton loader for title */}
+            <div className="flex justify-center p-1">
               <Skeleton variant="text" width={200} />
             </div>
 
-            <div className="flex justify-start items-center">
+            <div className="flex justify-center p-1">
+              {/* Skeleton loader for order completed */}
+              <Skeleton variant="text" width={140} />
+            </div>
+
+            <div className="flex justify-center items-center">
               {/* Skeleton loader for rating */}
               <Skeleton variant="text" width={100} height={30} />
             </div>
