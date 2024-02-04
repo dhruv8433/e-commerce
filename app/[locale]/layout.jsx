@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
+import { setLocale } from "../config/config";
 require("dotenv").config();
 
 // static params for our languages file
@@ -18,10 +19,14 @@ export default async function RootLayout({ children, params }) {
   const { locale } = params;
   // when user want to change localets
   try {
+    // if 
+    setLocale();
     messages = (await import(`../../locales/${locale}.json`)).default;
   } catch (error) {
     notFound();
   }
+
+
   return (
     // passing locale as lang in html so we can translate in defined json language file
     <html lang={"en"}>
@@ -31,7 +36,11 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body>
         {/* internationalization */}
-        <NextIntlClientProvider defaultTranslationValues={"en"} locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          defaultTranslationValues={"en"}
+          locale={locale}
+          messages={messages}
+        >
           {/* redux provider */}
           <ProviderStore>
             <Navigation />
