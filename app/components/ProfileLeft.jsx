@@ -49,7 +49,7 @@ const ProfileLeft = ({ user, logout }) => {
 
       console.log(response);
       toast.success(response.message);
-      close(setPopup);
+      setPopup(false);
       dispatch(loginSuccess(response.data));
     } catch (error) {
       console.error(error);
@@ -111,7 +111,7 @@ const ProfileLeft = ({ user, logout }) => {
 
         <Modal
           open={logoutPopup}
-          onClose={() => close(setLogoutPopup)}
+          onClose={() => setLogoutPopup(false)}
           style={{
             display: "flex",
             justifyContent: "center",
@@ -136,7 +136,7 @@ const ProfileLeft = ({ user, logout }) => {
                 size="small"
                 sx={{ marginInline: 1 }}
                 variant="outlined"
-                onClick={() => close(setLogoutPopup)}
+                onClick={() => setLogoutPopup(false)}
               >
                 {t("cancle")}
               </Button>
@@ -159,7 +159,7 @@ const ProfileLeft = ({ user, logout }) => {
           </Box>
         </Modal>
 
-        <Modal open={popup} onClose={() => close(setPopup)}>
+        <Modal open={popup} onClose={() => setPopup(false)}>
           <Box borderRadius={"10px"} p={2}>
             <div className="data">
               <SignUpForm
