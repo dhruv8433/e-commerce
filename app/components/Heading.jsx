@@ -9,7 +9,7 @@ const Heading = ({ title, setOpen }) => {
     <>
       <div className="p-2 flex justify-between">
         <h1 className="text-2xl">{title}</h1>
-        <IconButton onClick={() => close(setOpen)}>
+        <IconButton onClick={() => setOpen(false)}>
           <CloseRounded />
         </IconButton>
       </div>
