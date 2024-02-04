@@ -29,11 +29,11 @@ const HomeAnimation = () => {
               className="flex justify-start items-center"
             >
               <div className="p-8 items-center">
-                <h1 className="text-4xl font-bold mb-4 text-gray-800">
+                <h1 className="text-5xl font-bold mb-4 text-gray-800">
                   {t("welcome")}
                 </h1>
                 <p className="text-lg text-gray-600">{t("one_stop")}</p>
-                <p className="text-sm text-gray-400">{t("explore_here")}</p>
+                {/* <p className="text-sm bg-violet-500 w-max p-1 text-white rounded mt-3">{t("explore_here")}</p> */}
               </div>
             </Grid>
           </Grid>
