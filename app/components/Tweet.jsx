@@ -14,7 +14,7 @@ const Tweet = ({ twitter }) => {
           <TwitterIcon
             sx={{ fontSize: 40, color: "#1DA1F2", marginRight: 2 }}
           />
-          <Typography variant="h6">{twitter.username}</Typography>
+          <Typography>{twitter.username}</Typography>
         </div>
         <Typography variant="body1" sx={{ marginTop: 2 }}>
           {twitter.tweet} <span className="text-blue-600">{twitter.tags}</span>

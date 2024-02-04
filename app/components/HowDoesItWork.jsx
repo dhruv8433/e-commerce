@@ -16,7 +16,7 @@ const HowDoesItWork = () => {
         <div className="flex justify-center items-center">
           <h1 className=" text-3xl font-bold">
             {t("how")}
-            <span className="color-primary">{t("company")}</span> {t("work")}?
+            <span className="color-primary text-4xl">{t("company")}</span> {t("work")}?
           </h1>
         </div>
         <Grid container spacing={3}>
@@ -43,7 +43,7 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl">1. {t("online_book")}</h1>
+                  <h1 className="text-2xl font-semibold">I. {t("online_book")}</h1>
                   <h1 className="text-gray-500">{t("step_1")}</h1>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl">2. {t("best_price")}</h1>
+                  <h1 className="text-2xl font-semibold">II. {t("best_price")}</h1>
                   <h1 className="text-gray-500">{t("step_2")}</h1>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl">3. {t("save_time")}</h1>
+                  <h1 className="text-2xl font-semibold">III. {t("save_time")}</h1>
                   <h1 className="text-gray-500">{t("step_3")}</h1>
                 </div>{" "}
               </Box>
