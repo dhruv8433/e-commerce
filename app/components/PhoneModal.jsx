@@ -19,13 +19,13 @@ const PhoneModal = ({ signup, login }) => {
       <Modal
         className="flex justify-center items-center"
         open={loginModal}
-        onClose={() => close(setLoginModal)}
+        onClose={() => setLoginModal(false)}
       >
         <div className="bg-white w-48 h-48 rounded ">
           {/* select method to login or signup */}
           <div className="flex justify-between items-center px-1">
             <h1>Select Method</h1>
-            <IconButton onClick={() => close(setLoginModal)}>
+            <IconButton onClick={() => setLoginModal(false)}>
               <CloseRounded />
             </IconButton>
           </div>
