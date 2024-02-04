@@ -67,7 +67,7 @@ const DeleteAccount = () => {
                 size="small"
                 variant="outlined"
                 sx={{ marginInline: "10px" }}
-                onClick={() => close(setPopup)}
+                onClick={() => setPopup(false)}
               >
                 {t("cancle")}
               </Button>
