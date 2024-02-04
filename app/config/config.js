@@ -1,3 +1,5 @@
+import Cookies from "js-cookie";
+
 export const colors = [
   "red",
   "blue",
@@ -45,3 +47,10 @@ export const order_canlce_details =
   "Your order will be canceling soon, we refund amount into your bank account";
 export const order_processed_details =
   "Your Service order is currently processing, don't forgot to review it";
+
+// cookies for language support
+const isThereLocale = Cookies.get("locale");
+
+export const setLocale = () => {
+  isThereLocale ? "" : Cookies.set("locale", "en");
+};
