@@ -6,6 +6,7 @@ import { homeService } from "../services/homeService";
 import ProviderLogos from "./ProviderLogos";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const ProviderSection = () => {
   const [provider, setProvider] = useState([]);
@@ -21,7 +22,12 @@ const ProviderSection = () => {
 
   const t = useTranslations("providers");
   return (
-    <div className="py-14 h-auto">
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="py-14 h-auto"
+    >
       <Container>
         <div className="flex justify-center ">
           <h1 className="text-3xl">{t("available")}</h1>
@@ -55,7 +61,7 @@ const ProviderSection = () => {
           </Link>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

@@ -6,6 +6,7 @@ import aboutAnimation from "@/app/json/animations/about.json";
 import { Box, Grid } from "@mui/material";
 import { getSettings } from "@/app/services/getSetting";
 import Breadcrumbs from "@/app/common/Breadcrumbs";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   const [aboutUs, setAboutUs] = useState("");
@@ -30,12 +31,22 @@ const AboutUs = () => {
       </Box>
       <Grid container>
         <Grid item xs={12} md={6}>
-          <div className="min-h-full flex justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="min-h-full flex justify-center items-center"
+          >
             <Lottie animationData={aboutAnimation} style={{ height: 600 }} />
-          </div>
+          </motion.div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <div className="min-h-full flex items-center justify-center bg-theme">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="min-h-full flex items-center justify-center bg-theme"
+          >
             <section className="py-16">
               <div className="mx-auto flex justify-center flex-col items-center">
                 <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
@@ -48,7 +59,7 @@ const AboutUs = () => {
                 ></div>
               </div>
             </section>
-          </div>
+          </motion.div>
         </Grid>
       </Grid>
     </>

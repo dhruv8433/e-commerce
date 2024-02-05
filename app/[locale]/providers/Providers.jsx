@@ -5,6 +5,7 @@ import ProviderSkeleton from "@/app/components/Skeletons";
 import { GetProviders } from "@/app/services/getProviders";
 import { Box, Container, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Providers = () => {
   const [providers, setProviders] = useState([]);
@@ -31,27 +32,33 @@ const Providers = () => {
         <Breadcrumb title={"Providers"} breadcrumb={"providers"} />
       </Box>
       <Container>
-        <Box className="py-2">
-          {loading ? (
-            <Grid container>
-              <MultiSkeleton />
-            </Grid>
-          ) : (
-            <div className="providercard">
-              <Box>
-                <Grid container spacing={2}>
-                  {/* we only display 3 providers on home page */}
-                  {providers.map((provider) => (
-                    <Grid item xs={12} sm={6} md={4} key={provider.id}>
-                      {/* calling single provider component */}
-                      <Provider key={provider.id} provider={provider} />
-                    </Grid>
-                  ))}
-                </Grid>
-              </Box>
-            </div>
-          )}
-        </Box>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <Box className="py-2">
+            {loading ? (
+              <Grid container>
+                <MultiSkeleton />
+              </Grid>
+            ) : (
+              <div className="providercard">
+                <Box>
+                  <Grid container spacing={2}>
+                    {/* we only display 3 providers on home page */}
+                    {providers.map((provider) => (
+                      <Grid item xs={12} sm={6} md={4} key={provider.id}>
+                        {/* calling single provider component */}
+                        <Provider key={provider.id} provider={provider} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </Box>
+              </div>
+            )}
+          </Box>
+        </motion.div>
       </Container>
     </>
   );
