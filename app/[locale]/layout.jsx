@@ -7,6 +7,7 @@ import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ProviderStore } from "./StoreProvider";
 import { setLocale } from "../config/config";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 require("dotenv").config();
 
 // static params for our languages file
