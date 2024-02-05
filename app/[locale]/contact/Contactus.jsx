@@ -7,6 +7,7 @@ import contactAnimation from "@/app/json/animations/contact.json";
 import Breadcrumb from "@/app/common/Breadcrumbs";
 import toast from "react-hot-toast";
 import { contactService } from "@/app/services/contactService";
+import { motion } from "framer-motion";
 // import { httpAxios } from "../helper/httpAxios";
 
 const page = () => {
@@ -43,12 +44,22 @@ const page = () => {
       </Box>
       <Grid container>
         <Grid item xs={12} md={6}>
-          <div className="min-h-full flex justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="min-h-full flex justify-center items-center"
+          >
             <Lottie animationData={contactAnimation} style={{ height: 600 }} />
-          </div>
+          </motion.div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <div className="min-h-full flex items-center justify-center bg-theme py-2">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="min-h-full flex items-center justify-center bg-theme py-2"
+          >
             <div className="w-96 p-6 bg-white rounded-lg shadow-md">
               <h2 className="text-2xl font-semibold mb-4">{t("contact")}</h2>
               <form onSubmit={handleSubmit}>
@@ -116,7 +127,7 @@ const page = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </motion.div>
         </Grid>
       </Grid>
     </>

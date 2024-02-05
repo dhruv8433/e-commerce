@@ -2,7 +2,7 @@
 import { ShoppingCartOutlined } from "@mui/icons-material";
 import { Box, Divider, Drawer, IconButton } from "@mui/material";
 import React, { useState } from "react";
-import { close, open } from "../config/config";
+import { open } from "../config/config";
 import { useSelector } from "react-redux";
 import ServiceCard from "../components/ServiceCard";
 import emptyCartAnimation from "@/app/json/animations/empty_cart.json";

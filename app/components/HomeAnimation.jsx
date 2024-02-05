@@ -5,6 +5,7 @@ import React from "react";
 import homeAnimationJSON from "@/app/json/animations/homescreen.json";
 import { useTranslations } from "next-intl";
 import { Container, Grid } from "@mui/material";
+import { motion } from "framer-motion";
 import "@/app/styles/style.css";
 
 // starting component
@@ -28,13 +29,18 @@ const HomeAnimation = () => {
               md={6}
               className="flex justify-start items-center"
             >
-              <div className="p-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
+                className="p-8 items-center"
+              >
                 <h1 className="text-5xl font-bold mb-4 text-gray-800">
                   {t("welcome")}
                 </h1>
                 <p className="text-lg text-gray-600">{t("one_stop")}</p>
                 {/* <p className="text-sm bg-violet-500 w-max p-1 text-white rounded mt-3">{t("explore_here")}</p> */}
-              </div>
+              </motion.div>
             </Grid>
           </Grid>
         </Container>
