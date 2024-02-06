@@ -49,6 +49,7 @@ export default async function RootLayout({ children, params }) {
             <Footer />
             <Toaster />
           </ProviderStore>
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
