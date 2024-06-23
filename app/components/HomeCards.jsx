@@ -18,7 +18,7 @@ const HomeCards = () => {
     getCards();
   }, []);
   return (
-    <motion.div
+    <div  data-aos="fade-up"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 3 }}
@@ -31,7 +31,7 @@ const HomeCards = () => {
           ))}
         </Grid>
       </Container>
-    </motion.div>
+    </div >
   );
 };
 

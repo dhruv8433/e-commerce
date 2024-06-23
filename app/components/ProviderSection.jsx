@@ -22,15 +22,18 @@ const ProviderSection = () => {
 
   const t = useTranslations("providers");
   return (
-    <motion.div
+    <div
+      data-aos="fade-up"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       className="py-14 h-auto"
     >
       <Container>
-        <div className="flex justify-center ">
-          <h1 className="text-3xl">{t("available")}</h1>
+        <div data-aos="fade-up" className="flex justify-center ">
+          <h1 data-aos="fade-up" className="text-3xl">
+            {t("available")}
+          </h1>
         </div>
 
         {/* Provider Icons large  screen */}
@@ -44,6 +47,7 @@ const ProviderSection = () => {
         <div className="flex justify-center ">
           <Link href={"/providers"}>
             <Button
+              data-aos="fade-up"
               variant="outlined"
               className="text-black hover:bg-violet-500 border hover:border-violet-950"
               sx={{
@@ -61,7 +65,7 @@ const ProviderSection = () => {
           </Link>
         </div>
       </Container>
-    </motion.div>
+    </div>
   );
 };
 
