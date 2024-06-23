@@ -29,7 +29,7 @@ const HomeAnimation = () => {
               md={6}
               className="flex justify-start items-center"
             >
-              <motion.div
+              <div  data-aos="fade-up"
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 2 }}
@@ -40,7 +40,7 @@ const HomeAnimation = () => {
                 </h1>
                 <p className="text-lg text-gray-600">{t("one_stop")}</p>
                 {/* <p className="text-sm bg-violet-500 w-max p-1 text-white rounded mt-3">{t("explore_here")}</p> */}
-              </motion.div>
+              </div >
             </Grid>
           </Grid>
         </Container>

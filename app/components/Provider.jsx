@@ -42,7 +42,7 @@ const Provider = ({ provider, bookmarkIconVisible }) => {
     }
   }
   return (
-    <div className="p-1 items-center text-center mt-10">
+    <div data-aos="fade-up" className="p-1 items-center text-center mt-10">
       {isAuthenticated ? (
         <Box
           className="absolute rounded-sm bg-white"

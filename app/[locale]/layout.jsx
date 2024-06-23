@@ -10,6 +10,8 @@ import { setLocale } from "../config/config";
 // web analytics and speed Insights
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Aos from "aos";
+import AosContainer from "./AosContainer";
 require("dotenv").config();
 
 // static params for our languages file
@@ -43,6 +45,7 @@ export default async function RootLayout({ children, params }) {
           locale={locale}
           messages={messages}
         >
+          <AosContainer />
           {/* redux provider */}
           <ProviderStore>
             <Navigation />

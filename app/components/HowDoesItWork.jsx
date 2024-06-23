@@ -12,15 +12,10 @@ import { motion } from "framer-motion";
 const HowDoesItWork = () => {
   const t = useTranslations("work");
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="h-auto my-20"
-    >
+    <div data-aos="fade-up">
       <Container>
-        <div className="flex justify-center items-center">
-          <h1 className=" text-3xl font-bold">
+        <div data-aos="fade-up" className="flex justify-center items-center">
+          <h1 data-aos="fade-up" className=" text-3xl font-bold">
             {t("how")}
             <span className="color-primary text-4xl">{t("company")}</span>{" "}
             {t("work")}?
@@ -40,7 +35,7 @@ const HowDoesItWork = () => {
               xs={12}
               sx={{ display: "flex", justifyContent: "center" }}
             >
-              <div className="w-300">
+              <div data-aos="fade-up" className="w-300">
                 <Lottie
                   animationData={bookingAnimation}
                   style={{
@@ -50,10 +45,12 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl font-semibold">
+                  <h1 data-aos="fade-up" className="text-2xl font-semibold">
                     I. {t("online_book")}
                   </h1>
-                  <h1 className="text-gray-500">{t("step_1")}</h1>
+                  <h1 data-aos="fade-up" className="text-gray-500">
+                    {t("step_1")}
+                  </h1>
                 </div>
               </div>
             </Grid>
@@ -72,10 +69,12 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl font-semibold">
+                  <h1 data-aos="fade-up" className="text-2xl font-semibold">
                     II. {t("best_price")}
                   </h1>
-                  <h1 className="text-gray-500">{t("step_2")}</h1>
+                  <h1 data-aos="fade-up" className="text-gray-500">
+                    {t("step_2")}
+                  </h1>
                 </div>
               </div>
             </Grid>
@@ -95,17 +94,17 @@ const HowDoesItWork = () => {
                   }}
                 />
                 <div className="content">
-                  <h1 className="text-2xl font-semibold">
+                  <h1  data-aos="fade-up" className="text-2xl font-semibold">
                     III. {t("save_time")}
                   </h1>
-                  <h1 className="text-gray-500">{t("step_3")}</h1>
+                  <h1  data-aos="fade-up" className="text-gray-500">{t("step_3")}</h1>
                 </div>{" "}
               </Box>
             </Grid>
           </Box>
         </Grid>
       </Container>
-    </motion.div>
+    </div>
   );
 };
 

@@ -10,11 +10,11 @@ const Discount = () => {
     <div className="dicount-bg h-96">
       <Container>
         <div className="absolute text-white">
-          <h1 className="text-3xl font-bold mt-20">
+          <h1  data-aos="fade-up" className="text-3xl font-bold mt-20">
             Where Do You Get Service?
           </h1>
           <div className="w-300">
-            <h1 className="mt-2 text-2xl">
+            <h1  data-aos="fade-up" className="mt-2 text-2xl">
               {t("register")}{" "}
               <span className="font-bold">{t("company_email")}</span>{" "}
               {t("discount")}

@@ -44,17 +44,17 @@ const page = () => {
       </Box>
       <Grid container>
         <Grid item xs={12} md={6}>
-          <motion.div
+          <div  data-aos="fade-up"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             className="min-h-full flex justify-center items-center"
           >
             <Lottie animationData={contactAnimation} style={{ height: 600 }} />
-          </motion.div>
+          </div >
         </Grid>
         <Grid item xs={12} md={6}>
-          <motion.div
+          <div  data-aos="fade-up"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -127,7 +127,7 @@ const page = () => {
                 </div>
               </form>
             </div>
-          </motion.div>
+          </div >
         </Grid>
       </Grid>
     </>

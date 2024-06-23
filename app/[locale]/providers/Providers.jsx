@@ -32,7 +32,7 @@ const Providers = () => {
         <Breadcrumb title={"Providers"} breadcrumb={"providers"} />
       </Box>
       <Container>
-        <motion.div
+        <div  data-aos="fade-up"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -48,7 +48,7 @@ const Providers = () => {
                   <Grid container spacing={2}>
                     {/* we only display 3 providers on home page */}
                     {providers.map((provider) => (
-                      <Grid item xs={12} sm={6} md={4} key={provider.id}>
+                      <Grid  item xs={12} sm={6} md={4} key={provider.id}>
                         {/* calling single provider component */}
                         <Provider key={provider.id} provider={provider} />
                       </Grid>
@@ -58,7 +58,7 @@ const Providers = () => {
               </div>
             )}
           </Box>
-        </motion.div>
+        </div >
       </Container>
     </>
   );
